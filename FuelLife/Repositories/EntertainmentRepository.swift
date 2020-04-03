@@ -49,7 +49,7 @@ class EntertainmentRepository{
             }
             return entertainment
         }
-        return nil
+        return entertainments.filter { $0.name == name }.first
     }
     
     static func updateEntertainment(entertainment:Entertainment, newName:String, newBasePrice:Int64){

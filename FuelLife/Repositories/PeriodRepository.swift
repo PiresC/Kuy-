@@ -85,7 +85,7 @@ class PeriodRepository{
             }
             return period
         }
-        return  nil
+        return periods.filter { $0.month == month }.first
     }
 
     static func fetchPeriods() -> [Period]{
