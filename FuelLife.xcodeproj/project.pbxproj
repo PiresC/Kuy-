@@ -7,27 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F09287F924360273009B6F38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09287F824360273009B6F38 /* AppDelegate.swift */; };
-		F09287FB24360273009B6F38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09287FA24360273009B6F38 /* SceneDelegate.swift */; };
-		F09287FD24360273009B6F38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09287FC24360273009B6F38 /* ViewController.swift */; };
-		F092880024360273009B6F38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F09287FE24360273009B6F38 /* Main.storyboard */; };
-		F092880224360275009B6F38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F092880124360275009B6F38 /* Assets.xcassets */; };
-		F092880524360275009B6F38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F092880324360275009B6F38 /* LaunchScreen.storyboard */; };
+		7AA49579243730F0007692E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49578243730F0007692E4 /* AppDelegate.swift */; };
+		7AA4957B243730F0007692E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4957A243730F0007692E4 /* SceneDelegate.swift */; };
+		7AA4957D243730F0007692E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4957C243730F0007692E4 /* ViewController.swift */; };
+		7AA49580243730F0007692E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA4957E243730F0007692E4 /* Main.storyboard */; };
+		7AA49583243730F0007692E4 /* FuelLife.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49581243730F0007692E4 /* FuelLife.xcdatamodeld */; };
+		7AA49585243730F1007692E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AA49584243730F1007692E4 /* Assets.xcassets */; };
+		7AA49588243730F1007692E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA49586243730F1007692E4 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F09287F524360273009B6F38 /* FuelLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuelLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F09287F824360273009B6F38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F09287FA24360273009B6F38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F09287FC24360273009B6F38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F09287FF24360273009B6F38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F092880124360275009B6F38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F092880424360275009B6F38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F092880624360275009B6F38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AA49575243730F0007692E4 /* FuelLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuelLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AA49578243730F0007692E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7AA4957A243730F0007692E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7AA4957C243730F0007692E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7AA4957F243730F0007692E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7AA49582243730F0007692E4 /* FuelLife.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FuelLife.xcdatamodel; sourceTree = "<group>"; };
+		7AA49584243730F1007692E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7AA49587243730F1007692E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7AA49589243730F1007692E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F09287F224360273009B6F38 /* Frameworks */ = {
+		7AA49572243730F0007692E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,32 +39,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F09287EC24360273009B6F38 = {
+		7AA4956C243730F0007692E4 = {
 			isa = PBXGroup;
 			children = (
-				F09287F724360273009B6F38 /* FuelLife */,
-				F09287F624360273009B6F38 /* Products */,
+				7AA49577243730F0007692E4 /* FuelLife */,
+				7AA49576243730F0007692E4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F09287F624360273009B6F38 /* Products */ = {
+		7AA49576243730F0007692E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F09287F524360273009B6F38 /* FuelLife.app */,
+				7AA49575243730F0007692E4 /* FuelLife.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F09287F724360273009B6F38 /* FuelLife */ = {
+		7AA49577243730F0007692E4 /* FuelLife */ = {
 			isa = PBXGroup;
 			children = (
-				F09287F824360273009B6F38 /* AppDelegate.swift */,
-				F09287FA24360273009B6F38 /* SceneDelegate.swift */,
-				F09287FC24360273009B6F38 /* ViewController.swift */,
-				F09287FE24360273009B6F38 /* Main.storyboard */,
-				F092880124360275009B6F38 /* Assets.xcassets */,
-				F092880324360275009B6F38 /* LaunchScreen.storyboard */,
-				F092880624360275009B6F38 /* Info.plist */,
+				7AA49578243730F0007692E4 /* AppDelegate.swift */,
+				7AA4957A243730F0007692E4 /* SceneDelegate.swift */,
+				7AA4957C243730F0007692E4 /* ViewController.swift */,
+				7AA4957E243730F0007692E4 /* Main.storyboard */,
+				7AA49584243730F1007692E4 /* Assets.xcassets */,
+				7AA49586243730F1007692E4 /* LaunchScreen.storyboard */,
+				7AA49589243730F1007692E4 /* Info.plist */,
+				7AA49581243730F0007692E4 /* FuelLife.xcdatamodeld */,
 			);
 			path = FuelLife;
 			sourceTree = "<group>";
@@ -70,13 +73,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F09287F424360273009B6F38 /* FuelLife */ = {
+		7AA49574243730F0007692E4 /* FuelLife */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F092880924360275009B6F38 /* Build configuration list for PBXNativeTarget "FuelLife" */;
+			buildConfigurationList = 7AA4958C243730F1007692E4 /* Build configuration list for PBXNativeTarget "FuelLife" */;
 			buildPhases = (
-				F09287F124360273009B6F38 /* Sources */,
-				F09287F224360273009B6F38 /* Frameworks */,
-				F09287F324360273009B6F38 /* Resources */,
+				7AA49571243730F0007692E4 /* Sources */,
+				7AA49572243730F0007692E4 /* Frameworks */,
+				7AA49573243730F0007692E4 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,24 +87,25 @@
 			);
 			name = FuelLife;
 			productName = FuelLife;
-			productReference = F09287F524360273009B6F38 /* FuelLife.app */;
+			productReference = 7AA49575243730F0007692E4 /* FuelLife.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F09287ED24360273009B6F38 /* Project object */ = {
+		7AA4956D243730F0007692E4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Team 10";
 				TargetAttributes = {
-					F09287F424360273009B6F38 = {
-						CreatedOnToolsVersion = 11.4;
+					7AA49574243730F0007692E4 = {
+						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
 			};
-			buildConfigurationList = F09287F024360273009B6F38 /* Build configuration list for PBXProject "FuelLife" */;
+			buildConfigurationList = 7AA49570243730F0007692E4 /* Build configuration list for PBXProject "FuelLife" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,55 +113,56 @@
 				en,
 				Base,
 			);
-			mainGroup = F09287EC24360273009B6F38;
-			productRefGroup = F09287F624360273009B6F38 /* Products */;
+			mainGroup = 7AA4956C243730F0007692E4;
+			productRefGroup = 7AA49576243730F0007692E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F09287F424360273009B6F38 /* FuelLife */,
+				7AA49574243730F0007692E4 /* FuelLife */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F09287F324360273009B6F38 /* Resources */ = {
+		7AA49573243730F0007692E4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F092880524360275009B6F38 /* LaunchScreen.storyboard in Resources */,
-				F092880224360275009B6F38 /* Assets.xcassets in Resources */,
-				F092880024360273009B6F38 /* Main.storyboard in Resources */,
+				7AA49588243730F1007692E4 /* LaunchScreen.storyboard in Resources */,
+				7AA49585243730F1007692E4 /* Assets.xcassets in Resources */,
+				7AA49580243730F0007692E4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F09287F124360273009B6F38 /* Sources */ = {
+		7AA49571243730F0007692E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F09287FD24360273009B6F38 /* ViewController.swift in Sources */,
-				F09287F924360273009B6F38 /* AppDelegate.swift in Sources */,
-				F09287FB24360273009B6F38 /* SceneDelegate.swift in Sources */,
+				7AA4957D243730F0007692E4 /* ViewController.swift in Sources */,
+				7AA49583243730F0007692E4 /* FuelLife.xcdatamodeld in Sources */,
+				7AA49579243730F0007692E4 /* AppDelegate.swift in Sources */,
+				7AA4957B243730F0007692E4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F09287FE24360273009B6F38 /* Main.storyboard */ = {
+		7AA4957E243730F0007692E4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F09287FF24360273009B6F38 /* Base */,
+				7AA4957F243730F0007692E4 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		F092880324360275009B6F38 /* LaunchScreen.storyboard */ = {
+		7AA49586243730F1007692E4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F092880424360275009B6F38 /* Base */,
+				7AA49587243730F1007692E4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -165,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F092880724360275009B6F38 /* Debug */ = {
+		7AA4958A243730F1007692E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -215,7 +220,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -225,7 +230,7 @@
 			};
 			name = Debug;
 		};
-		F092880824360275009B6F38 /* Release */ = {
+		7AA4958B243730F1007692E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -269,7 +274,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -279,7 +284,7 @@
 			};
 			name = Release;
 		};
-		F092880A24360275009B6F38 /* Debug */ = {
+		7AA4958D243730F1007692E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -289,14 +294,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.group1.FuelLife;
+				PRODUCT_BUNDLE_IDENTIFIER = com.team10.FuelLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		F092880B24360275009B6F38 /* Release */ = {
+		7AA4958E243730F1007692E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -306,7 +311,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.group1.FuelLife;
+				PRODUCT_BUNDLE_IDENTIFIER = com.team10.FuelLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -316,25 +321,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F09287F024360273009B6F38 /* Build configuration list for PBXProject "FuelLife" */ = {
+		7AA49570243730F0007692E4 /* Build configuration list for PBXProject "FuelLife" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F092880724360275009B6F38 /* Debug */,
-				F092880824360275009B6F38 /* Release */,
+				7AA4958A243730F1007692E4 /* Debug */,
+				7AA4958B243730F1007692E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F092880924360275009B6F38 /* Build configuration list for PBXNativeTarget "FuelLife" */ = {
+		7AA4958C243730F1007692E4 /* Build configuration list for PBXNativeTarget "FuelLife" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F092880A24360275009B6F38 /* Debug */,
-				F092880B24360275009B6F38 /* Release */,
+				7AA4958D243730F1007692E4 /* Debug */,
+				7AA4958E243730F1007692E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7AA49581243730F0007692E4 /* FuelLife.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7AA49582243730F0007692E4 /* FuelLife.xcdatamodel */,
+			);
+			currentVersion = 7AA49582243730F0007692E4 /* FuelLife.xcdatamodel */;
+			path = FuelLife.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = F09287ED24360273009B6F38 /* Project object */;
+	rootObject = 7AA4956D243730F0007692E4 /* Project object */;
 }

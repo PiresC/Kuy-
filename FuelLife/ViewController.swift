@@ -2,7 +2,8 @@
 //  ViewController.swift
 //  FuelLife
 //
-//  Created by Amos Ebenhaezer on 02/04/20.
+//  Created by Wikan Setiaji on 03/04/20.
+//  Copyright © 2020 Team 10. All rights reserved.
 //
 
 import UIKit
