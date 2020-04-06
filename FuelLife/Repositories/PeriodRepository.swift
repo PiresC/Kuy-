@@ -95,6 +95,8 @@ class PeriodRepository{
         let managedContext = appDelegate.persistentContainer.viewContext
         
         let fetchRequest = NSFetchRequest<Period>(entityName: "Period")
+        let sort = NSSortDescriptor(key: #keyPath(Period.month), ascending: true)
+        fetchRequest.sortDescriptors = [sort]
         
         do {
             let periods = try managedContext.fetch(fetchRequest)

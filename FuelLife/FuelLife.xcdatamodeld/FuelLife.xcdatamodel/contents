@@ -9,18 +9,18 @@
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="note" optional="YES" attributeType="String"/>
         <attribute name="price" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="entertainment" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Entertainment" inverseName="expenses" inverseEntity="Entertainment"/>
-        <relationship name="period" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Period" inverseName="expenses" inverseEntity="Period"/>
+        <relationship name="entertainment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Entertainment" inverseName="expenses" inverseEntity="Entertainment"/>
+        <relationship name="period" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Period" inverseName="expenses" inverseEntity="Period"/>
     </entity>
     <entity name="Period" representedClassName="Period" syncable="YES" codeGenerationType="class">
         <attribute name="currentBudget" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="month" attributeType="String" defaultValueString=" "/>
         <attribute name="startingBudget" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="expenses" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Expense" inverseName="period" inverseEntity="Expense"/>
+        <relationship name="expenses" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Expense" inverseName="period" inverseEntity="Expense"/>
     </entity>
     <elements>
         <element name="Entertainment" positionX="-284.1484375" positionY="-129.765625" width="128" height="88"/>
         <element name="Expense" positionX="-360.5" positionY="196.7265625" width="128" height="118"/>
-        <element name="Period" positionX="-328.3828125" positionY="398.14453125" width="128" height="103"/>
+        <element name="Period" positionX="-328.3828125" positionY="398.14453125" width="128" height="28"/>
     </elements>
 </model>
