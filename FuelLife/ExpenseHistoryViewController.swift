@@ -10,7 +10,12 @@ import UIKit
 
 class ExpenseHistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    var expenses:[Expense] = []
+    var expenses:[Expense] = []{
+        didSet{
+            expenses.reverse()
+        }
+    }
+    
     var periods:[Period] = PeriodRepository.fetchPeriods()
     var period:Period? = PeriodRepository.getCurrentPeriod()
     @IBOutlet weak var prevPeriodButton: UIButton!
@@ -20,6 +25,8 @@ class ExpenseHistoryViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var expenseTableView: UITableView!
     @IBOutlet weak var totalAmountLabel: UILabel!
     @IBOutlet weak var monthTextField: UITextField!
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +85,7 @@ class ExpenseHistoryViewController: UIViewController, UITableViewDelegate, UITab
         let refreshAlert = UIAlertController(title: "Delete", message: "Are you sure you want to delete this expense?", preferredStyle: UIAlertController.Style.alert)
         refreshAlert.addAction(UIAlertAction(title: "No", style: .cancel))
         refreshAlert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { (action: UIAlertAction!) in
+            PeriodRepository.updatePeriod(period: self.period!, startingBudget: self.period!.startingBudget, currentBudget: self.period!.currentBudget + Int64(expense.price))
                 ExpenseRepository.deleteExpense(expense: expense)
                 self.updateView()
         }))
@@ -86,12 +94,37 @@ class ExpenseHistoryViewController: UIViewController, UITableViewDelegate, UITab
     
     @IBAction func prevPeriodButtonClick(_ sender: Any) {
         period = periods[(periods.firstIndex(of: period!) ?? 1 )-1]
+        picker.selectRow(picker.selectedRow(inComponent: 0)-1, inComponent: 0, animated: false)
         updateView()
     }
     
     @IBAction func nextPeriodButtonClick(_ sender: Any) {
         period = periods[(periods.firstIndex(of: period!) ?? -1 )+1]
+        picker.selectRow(picker.selectedRow(inComponent: 0)+1, inComponent: 0, animated: false)
         updateView()
+    }
+    
+    @IBAction func addExpenseButtonClick(_ sender: Any) {
+        performSegue(withIdentifier: "addExpense", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "addExpense"){
+            if let destination = segue.destination as? AddExpenseViewController{
+                destination.viewController = self
+            }
+        }
+        else if (segue.identifier == "expenseDetail"){
+            if let destination = segue.destination as? ExpenseDetailViewController, let expense = sender as? Expense{
+                destination.expense = expense
+            }
+        }
+        else if (segue.identifier == "editExpense"){
+            if let destination = segue.destination as? EditExpenseViewController, let expense = sender as? Expense{
+                destination.expense = expense
+                destination.viewController = self
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -112,11 +145,16 @@ class ExpenseHistoryViewController: UIViewController, UITableViewDelegate, UITab
         delete.backgroundColor = .red
         
         let edit = UIContextualAction(style: .normal, title:  "Edit", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            self.performSegue(withIdentifier: "editExpense", sender: self.expenses[indexPath.row])
             success(true)
         })
         edit.backgroundColor = .systemBlue
         
         return UISwipeActionsConfiguration(actions: [delete, edit])
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "expenseDetail", sender: expenses[indexPath.row])
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
