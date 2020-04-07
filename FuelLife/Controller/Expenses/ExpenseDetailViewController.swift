@@ -19,7 +19,7 @@ class ExpenseDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let expense = self.expense{
-            amountLabel.text = "Rp. \(expense.price)"
+            amountLabel.text = CurrencyFormatter.format(Int(expense.price))
             entertainmentLabel.text = expense.entertainment!.name
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "EEEE, MMM d yyyy"

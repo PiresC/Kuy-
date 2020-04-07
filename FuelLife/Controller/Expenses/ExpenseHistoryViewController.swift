@@ -76,7 +76,7 @@ class ExpenseHistoryViewController: UIViewController, UITableViewDelegate, UITab
         for i in expenses{
             amount += Int(exactly:i.price ) ?? 0
         }
-        totalAmountLabel.text = "Rp. \(amount)"
+        totalAmountLabel.text = CurrencyFormatter.format(amount)
     }
     
     func deleteExpense(index:Int){

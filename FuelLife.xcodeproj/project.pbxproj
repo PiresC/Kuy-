@@ -22,6 +22,8 @@
 		7AA495CD243783EE007692E4 /* EntertainmentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA495CC243783EE007692E4 /* EntertainmentRepository.swift */; };
 		7AA495CF243786B6007692E4 /* ExpenseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA495CE243786B6007692E4 /* ExpenseRepository.swift */; };
 		7ABDE8C4243C67A400B2F611 /* EditExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABDE8C3243C67A400B2F611 /* EditExpenseViewController.swift */; };
+		7ABDE8C7243C7FE300B2F611 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABDE8C6243C7FE300B2F611 /* UIColorExtension.swift */; };
+		7ABDE8CA243C86F100B2F611 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABDE8C9243C86F100B2F611 /* CurrencyFormatter.swift */; };
 		BA644A5D243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */; };
 		BA644A5E243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -44,6 +46,8 @@
 		7AA495CC243783EE007692E4 /* EntertainmentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentRepository.swift; sourceTree = "<group>"; };
 		7AA495CE243786B6007692E4 /* ExpenseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseRepository.swift; sourceTree = "<group>"; };
 		7ABDE8C3243C67A400B2F611 /* EditExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditExpenseViewController.swift; sourceTree = "<group>"; };
+		7ABDE8C6243C7FE300B2F611 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		7ABDE8C9243C86F100B2F611 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,11 +92,7 @@
 				7AA49589243730F1007692E4 /* Info.plist */,
 				7AA49581243730F0007692E4 /* FuelLife.xcdatamodeld */,
 				7AA495D02437883C007692E4 /* Repositories */,
-				7A21F2612439C52900F01389 /* ExpenseHistoryViewController.swift */,
-				7A21F2632439C65C00F01389 /* ExpenseTableViewCell.swift */,
-				7A58E8FE243B8ED300D83986 /* AddExpenseViewController.swift */,
-				7A58E900243BA67100D83986 /* ExpenseDetailViewController.swift */,
-				7ABDE8C3243C67A400B2F611 /* EditExpenseViewController.swift */,
+				7ABDE8C8243C800000B2F611 /* Extension */,
 			);
 			path = FuelLife;
 			sourceTree = "<group>";
@@ -107,9 +107,30 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		7ABDE8C5243C7E4700B2F611 /* Expenses */ = {
+			isa = PBXGroup;
+			children = (
+				7A21F2612439C52900F01389 /* ExpenseHistoryViewController.swift */,
+				7ABDE8C3243C67A400B2F611 /* EditExpenseViewController.swift */,
+				7A58E900243BA67100D83986 /* ExpenseDetailViewController.swift */,
+				7A58E8FE243B8ED300D83986 /* AddExpenseViewController.swift */,
+			);
+			path = Expenses;
+			sourceTree = "<group>";
+		};
+		7ABDE8C8243C800000B2F611 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7ABDE8C6243C7FE300B2F611 /* UIColorExtension.swift */,
+				7ABDE8C9243C86F100B2F611 /* CurrencyFormatter.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		BA644A59243C2CF600AA3B4A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				7A21F2632439C65C00F01389 /* ExpenseTableViewCell.swift */,
 				BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */,
 				BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */,
 			);
@@ -127,6 +148,7 @@
 		BAD7319C2439016000E23E39 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7ABDE8C5243C7E4700B2F611 /* Expenses */,
 				7AA4957C243730F0007692E4 /* ViewController.swift */,
 			);
 			path = Controller;
@@ -205,8 +227,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AA4957D243730F0007692E4 /* ViewController.swift in Sources */,
+				7ABDE8C7243C7FE300B2F611 /* UIColorExtension.swift in Sources */,
 				7AA49583243730F0007692E4 /* FuelLife.xcdatamodeld in Sources */,
 				7AA49579243730F0007692E4 /* AppDelegate.swift in Sources */,
+				7ABDE8CA243C86F100B2F611 /* CurrencyFormatter.swift in Sources */,
 				7ABDE8C4243C67A400B2F611 /* EditExpenseViewController.swift in Sources */,
 				7A58E901243BA67100D83986 /* ExpenseDetailViewController.swift in Sources */,
 				7A21F2642439C65C00F01389 /* ExpenseTableViewCell.swift in Sources */,

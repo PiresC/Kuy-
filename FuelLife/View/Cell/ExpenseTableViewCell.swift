@@ -22,7 +22,6 @@ class ExpenseTableViewCell: UITableViewCell {
     }
     
     func update(){
-        colorTagView.backgroundColor = .red
         colorTagView.layer.cornerRadius = 20
         let dateFormat = expense.date!
         let dateFormatter = DateFormatter()
@@ -31,7 +30,8 @@ class ExpenseTableViewCell: UITableViewCell {
         
         title.text = expense.entertainment?.name
         date.text = dateString
-        price.text = "Rp. \(expense.price)"
+        price.text = CurrencyFormatter.format(Int(expense!.price))
+        colorTagView.backgroundColor = UIColor(hexString: expense.entertainment?.color ?? "#000000")
     }
 
 }
