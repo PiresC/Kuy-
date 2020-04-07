@@ -8,26 +8,6 @@
 
 import UIKit
 
-class RecommendationViewCell: UITableViewCell {
-    
-    @IBOutlet weak var recommendationCollectionView: UICollectionView!
-    
-    override func awakeFromNib() {
-//        let recommendationCollectionViewLayout = UICollectionViewFlowLayout();
-//        
-//        recommendationCollectionViewLayout.itemSize = CGSize(width: 120, height: 120)
-//        recommendationCollectionViewLayout.scrollDirection = .horizontal
-//        
-//        recommendationCollectionView.collectionViewLayout = recommendationCollectionViewLayout
-//        
-//        recommendationCollectionView.register(RecommendationCollectionViewCell.nib(), forCellWithReuseIdentifier: RecommendationCollectionViewCell.identifier)
-        
-        recommendationCollectionView.delegate = self
-        recommendationCollectionView.dataSource = self
-    }
-    
-}
-
 class ViewController: UIViewController {
 
     @IBOutlet weak var dashboardTableView: UITableView!
@@ -41,15 +21,15 @@ class ViewController: UIViewController {
     }
 }
 
+
+// MARK: Table View Extensions
+
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 5
     }
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        "Section ABC"
-//    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -83,7 +63,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         //        cell.imageView?.image = UIImage(named: category.categoryImage)
         //        recommendationCellLabel.text = recommendationLabel
         //          recommendationCellPrice?.text = recommendationPrice
-                //cell.recommen
+                
                 
                 return cell
     }
@@ -117,32 +97,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 
-extension RecommendationViewCell: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 170, height: 120)
-    }
-    
-}
 
-extension RecommendationViewCell: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("you tapped me")
-    }
-}
 
-extension RecommendationViewCell: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
-    }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommendationCollectionViewCell.identifier, for: indexPath) as! RecommendationCollectionViewCell
-        
-        cell.backgroundColor = #colorLiteral(red: 0.9725490196, green: 0.968627451, blue: 0.5960784314, alpha: 1) 
-
-        //cell.configure(recommendationLabel: "Movie", recommendationPrice: "$ 100")
-        return cell
-    }
-
-}
 
 

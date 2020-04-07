@@ -35,8 +35,8 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="404" height="215"/>
             <connections>
-                <outlet property="recommendationCellLabel" destination="cZD-Mo-AA0" id="LM9-1z-Yax"/>
-                <outlet property="recommendationCellPrice" destination="Mfj-4b-zA6" id="pNY-ux-bXO"/>
+                <outlet property="recommendationCollectionViewCellLabel" destination="cZD-Mo-AA0" id="LM9-1z-Yax"/>
+                <outlet property="recommendationCollectionViewCellPrice" destination="Mfj-4b-zA6" id="pNY-ux-bXO"/>
             </connections>
             <point key="canvasLocation" x="267" y="181"/>
         </collectionViewCell>

@@ -10,8 +10,8 @@ import UIKit
 
 class RecommendationCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet var recommendationCellLabel: UILabel!
-    @IBOutlet var recommendationCellPrice: UILabel?
+    @IBOutlet var recommendationCollectionViewCellLabel: UILabel!
+    @IBOutlet var recommendationCollectionViewCellPrice: UILabel?
 
     static let identifier = "RecommendationCollectionViewCell"
     
@@ -20,8 +20,8 @@ class RecommendationCollectionViewCell: UICollectionViewCell {
     }
     
     public func configure(recommendationLabel: String, recommendationPrice: String) {
-        recommendationCellLabel.text = recommendationLabel
-        recommendationCellPrice?.text = recommendationPrice
+        recommendationCollectionViewCellLabel.text = recommendationLabel
+        recommendationCollectionViewCellPrice?.text = recommendationPrice
     }
     
     static func nib() -> UINib {
