@@ -33,6 +33,8 @@ class ExpenseHistoryViewController: UIViewController, UITableViewDelegate, UITab
         period = PeriodRepository.getCurrentPeriod()
         periods = PeriodRepository.fetchPeriods()
         
+        PeriodRepository.updatePeriod(period: period!, startingBudget: 50000, currentBudget: 50000)
+        
         expenseTableView.dataSource = self
         expenseTableView.delegate = self
 

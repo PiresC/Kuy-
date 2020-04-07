@@ -52,24 +52,21 @@ class ExpenseRepository{
     }
     
     static func updateExpense(expense:Expense, newNote:String, newPrice:Int64, newDate:Date, newEntertainment:Entertainment){
-        let expenses = fetchExpenses()
-        if (expenses.filter { $0.date == newDate }.count == 1){
-            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-                return
-            }
-            let managedContext = appDelegate.persistentContainer.viewContext
-            
-            expense.note = newNote
-            expense.price = newPrice
-            expense.date = newDate
-            expense.entertainment = newEntertainment
-            
-            do {
-                try managedContext.save()
-            }
-            catch let error as NSError {
-                print(error)
-            }
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        expense.note = newNote
+        expense.price = newPrice
+        expense.date = newDate
+        expense.entertainment = newEntertainment
+        
+        do {
+            try managedContext.save()
+        }
+        catch let error as NSError {
+            print(error)
         }
     }
     

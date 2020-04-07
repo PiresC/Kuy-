@@ -127,6 +127,9 @@ class EditExpenseViewController: UIViewController, UIPickerViewDelegate, UIPicke
                 present(insufficientAlert, animated: true, completion: nil)
             }
         }
+        else{
+            print("kena")
+        }
     }
     
     @objc func onAddEntertainment(){
