@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecommendationCollectionViewCell" id="gTV-IL-0wX" customClass="RecommendationCollectionViewCell" customModule="FuelLife" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecommendationCollectionViewCell" id="gTV-IL-0wX" customClass="RecommendationCollectionViewCell" customModule="Kuy_" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="170" height="120"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -34,6 +34,10 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="404" height="215"/>
+            <connections>
+                <outlet property="recommendationCellLabel" destination="cZD-Mo-AA0" id="LM9-1z-Yax"/>
+                <outlet property="recommendationCellPrice" destination="Mfj-4b-zA6" id="pNY-ux-bXO"/>
+            </connections>
             <point key="canvasLocation" x="267" y="181"/>
         </collectionViewCell>
     </objects>
