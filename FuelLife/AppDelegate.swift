@@ -77,6 +77,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        print("kena")
+        _ = PeriodRepository.getCurrentPeriod()
+    }
 
 }
 

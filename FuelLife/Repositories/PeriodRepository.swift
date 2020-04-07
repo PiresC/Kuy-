@@ -21,7 +21,7 @@ class PeriodRepository{
         if let period = (data.filter { $0.month == month }.first){
             return period
         }
-        return nil
+        return createPeriod(month: month, currentBudget: 0, startingBudget: 0)
     }
     
     static func resetBudget(){

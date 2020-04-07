@@ -30,6 +30,9 @@ class ExpenseHistoryViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        period = PeriodRepository.getCurrentPeriod()
+        periods = PeriodRepository.fetchPeriods()
+        
         expenseTableView.dataSource = self
         expenseTableView.delegate = self
 
