@@ -19,7 +19,6 @@
 		7AA495CF243786B6007692E4 /* ExpenseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA495CE243786B6007692E4 /* ExpenseRepository.swift */; };
 		BA644A5D243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */; };
 		BA644A5E243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */; };
-		BA644A61243C3AA000AA3B4A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA644A60243C3AA000AA3B4A /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +36,6 @@
 		7AA495CE243786B6007692E4 /* ExpenseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseRepository.swift; sourceTree = "<group>"; };
 		BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCollectionViewCell.xib; sourceTree = "<group>"; };
-		BA644A60243C3AA000AA3B4A /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +68,6 @@
 		7AA49577243730F0007692E4 /* FuelLife */ = {
 			isa = PBXGroup;
 			children = (
-				BA644A5F243C3A5E00AA3B4A /* Extensions */,
 				BA644A5A243C2D0000AA3B4A /* View */,
 				7AA49578243730F0007692E4 /* AppDelegate.swift */,
 				7AA4957A243730F0007692E4 /* SceneDelegate.swift */,
@@ -110,14 +107,6 @@
 				BA644A59243C2CF600AA3B4A /* Cell */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		BA644A5F243C3A5E00AA3B4A /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				BA644A60243C3AA000AA3B4A /* UIColorExtension.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BAD7319C2439016000E23E39 /* Controller */ = {
@@ -205,7 +194,6 @@
 				7AA49579243730F0007692E4 /* AppDelegate.swift in Sources */,
 				7AA495CB24377A5A007692E4 /* PeriodRepository.swift in Sources */,
 				7AA495CD243783EE007692E4 /* EntertainmentRepository.swift in Sources */,
-				BA644A61243C3AA000AA3B4A /* UIColorExtension.swift in Sources */,
 				BA644A5D243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift in Sources */,
 				7AA4957B243730F0007692E4 /* SceneDelegate.swift in Sources */,
 				7AA495CF243786B6007692E4 /* ExpenseRepository.swift in Sources */,
