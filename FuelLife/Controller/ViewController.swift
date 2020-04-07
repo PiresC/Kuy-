@@ -50,7 +50,8 @@ extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommendationCollectionViewCell.identifier, for: indexPath) as! RecommendationCollectionViewCell
         
-        cell.backgroundColor = UIColor(hex: "#F8F798FF")
+        //cell.backgroundColor = UIColor(hex: "#F8F798FF")
+        cell.backgroundColor = #colorLiteral(red: 0.9725490196, green: 0.968627451, blue: 0.5960784314, alpha: 1)
 
         //cell.configure(recommendationLabel: "Movie", recommendationPrice: "$ 100")
         return cell
