@@ -78,6 +78,9 @@ class AddExpenseViewController: UIViewController, UIPickerViewDelegate, UIPicker
         }
         if let entertainment = self.entertainment{
             categoryTextField.text = entertainment.name
+            if amount == nil{
+                amountTextField.text = "\(entertainment.basePrice)"
+            }
         }
         else{
             saveButton.isEnabled = false
