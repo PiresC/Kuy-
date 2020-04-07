@@ -10,10 +10,10 @@ import UIKit
 
 class ExpenseTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var colorTagView: UIView!
     
     var expense:Expense!{
         didSet{
@@ -22,6 +22,8 @@ class ExpenseTableViewCell: UITableViewCell {
     }
     
     func update(){
+        colorTagView.backgroundColor = .red
+        colorTagView.layer.cornerRadius = 20
         let dateFormat = expense.date!
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE, MMM d yyyy"

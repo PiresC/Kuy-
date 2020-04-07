@@ -53,7 +53,7 @@ class ExpenseRepository{
     
     static func updateExpense(expense:Expense, newNote:String, newPrice:Int64, newDate:Date, newEntertainment:Entertainment){
         let expenses = fetchExpenses()
-        if (expenses.filter { $0.date == newDate }.count == 0){
+        if (expenses.filter { $0.date == newDate }.count == 1){
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
                 return
             }
