@@ -11,12 +11,12 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var dashboardTableView: UITableView!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
         dashboardTableView.delegate = self
-        dashboardTableView.dataSource = self        
+        dashboardTableView.dataSource = self
     }
     
 }
