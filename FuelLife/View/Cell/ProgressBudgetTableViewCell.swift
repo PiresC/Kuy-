@@ -10,8 +10,6 @@ import UIKit
 
 class ProgressBudgetTableViewCell: UITableViewCell {
     
-    
-    
 
     @IBOutlet weak var availableBudgetView: UIView!
     @IBOutlet weak var availableBudgetLabel: UILabel!
@@ -35,6 +33,7 @@ class ProgressBudgetTableViewCell: UITableViewCell {
         availableBudgetView.layer.shadowOpacity = 0.7
         availableBudgetView.layer.masksToBounds = false
         
+
         usedBudgetView.layer.cornerRadius = 10
         usedBudgetView.layer.borderWidth = 1.0
         usedBudgetView.layer.borderColor = UIColor.lightGray.cgColor
@@ -52,5 +51,5 @@ class ProgressBudgetTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }
