@@ -21,7 +21,7 @@ class PeriodRepository{
         if let period = (data.filter { $0.month == month }.first){
             return period
         }
-        return nil
+        return createPeriod(month: month, currentBudget: 0, startingBudget: 0)
     }
     
     static func resetBudget(){
@@ -95,6 +95,8 @@ class PeriodRepository{
         let managedContext = appDelegate.persistentContainer.viewContext
         
         let fetchRequest = NSFetchRequest<Period>(entityName: "Period")
+        let sort = NSSortDescriptor(key: #keyPath(Period.month), ascending: true)
+        fetchRequest.sortDescriptors = [sort]
         
         do {
             let periods = try managedContext.fetch(fetchRequest)
