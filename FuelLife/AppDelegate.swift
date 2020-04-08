@@ -16,6 +16,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        let entertainmentNama = ["Netflix", "Bioskop", "Makan Baso", "Makan Mie Ayam", "Coffee Shop"]
+        let entertainmentHarga = [50000,45000,20000,20000,50000]
+        let entertainmentColor = ["#32a852", "#000000", "#ff0000", "#3c00ff", "#fffb00"]
+        if (ExpenseRepository.fetchExpenses().count == 0 && EntertainmentRepository.fetchEntertainments().count == 0){
+            for i in 1...4{
+                let period = PeriodRepository.createPeriod(month: "0\(i)/2020", currentBudget: 1000000, startingBudget: 1000000)
+                for x in 0...4{
+                    let entertainment = EntertainmentRepository.createEntertainment(name: entertainmentNama[x], basePrice: Int64(entertainmentHarga[x]), color: entertainmentColor[x])
+                    if (x % i == 0){
+                        for _ in 1...5{
+                            _ = ExpenseRepository.createExpense(date: Date(), price: Int64(entertainmentHarga[x]), note: "Dummy Data", period: period!, entertainment: entertainment!)
+                        }
+                    }
+                }
+            }
+        }
+        _ = PeriodRepository.getCurrentPeriod()
+
         return true
     }
 
@@ -77,11 +96,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-    
-    func applicationDidFinishLaunching(_ application: UIApplication) {
-        print("kena")
-        _ = PeriodRepository.getCurrentPeriod()
-    }
-
 }
 
