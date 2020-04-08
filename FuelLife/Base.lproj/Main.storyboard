@@ -84,7 +84,7 @@
                                             <outlet property="recommendationCollectionView" destination="rd1-1O-AVY" id="H36-rP-RmT"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dashboardTableViewCell" rowHeight="211" id="ut1-Hd-xtB" userLabel="Dashboard View Cell" colorLabel="IBBuiltInLabel-Orange">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dashboardTableViewCell" rowHeight="211" id="ut1-Hd-xtB" userLabel="Dashboard View Cell" customClass="ProgressBudgetTableViewCell" customModule="Kuy_" customModuleProvider="target" colorLabel="IBBuiltInLabel-Orange">
                                         <rect key="frame" x="0.0" y="225" width="414" height="211"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ut1-Hd-xtB" id="XNK-ia-xX1">
@@ -124,7 +124,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" red="0.68076378110000002" green="0.78983575110000004" blue="0.4156090617" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KDc-fQ-O0T" userLabel="Used Budget View">
                                                                     <rect key="frame" x="204" y="7" width="182" height="128"/>
@@ -145,7 +145,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" red="0.68076378110000002" green="0.78983575110000004" blue="0.4156090617" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </view>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -160,6 +160,14 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="availableBudgetAmountLabel" destination="G00-jq-tx6" id="aO1-NK-X0c"/>
+                                            <outlet property="availableBudgetLabel" destination="xKC-ua-D1U" id="jaF-kA-ajc"/>
+                                            <outlet property="availableBudgetView" destination="zzx-fP-Lw5" id="stv-2P-JF7"/>
+                                            <outlet property="usedBudgetAmountLabel" destination="hya-i2-Ci3" id="eo2-Sf-wbG"/>
+                                            <outlet property="usedBudgetLabel" destination="pP1-rH-0Mz" id="O0V-cX-cYK"/>
+                                            <outlet property="usedBudgetView" destination="KDc-fQ-O0T" id="gkU-bq-nAo"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="budgetTableViewCell" rowHeight="285" id="u9b-nm-4DH" userLabel="Budget View Cell">
                                         <rect key="frame" x="0.0" y="436" width="414" height="285"/>

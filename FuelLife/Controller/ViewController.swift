@@ -63,9 +63,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         //        cell.imageView?.image = UIImage(named: category.categoryImage)
         //        recommendationCellLabel.text = recommendationLabel
         //          recommendationCellPrice?.text = recommendationPrice
-                
-            
-                return cell
+                            
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
