@@ -24,6 +24,8 @@
 		7ABDE8C4243C67A400B2F611 /* EditExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABDE8C3243C67A400B2F611 /* EditExpenseViewController.swift */; };
 		7ABDE8C7243C7FE300B2F611 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABDE8C6243C7FE300B2F611 /* UIColorExtension.swift */; };
 		7ABDE8CA243C86F100B2F611 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABDE8C9243C86F100B2F611 /* CurrencyFormatter.swift */; };
+		BA29EA16243D107500CAA028 /* RecommendationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29EA15243D107500CAA028 /* RecommendationTableViewCell.swift */; };
+		BA43174D243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */; };
 		BA644A5D243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */; };
 		BA644A5E243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -48,6 +50,8 @@
 		7ABDE8C3243C67A400B2F611 /* EditExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditExpenseViewController.swift; sourceTree = "<group>"; };
 		7ABDE8C6243C7FE300B2F611 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		7ABDE8C9243C86F100B2F611 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		BA29EA15243D107500CAA028 /* RecommendationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationTableViewCell.swift; sourceTree = "<group>"; };
+		BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBudgetTableViewCell.swift; sourceTree = "<group>"; };
 		BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +137,8 @@
 				7A21F2632439C65C00F01389 /* ExpenseTableViewCell.swift */,
 				BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */,
 				BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */,
+				BA29EA15243D107500CAA028 /* RecommendationTableViewCell.swift */,
+				BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -236,7 +242,9 @@
 				7A21F2642439C65C00F01389 /* ExpenseTableViewCell.swift in Sources */,
 				7AA495CB24377A5A007692E4 /* PeriodRepository.swift in Sources */,
 				7AA495CD243783EE007692E4 /* EntertainmentRepository.swift in Sources */,
+				BA29EA16243D107500CAA028 /* RecommendationTableViewCell.swift in Sources */,
 				BA644A5D243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift in Sources */,
+				BA43174D243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift in Sources */,
 				7AA4957B243730F0007692E4 /* SceneDelegate.swift in Sources */,
 				7A58E8FF243B8ED300D83986 /* AddExpenseViewController.swift in Sources */,
 				7A21F2622439C52900F01389 /* ExpenseHistoryViewController.swift in Sources */,
