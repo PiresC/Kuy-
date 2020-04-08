@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DashboardController: UIViewController {
 
     @IBOutlet weak var dashboardTableView: UITableView!
         
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 
 // MARK: Table View Extensions
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension DashboardController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 5
@@ -71,13 +71,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath.section {
         case 0:
-            return 197
+            return 183
         case 1:
-            return 211
+            return 167
         case 2:
             return 285
         case 3:
-            return 221
+            return 300
         case 4:
             return 324
         default:
