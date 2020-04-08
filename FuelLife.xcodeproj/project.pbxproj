@@ -28,6 +28,7 @@
 		BA43174D243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */; };
 		BA43174F243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43174E243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift */; };
 		BA4CC3AE243E19370040875D /* ExpenseDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4CC3AD243E19370040875D /* ExpenseDashboardTableViewCell.swift */; };
+		BA4CC3B0243E2D450040875D /* TopStoriesDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4CC3AF243E2D450040875D /* TopStoriesDashboardTableViewCell.swift */; };
 		BA644A5D243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */; };
 		BA644A5E243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBudgetTableViewCell.swift; sourceTree = "<group>"; };
 		BA43174E243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetChartTableViewCell.swift; sourceTree = "<group>"; };
 		BA4CC3AD243E19370040875D /* ExpenseDashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDashboardTableViewCell.swift; sourceTree = "<group>"; };
+		BA4CC3AF243E2D450040875D /* TopStoriesDashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesDashboardTableViewCell.swift; sourceTree = "<group>"; };
 		BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +145,7 @@
 				BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */,
 				BA43174E243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift */,
 				BA4CC3AD243E19370040875D /* ExpenseDashboardTableViewCell.swift */,
+				BA4CC3AF243E2D450040875D /* TopStoriesDashboardTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				7ABDE8CA243C86F100B2F611 /* CurrencyFormatter.swift in Sources */,
 				7ABDE8C4243C67A400B2F611 /* EditExpenseViewController.swift in Sources */,
 				7A58E901243BA67100D83986 /* ExpenseDetailViewController.swift in Sources */,
+				BA4CC3B0243E2D450040875D /* TopStoriesDashboardTableViewCell.swift in Sources */,
 				7A21F2642439C65C00F01389 /* ExpenseTableViewCell.swift in Sources */,
 				7AA495CB24377A5A007692E4 /* PeriodRepository.swift in Sources */,
 				7AA495CD243783EE007692E4 /* EntertainmentRepository.swift in Sources */,

@@ -31,7 +31,25 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        
+        var numberOfRows: Int
+
+        switch section {
+        case 0:
+            numberOfRows = 1
+        case 1:
+            numberOfRows = 1
+        case 2:
+            numberOfRows = 1
+        case 3:
+            numberOfRows = 1
+        case 4:
+            numberOfRows = 4
+        default:
+            numberOfRows = 1
+        }
+        
+        return numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,20 +89,66 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath.section {
         case 0:
-            return 183
+            return 135
         case 1:
-            return 167
+            return 127
         case 2:
             return 285
         case 3:
             return 300
         case 4:
-            return 324
-        default:
             return 300
+        default:
+            return 250
         }
         
     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        switch section {
+
+            case 0, 1, 4:
+                return 38
+            default:
+                return 0
+        }
+    }
+    
+func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    
+    var headerTitle: String
+    
+    switch section {
+    case 0:
+        headerTitle = "Recommendation"
+    case 1:
+        headerTitle = "Dashboard"
+    case 4:
+        headerTitle = "Top Stories"
+    default:
+        return nil
+    }
+    
+    return headerTitle
+}
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let myLabel = UILabel()
+        
+        myLabel.frame = CGRect(x: 11, y: 8, width: 320, height: 30)
+        
+        
+        myLabel.font = UIFont(name: "HelveticaNeue-Bold", size:  22.0)
+        
+        myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
+        
+        let headerView = UIView()
+        headerView.addSubview(myLabel)
+           
+        return headerView
+    }
+    
+   
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        let category = categories[indexPath.row]
