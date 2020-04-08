@@ -64,7 +64,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         //        recommendationCellLabel.text = recommendationLabel
         //          recommendationCellPrice?.text = recommendationPrice
                 
-                
+            
                 return cell
     }
     
@@ -72,7 +72,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath.section {
         case 0:
-            return 186
+            return 197
         case 1:
             return 211
         case 2:
@@ -86,7 +86,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
     }
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        let category = categories[indexPath.row]

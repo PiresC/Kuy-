@@ -20,11 +20,11 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="recommendationTableViewCell" rowHeight="186" id="tI3-Om-3Oo" userLabel="Recommendation View Cell" customClass="RecommendationTableViewCell" customModule="Kuy_" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="186"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="recommendationTableViewCell" rowHeight="197" id="tI3-Om-3Oo" userLabel="Recommendation View Cell" customClass="RecommendationTableViewCell" customModule="Kuy_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="197"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tI3-Om-3Oo" id="7Hm-ic-vA4">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="186"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="197"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recommendation" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gX7-20-Tv1">
@@ -85,7 +85,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dashboardTableViewCell" rowHeight="211" id="ut1-Hd-xtB" userLabel="Dashboard View Cell" colorLabel="IBBuiltInLabel-Orange">
-                                        <rect key="frame" x="0.0" y="214" width="414" height="211"/>
+                                        <rect key="frame" x="0.0" y="225" width="414" height="211"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ut1-Hd-xtB" id="XNK-ia-xX1">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="211"/>
@@ -95,23 +95,29 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="555"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cBW-9g-PjL">
-                                                            <rect key="frame" x="12" y="42" width="394" height="143"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Si3-Gs-RRh" userLabel="Dashboard Label">
+                                                            <rect key="frame" x="11" y="8" width="403" height="30"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cBW-9g-PjL" userLabel="Dashboard View">
+                                                            <rect key="frame" x="11" y="42" width="392" height="143"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <subviews>
-                                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zzx-fP-Lw5">
+                                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zzx-fP-Lw5" userLabel="Available Budget View">
                                                                     <rect key="frame" x="0.0" y="8" width="182" height="128"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Available" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKC-ua-D1U">
-                                                                            <rect key="frame" x="15" y="17" width="78" height="22"/>
+                                                                            <rect key="frame" x="15" y="15" width="77.5" height="21.5"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rp. 120.000,-" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G00-jq-tx6">
-                                                                            <rect key="frame" x="40" y="68" width="111" height="21"/>
+                                                                            <rect key="frame" x="40" y="65.5" width="111" height="21"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                                             <nil key="textColor"/>
@@ -120,19 +126,19 @@
                                                                     </subviews>
                                                                     <color key="backgroundColor" red="0.68076378110000002" green="0.78983575110000004" blue="0.4156090617" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </view>
-                                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KDc-fQ-O0T">
+                                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KDc-fQ-O0T" userLabel="Used Budget View">
                                                                     <rect key="frame" x="204" y="7" width="182" height="128"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rp. 120.000,-" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hya-i2-Ci3">
-                                                                            <rect key="frame" x="40" y="68.5" width="111" height="21"/>
+                                                                            <rect key="frame" x="40" y="62.5" width="111" height="21"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Used" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pP1-rH-0Mz">
-                                                                            <rect key="frame" x="15" y="17" width="44.5" height="21.5"/>
+                                                                            <rect key="frame" x="15" y="15" width="44.5" height="21.5"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                                                             <nil key="textColor"/>
@@ -144,21 +150,19 @@
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dashboard" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Si3-Gs-RRh">
-                                                            <rect key="frame" x="12" y="8" width="131" height="30"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="Si3-Gs-RRh" secondAttribute="trailing" id="dig-hv-jVu"/>
+                                                        <constraint firstItem="Si3-Gs-RRh" firstAttribute="top" secondItem="K0a-Pz-jTa" secondAttribute="top" constant="8" id="fSe-i5-hhY"/>
+                                                        <constraint firstItem="Si3-Gs-RRh" firstAttribute="leading" secondItem="K0a-Pz-jTa" secondAttribute="leading" constant="11" id="vLW-nO-62Z"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="budgetTableViewCell" rowHeight="285" id="u9b-nm-4DH" userLabel="Budget View Cell">
-                                        <rect key="frame" x="0.0" y="425" width="414" height="285"/>
+                                        <rect key="frame" x="0.0" y="436" width="414" height="285"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u9b-nm-4DH" id="wf0-ns-dUD">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="285"/>
@@ -203,7 +207,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="expenseTableViewCell" rowHeight="249" id="AbT-31-SeE" userLabel="Expense View Cell">
-                                        <rect key="frame" x="0.0" y="710" width="414" height="249"/>
+                                        <rect key="frame" x="0.0" y="721" width="414" height="249"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AbT-31-SeE" id="esP-15-CUB">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="249"/>
@@ -248,11 +252,31 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="topStoriesTableViewCell" rowHeight="324" id="NaV-uG-05r" userLabel="Top Stories View Cell">
-                                        <rect key="frame" x="0.0" y="959" width="414" height="324"/>
+                                        <rect key="frame" x="0.0" y="970" width="414" height="324"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NaV-uG-05r" id="YKt-k7-eMG">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="324"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="9Fa-TZ-JdR">
+                                                    <rect key="frame" x="0.0" y="40" width="414" height="243"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Top Stories" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rax-tp-EVb">
+                                                            <rect key="frame" x="21" y="-10" width="135" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ybb-d2-Usa">
+                                                            <rect key="frame" x="21" y="28" width="375" height="128"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </view>
+                                                    </subviews>
+                                                </view>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
