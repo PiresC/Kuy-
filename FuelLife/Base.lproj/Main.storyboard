@@ -169,7 +169,7 @@
                                             <outlet property="usedBudgetView" destination="KDc-fQ-O0T" id="gkU-bq-nAo"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="budgetTableViewCell" rowHeight="285" id="u9b-nm-4DH" userLabel="Budget View Cell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="budgetTableViewCell" rowHeight="285" id="u9b-nm-4DH" userLabel="Budget View Cell" customClass="BudgetChartTableViewCell" customModule="Kuy_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="436" width="414" height="285"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u9b-nm-4DH" id="wf0-ns-dUD">
@@ -213,6 +213,9 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="budgetChartView" destination="FUd-HI-ewN" id="uex-KB-lLU"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="expenseTableViewCell" rowHeight="249" id="AbT-31-SeE" userLabel="Expense View Cell">
                                         <rect key="frame" x="0.0" y="721" width="414" height="249"/>

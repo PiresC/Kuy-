@@ -10,9 +10,6 @@ import UIKit
 
 class ProgressBudgetTableViewCell: UITableViewCell {
     
-    
-    
-
     @IBOutlet weak var availableBudgetView: UIView!
     @IBOutlet weak var availableBudgetLabel: UILabel!
     @IBOutlet weak var availableBudgetAmountLabel: UILabel!
