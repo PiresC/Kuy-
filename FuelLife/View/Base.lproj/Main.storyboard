@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EJv-SA-Cm4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EJv-SA-Cm4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -151,8 +151,13 @@
                                             <outlet property="usedBudgetView" destination="KDc-fQ-O0T" id="gkU-bq-nAo"/>
                                         </connections>
                                     </tableViewCell>
+<<<<<<< HEAD:FuelLife/Base.lproj/Main.storyboard
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="budgetTableViewCell" rowHeight="285" id="u9b-nm-4DH" userLabel="Budget View Cell" customClass="BudgetTableViewCell" customModule="Kuy_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="436" width="414" height="285"/>
+=======
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="budgetTableViewCell" rowHeight="285" id="u9b-nm-4DH" userLabel="Budget View Cell" customClass="BudgetChartTableViewCell" customModule="Kuy_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="347.5" width="414" height="285"/>
+>>>>>>> 4467638e640fdd3f5786503deea4b23dec8bb3f0:FuelLife/View/Base.lproj/Main.storyboard
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u9b-nm-4DH" id="wf0-ns-dUD">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="285"/>
@@ -162,15 +167,15 @@
                                                     <rect key="frame" x="10" y="11" width="394" height="263"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UCz-m7-mjp">
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UCz-m7-mjp" customClass="ChartImageView" customModule="Kuy_" customModuleProvider="target">
                                                             <rect key="frame" x="8" y="57" width="190" height="128"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
-                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3rP-LA-XOv">
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3rP-LA-XOv" customClass="BudgetTableViewCell" customModule="Kuy_" customModuleProvider="target">
                                                             <rect key="frame" x="206" y="57" width="180" height="128"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Budget" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXP-Vw-4oG">
                                                             <rect key="frame" x="11" y="14" width="63" height="22"/>
@@ -190,9 +195,15 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+<<<<<<< HEAD:FuelLife/Base.lproj/Main.storyboard
+                                        <connections>
+                                            <outlet property="budgetLabelView" destination="3rP-LA-XOv" id="cfG-Oa-8h0"/>
+                                            <outlet property="labelViewBudget" destination="3rP-LA-XOv" id="Iw4-N0-0xT"/>
+=======
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="budgetChartView" destination="FUd-HI-ewN" id="uex-KB-lLU"/>
+>>>>>>> 4467638e640fdd3f5786503deea4b23dec8bb3f0:FuelLife/View/Base.lproj/Main.storyboard
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="expenseTableViewCell" rowHeight="300" id="AbT-31-SeE" userLabel="Expense View Cell" customClass="ExpenseDashboardTableViewCell" customModule="Kuy_" customModuleProvider="target">
@@ -812,19 +823,24 @@
             <point key="canvasLocation" x="160.86956521739131" y="137.94642857142856"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Kuy" width="746" height="329"/>
-        <image name="calendar" catalog="system" width="64" height="52"/>
-        <image name="chevron.left" catalog="system" width="48" height="64"/>
-        <image name="chevron.right" catalog="system" width="48" height="64"/>
-        <image name="folder" catalog="system" width="64" height="46"/>
-        <image name="gear" catalog="system" width="64" height="58"/>
-        <image name="idr-tag" width="80" height="80"/>
-        <image name="plus" catalog="system" width="64" height="56"/>
-        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
-        <image name="travel" width="7952" height="5622"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="iKS-Ef-Er3"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="Kuy" width="746" height="329"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="folder" catalog="system" width="128" height="95"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="idr-tag" width="80" height="80"/>
+<<<<<<< HEAD:FuelLife/Base.lproj/Main.storyboard
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+=======
+        <image name="plus" catalog="system" width="64" height="56"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+        <image name="travel" width="7952" height="5622"/>
+>>>>>>> 4467638e640fdd3f5786503deea4b23dec8bb3f0:FuelLife/View/Base.lproj/Main.storyboard
+    </resources>
 </document>
