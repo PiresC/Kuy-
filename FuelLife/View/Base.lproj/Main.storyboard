@@ -151,13 +151,8 @@
                                             <outlet property="usedBudgetView" destination="KDc-fQ-O0T" id="gkU-bq-nAo"/>
                                         </connections>
                                     </tableViewCell>
-<<<<<<< HEAD:FuelLife/Base.lproj/Main.storyboard
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="budgetTableViewCell" rowHeight="285" id="u9b-nm-4DH" userLabel="Budget View Cell" customClass="BudgetTableViewCell" customModule="Kuy_" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="436" width="414" height="285"/>
-=======
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="budgetTableViewCell" rowHeight="285" id="u9b-nm-4DH" userLabel="Budget View Cell" customClass="BudgetChartTableViewCell" customModule="Kuy_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="347.5" width="414" height="285"/>
->>>>>>> 4467638e640fdd3f5786503deea4b23dec8bb3f0:FuelLife/View/Base.lproj/Main.storyboard
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u9b-nm-4DH" id="wf0-ns-dUD">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="285"/>
@@ -195,15 +190,10 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
-<<<<<<< HEAD:FuelLife/Base.lproj/Main.storyboard
-                                        <connections>
-                                            <outlet property="budgetLabelView" destination="3rP-LA-XOv" id="cfG-Oa-8h0"/>
-                                            <outlet property="labelViewBudget" destination="3rP-LA-XOv" id="Iw4-N0-0xT"/>
-=======
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="budgetChartView" destination="FUd-HI-ewN" id="uex-KB-lLU"/>
->>>>>>> 4467638e640fdd3f5786503deea4b23dec8bb3f0:FuelLife/View/Base.lproj/Main.storyboard
+                                            <outlet property="budgetLabelView" destination="3rP-LA-XOv" id="IK3-MF-DC5"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="expenseTableViewCell" rowHeight="300" id="AbT-31-SeE" userLabel="Expense View Cell" customClass="ExpenseDashboardTableViewCell" customModule="Kuy_" customModuleProvider="target">
@@ -837,13 +827,8 @@
         <image name="folder" catalog="system" width="128" height="95"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="idr-tag" width="80" height="80"/>
-<<<<<<< HEAD:FuelLife/Base.lproj/Main.storyboard
-        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-=======
-        <image name="plus" catalog="system" width="64" height="56"/>
-        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="travel" width="7952" height="5622"/>
->>>>>>> 4467638e640fdd3f5786503deea4b23dec8bb3f0:FuelLife/View/Base.lproj/Main.storyboard
     </resources>
 </document>

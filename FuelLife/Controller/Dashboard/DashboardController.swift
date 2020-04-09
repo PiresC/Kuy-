@@ -17,10 +17,7 @@ class DashboardController: UIViewController {
         
         dashboardTableView.delegate = self
         dashboardTableView.dataSource = self
-<<<<<<< HEAD:FuelLife/Controller/ViewController.swift
 
-=======
->>>>>>> 4467638e640fdd3f5786503deea4b23dec8bb3f0:FuelLife/Controller/Dashboard/DashboardController.swift
     }
     
 }
