@@ -91,14 +91,9 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
           
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         
-                //let category = categories[indexPath.row]
-                
-                //cell.textLabel?.text = "Section \(indexPath.section) Row \(indexPath.row)"
-        //        cell.textLabel?.text = category.categoryName
-        //        cell.detailTextLabel?.text = category.categoryDescription
-        //        cell.imageView?.image = UIImage(named: category.categoryImage)
-        //        recommendationCellLabel.text = recommendationLabel
-        //          recommendationCellPrice?.text = recommendationPrice
+        if let c = cell as? LastExpensesTableViewCell{
+            c.dashboardView = self
+        }
                             
         return cell
     }
