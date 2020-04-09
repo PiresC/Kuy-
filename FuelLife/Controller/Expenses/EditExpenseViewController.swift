@@ -133,7 +133,7 @@ class EditExpenseViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     @objc func onAddEntertainment(){
-        view.endEditing(true)
+        performSegue(withIdentifier: "addEntertainmentFromEditExpense", sender: self)
     }
     
     @objc func onChangeEntertainment() {

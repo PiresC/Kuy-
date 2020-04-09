@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A210A4A243DE304002107B7 /* AddEntertainmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A210A49243DE304002107B7 /* AddEntertainmentViewController.swift */; };
 		7A21F2622439C52900F01389 /* ExpenseHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21F2612439C52900F01389 /* ExpenseHistoryViewController.swift */; };
 		7A21F2642439C65C00F01389 /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21F2632439C65C00F01389 /* ExpenseTableViewCell.swift */; };
 		7A58E8FF243B8ED300D83986 /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A58E8FE243B8ED300D83986 /* AddExpenseViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A210A49243DE304002107B7 /* AddEntertainmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntertainmentViewController.swift; sourceTree = "<group>"; };
 		7A21F2612439C52900F01389 /* ExpenseHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseHistoryViewController.swift; sourceTree = "<group>"; };
 		7A21F2632439C65C00F01389 /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
 		7A58E8FE243B8ED300D83986 /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		BAD7319C2439016000E23E39 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7A210A49243DE304002107B7 /* AddEntertainmentViewController.swift */,
 				7ABDE8C5243C7E4700B2F611 /* Expenses */,
 				7AA4957C243730F0007692E4 /* ViewController.swift */,
 			);
@@ -235,6 +238,7 @@
 				7AA4957D243730F0007692E4 /* ViewController.swift in Sources */,
 				7ABDE8C7243C7FE300B2F611 /* UIColorExtension.swift in Sources */,
 				7AA49583243730F0007692E4 /* FuelLife.xcdatamodeld in Sources */,
+				7A210A4A243DE304002107B7 /* AddEntertainmentViewController.swift in Sources */,
 				7AA49579243730F0007692E4 /* AppDelegate.swift in Sources */,
 				7ABDE8CA243C86F100B2F611 /* CurrencyFormatter.swift in Sources */,
 				7ABDE8C4243C67A400B2F611 /* EditExpenseViewController.swift in Sources */,
