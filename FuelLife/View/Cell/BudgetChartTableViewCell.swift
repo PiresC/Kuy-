@@ -11,7 +11,7 @@ import UIKit
 class BudgetChartTableViewCell: UITableViewCell {
 
     @IBOutlet weak var budgetChartView: UIView!
-    @IBOutlet weak var budgetLabelView: BudgetTableViewCell!
+    @IBOutlet weak var budgetLabelView: BudgetChartTableViewCell!
     
     
     var strokeColor: [CGColor] = []
@@ -37,15 +37,15 @@ class BudgetChartTableViewCell: UITableViewCell {
         setChart(frame: frames, text: persentase, strokeColor: strokeColor[0], strokeStart: 0.0, strokeEnd: 0.2)
         setChart(frame: frames, text: persentase, strokeColor: strokeColor[1], strokeStart: 0.2, strokeEnd: 0.8)
         
-        budgetChartView.layer.cornerRadius = 10
-        budgetChartView.layer.borderWidth = 0.4
-        budgetChartView.layer.borderColor = UIColor.lightGray.cgColor
+        budgetChartView?.layer.cornerRadius = 10
+        budgetChartView?.layer.borderWidth = 0.4
+        budgetChartView?.layer.borderColor = UIColor.lightGray.cgColor
         
-        budgetChartView.layer.shadowColor = UIColor.gray.cgColor
-        budgetChartView.layer.shadowOffset = CGSize(width: 2.0, height: 3.0)
-        budgetChartView.layer.shadowRadius = 2.0
-        budgetChartView.layer.shadowOpacity = 0.7
-        budgetChartView.layer.masksToBounds = false
+        budgetChartView?.layer.shadowColor = UIColor.gray.cgColor
+        budgetChartView?.layer.shadowOffset = CGSize(width: 2.0, height: 3.0)
+        budgetChartView?.layer.shadowRadius = 2.0
+        budgetChartView?.layer.shadowOpacity = 0.7
+        budgetChartView?.layer.masksToBounds = false
         
         arrText.append("a")
         arrText.append("b")

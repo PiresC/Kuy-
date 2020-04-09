@@ -167,7 +167,7 @@
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
-                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3rP-LA-XOv" customClass="BudgetTableViewCell" customModule="Kuy_" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3rP-LA-XOv" customClass="BudgetChartTableViewCell" customModule="Kuy_" customModuleProvider="target">
                                                             <rect key="frame" x="206" y="57" width="180" height="128"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -193,7 +193,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="budgetChartView" destination="FUd-HI-ewN" id="uex-KB-lLU"/>
-                                            <outlet property="budgetLabelView" destination="3rP-LA-XOv" id="IK3-MF-DC5"/>
+                                            <outlet property="budgetLabelView" destination="3rP-LA-XOv" id="Hob-Qj-K9Q"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="expenseTableViewCell" rowHeight="300" id="AbT-31-SeE" userLabel="Expense View Cell" customClass="ExpenseDashboardTableViewCell" customModule="Kuy_" customModuleProvider="target">
