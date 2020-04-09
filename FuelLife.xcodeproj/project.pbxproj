@@ -147,13 +147,10 @@
 				BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */,
 				BA29EA15243D107500CAA028 /* RecommendationTableViewCell.swift */,
 				BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */,
-<<<<<<< HEAD
 				F0C4381E243DEA1800EADFFA /* BudgetTableViewCell.swift */,
-=======
 				BA43174E243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift */,
 				BA4CC3AD243E19370040875D /* ExpenseDashboardTableViewCell.swift */,
 				BA4CC3AF243E2D450040875D /* TopStoriesDashboardTableViewCell.swift */,
->>>>>>> 4467638e640fdd3f5786503deea4b23dec8bb3f0
 			);
 			path = Cell;
 			sourceTree = "<group>";
