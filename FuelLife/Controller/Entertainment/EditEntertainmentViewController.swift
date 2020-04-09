@@ -1,22 +1,21 @@
 //
-//  AddEntertainmentViewController.swift
+//  EditEntertainmentViewController.swift
 //  FuelLife
 //
-//  Created by Wikan Setiaji on 08/04/20.
+//  Created by Wikan Setiaji on 09/04/20.
 //  Copyright © 2020 Team 10. All rights reserved.
 //
 
 import UIKit
 
-class AddEntertainmentViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+class EditEntertainmentViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var nameLabel: UITextField!
     @IBOutlet weak var priceLabel: UITextField!
     @IBOutlet weak var selectedColorLabel: UIView!
     @IBOutlet weak var colorLabel: UITextField!
     
-    var addExpenseViewController:AddExpenseViewController?
-    var editExpenseViewController:EditExpenseViewController?
+    var entertainment:Entertainment?
     
     var colors = ["#FF0028", "#a4cf00", "#ff00ff", "#f2d53c", "#ffc0cb","#ffa500", "#d2b48c", "#c0c0c0"]
     var selectedColor:String?
@@ -29,6 +28,13 @@ class AddEntertainmentViewController: UIViewController, UIPickerViewDelegate, UI
         picker.dataSource = self
         
         selectedColorLabel.layer.cornerRadius = 10
+        
+        if let e = entertainment{
+            selectedColor = e.color
+            priceLabel.text = "\(e.basePrice)"
+            nameLabel.text = e.name
+            updateView()
+        }
         
         let toolBar = UIToolbar(frame: CGRect(x: 0, y: 200, width: view.frame.width, height: 300))
         toolBar.sizeToFit()
@@ -76,13 +82,7 @@ class AddEntertainmentViewController: UIViewController, UIPickerViewDelegate, UI
     
     @IBAction func saveButtonClick(_ sender: Any) {
         dismiss(animated: true){
-            _ = EntertainmentRepository.createEntertainment(name: self.nameLabel.text!, basePrice: Int64(self.priceLabel.text!)!, color: self.selectedColor!)
-            if let vc = self.addExpenseViewController{
-                vc.updateView()
-            }
-            else if let vc = self.editExpenseViewController{
-                vc.updateView()
-            }
+            _ = EntertainmentRepository.updateEntertainment(entertainment: self.entertainment!, newName: self.nameLabel.text!, newBasePrice: Int64(self.priceLabel.text!)!, newColor: self.selectedColor!)
         }
     }
 
@@ -119,5 +119,4 @@ class AddEntertainmentViewController: UIViewController, UIPickerViewDelegate, UI
         
         return parentView
     }
-    
 }
