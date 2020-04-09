@@ -75,17 +75,18 @@ class AddExpenseViewController: UIViewController, UIPickerViewDelegate, UIPicker
         entertainments = entertainments.reversed()
         picker.reloadAllComponents()
         
-        if let amount = self.amount{
-            amountTextField.text = "\(amount)"
-        }
-        else{
-            saveButton.isEnabled = false
-        }
         if let entertainment = self.entertainment{
             categoryTextField.text = entertainment.name
             if amount == nil{
                 amountTextField.text = "\(entertainment.basePrice)"
+                amount = Int(entertainment.basePrice)
             }
+        }
+        else{
+            saveButton.isEnabled = false
+        }
+        if let amount = self.amount{
+            amountTextField.text = "\(amount)"
         }
         else{
             saveButton.isEnabled = false
