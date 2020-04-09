@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EJv-SA-Cm4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gvw-WR-HSU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -843,6 +843,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCJ-J4-GDw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2677" y="890"/>
+        </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="NKb-SD-W4z">
+            <objects>
+                <viewController id="Gvw-WR-HSU" customClass="OnboardingViewController" customModule="Kuy_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D1b-o8-NYy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oFa-y0-vnb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="648"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="gAf-NL-fC0"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="zKW-1p-Ib3"/>
+                            </scrollView>
+                            <pageControl contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="bZ5-J9-heu">
+                                <rect key="frame" x="20" y="814" width="374" height="40"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="EzQ-Jd-S3S"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="pageChanged:" destination="Gvw-WR-HSU" eventType="valueChanged" id="Wee-aN-G3C"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mW9-Ck-BkR" firstAttribute="bottom" secondItem="bZ5-J9-heu" secondAttribute="bottom" constant="8" id="9rD-7J-mrm"/>
+                            <constraint firstItem="bZ5-J9-heu" firstAttribute="leading" secondItem="mW9-Ck-BkR" secondAttribute="leading" constant="20" id="EMo-dV-J1b"/>
+                            <constraint firstItem="mW9-Ck-BkR" firstAttribute="trailing" secondItem="bZ5-J9-heu" secondAttribute="trailing" constant="20" id="X6e-c2-ywi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mW9-Ck-BkR"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="bZ5-J9-heu" id="Fqp-OI-BaZ"/>
+                        <outlet property="scrollView" destination="oFa-y0-vnb" id="mLe-zh-03k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s79-Fi-EOb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-930.43478260869574" y="-587.27678571428567"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rIb-e8-AQt">
