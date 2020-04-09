@@ -180,10 +180,12 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naz-R0-G3J">
-                                                            <rect key="frame" x="300" y="193" width="86" height="36"/>
+                                                            <rect key="frame" x="288" y="193" width="86" height="36"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                            <state key="normal" title="See detail"/>
+                                                            <state key="normal" title="See detail">
+                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -196,15 +198,15 @@
                                             <outlet property="budgetLabelView" destination="3rP-LA-XOv" id="Hob-Qj-K9Q"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="expenseTableViewCell" rowHeight="300" id="AbT-31-SeE" userLabel="Expense View Cell" customClass="ExpenseDashboardTableViewCell" customModule="Kuy_" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="632.5" width="414" height="300"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="expenseTableViewCell" rowHeight="410" id="AbT-31-SeE" userLabel="Expense View Cell" customClass="LastExpensesTableViewCell" customModule="Kuy_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="632.5" width="414" height="410"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AbT-31-SeE" id="esP-15-CUB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="410"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wcg-he-EDn" userLabel="Expense View">
-                                                    <rect key="frame" x="10" y="11" width="394" height="263"/>
+                                                    <rect key="frame" x="10" y="0.0" width="394" height="420"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B5y-F7-rva">
@@ -224,17 +226,60 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1q-JZ-IMQ">
-                                                            <rect key="frame" x="300" y="204" width="86" height="36"/>
+                                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CLu-Cd-0r1">
+                                                            <rect key="frame" x="0.0" y="44" width="394" height="360"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                            <state key="normal" title="See detail"/>
-                                                            <connections>
-                                                                <segue destination="9JQ-15-MTd" kind="show" id="BD6-ac-v5Q"/>
-                                                            </connections>
-                                                        </button>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <prototypes>
+                                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="lastExpensesTableViewCell" rowHeight="61" id="RsV-BY-zAC" userLabel="Expense Dashboard Table View Cell" customClass="ExpenseTableViewCell" customModule="Kuy_" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="28" width="394" height="61"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RsV-BY-zAC" id="t0k-li-6yo">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="61"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20 Mar 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uf3-OM-OrF">
+                                                                                <rect key="frame" x="66" y="31" width="154" height="21"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                                                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Movie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ab-Dy-ghD">
+                                                                                <rect key="frame" x="66" y="9" width="154" height="21"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rp.150.000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6j-EH-fr8">
+                                                                                <rect key="frame" x="212" y="9" width="163" height="21"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fef-I0-j9F">
+                                                                                <rect key="frame" x="10" y="11" width="40" height="40"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                            </view>
+                                                                        </subviews>
+                                                                    </tableViewCellContentView>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <connections>
+                                                                        <outlet property="colorTagView" destination="fef-I0-j9F" id="8D1-3P-VTX"/>
+                                                                        <outlet property="date" destination="uf3-OM-OrF" id="XNK-p3-Iuc"/>
+                                                                        <outlet property="price" destination="K6j-EH-fr8" id="QYk-fw-8U7"/>
+                                                                        <outlet property="title" destination="5ab-Dy-ghD" id="ldh-3w-jGj"/>
+                                                                    </connections>
+                                                                </tableViewCell>
+                                                            </prototypes>
+                                                        </tableView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -242,10 +287,11 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="expenseView" destination="wcg-he-EDn" id="26H-7s-n0S"/>
+                                            <outlet property="lastExpenseTableView" destination="CLu-Cd-0r1" id="Lft-Ax-rxS"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="topStoriesTableViewCell" rowHeight="324" id="NaV-uG-05r" userLabel="Top Stories View Cell" customClass="TopStoriesDashboardTableViewCell" customModule="Kuy_" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="932.5" width="414" height="324"/>
+                                        <rect key="frame" x="0.0" y="1042.5" width="414" height="324"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NaV-uG-05r" id="YKt-k7-eMG">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="324"/>
@@ -277,6 +323,7 @@
                                                             <rect key="frame" x="359" y="231" width="27" height="31"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                             <state key="normal" title="Button" image="square.and.arrow.up" catalog="system">
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                             </state>
