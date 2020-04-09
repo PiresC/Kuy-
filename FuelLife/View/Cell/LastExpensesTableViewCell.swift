@@ -13,6 +13,8 @@ class LastExpensesTableViewCell: UITableViewCell {
     @IBOutlet weak var expenseView: UIView!
     @IBOutlet weak var lastExpenseTableView: UITableView!
     
+    var dashboardView: DashboardController?
+    
     var expenses:[Expense] = []{
         didSet{
             expenses = ExpenseRepository.fetchExpenses()
@@ -43,6 +45,11 @@ class LastExpensesTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func seeDetailButtonClick(_ sender: Any) {
+        if let dashboard = dashboardView{
+            dashboard.performSegue(withIdentifier: "expenseHistory", sender: dashboard)
+        }
+    }
 }
 
 extension LastExpensesTableViewCell: UITableViewDelegate, UITableViewDataSource {

@@ -186,6 +186,9 @@
                                                             <state key="normal" title="See detail">
                                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="seeDetailButtonClick:" destination="mi6-yc-85m" eventType="touchUpInside" id="hJz-mY-ccX"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -244,7 +247,7 @@
                                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         </state>
                                                                         <connections>
-                                                                            <segue destination="9JQ-15-MTd" kind="show" id="IL5-hL-VGk"/>
+                                                                            <action selector="seeDetailButtonClick:" destination="AbT-31-SeE" eventType="touchUpInside" id="Zls-7i-drc"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -376,9 +379,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="dashboardTableView" destination="myf-oE-nQ6" id="WIp-M0-osh"/>
+                        <segue destination="9JQ-15-MTd" kind="show" identifier="expenseHistory" id="sck-cb-HyY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="mi6-yc-85m" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1071.0144927536232" y="137.94642857142856"/>
         </scene>
