@@ -10,9 +10,6 @@ import UIKit
 
 class ProgressBudgetTableViewCell: UITableViewCell {
     
-    
-    
-
     @IBOutlet weak var availableBudgetView: UIView!
     @IBOutlet weak var availableBudgetLabel: UILabel!
     @IBOutlet weak var availableBudgetAmountLabel: UILabel!
@@ -28,7 +25,7 @@ class ProgressBudgetTableViewCell: UITableViewCell {
         availableBudgetView.layer.cornerRadius = 10
         availableBudgetView.layer.borderWidth = 1.0
         availableBudgetView.layer.borderColor = UIColor.lightGray.cgColor
-        
+
         availableBudgetView.layer.shadowColor = UIColor.gray.cgColor
         availableBudgetView.layer.shadowOffset = CGSize(width: 2.0, height: 3.0)
         availableBudgetView.layer.shadowRadius = 2.0
