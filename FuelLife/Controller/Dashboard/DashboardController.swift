@@ -89,15 +89,15 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath.section {
         case 0:
-            return 135
+            return 135 //Recommendation Cell
         case 1:
-            return 127
+            return 127 // Dashboard Cell
         case 2:
-            return 285
+            return 285 //Budget Cell
         case 3:
-            return 300
+            return 430 //Expense Cell
         case 4:
-            return 300
+            return 300 //Top Stories
         default:
             return 250
         }
@@ -114,32 +114,30 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    
-    var headerTitle: String
-    
-    switch section {
-    case 0:
-        headerTitle = "Recommendation"
-    case 1:
-        headerTitle = "Dashboard"
-    case 4:
-        headerTitle = "Top Stories"
-    default:
-        return nil
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        var headerTitle: String
+        
+        switch section {
+        case 0:
+            headerTitle = "Recommendation"
+        case 1:
+            headerTitle = "Dashboard"
+        case 4:
+            headerTitle = "Top Stories"
+        default:
+            return nil
+        }
+        
+        return headerTitle
     }
     
-    return headerTitle
-}
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let myLabel = UILabel()
         
         myLabel.frame = CGRect(x: 11, y: 8, width: 320, height: 30)
-        
-        
         myLabel.font = UIFont(name: "HelveticaNeue-Bold", size:  22.0)
-        
         myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
         
         let headerView = UIView()
@@ -148,8 +146,8 @@ func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -
         return headerView
     }
     
-   
     
+   
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        let category = categories[indexPath.row]
         //        performSegue(withIdentifier: "productVC", sender: category)
