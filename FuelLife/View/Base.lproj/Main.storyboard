@@ -327,6 +327,9 @@
                                                             <state key="normal" title="Button" image="square.and.arrow.up" catalog="system">
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="shareBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2dg-Lx-tqj"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

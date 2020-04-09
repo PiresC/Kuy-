@@ -19,6 +19,23 @@ class DashboardController: UIViewController {
         dashboardTableView.dataSource = self
 
     }
+    @IBAction func shareBtn(_ sender: UIButton) {
+        
+        // image to share
+        let image = UIImage(named: "Kuy")
+
+        // set up activity view controller
+        let imageToShare = [ image! ]
+        let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+
+        // exclude some activity types from the list (optional)
+        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook, UIActivity.ActivityType.postToTwitter, UIActivity.ActivityType.addToReadingList]
+
+        // present the view controller
+        self.present(activityViewController, animated: true, completion: nil)
+        
+    }
     
 }
 
@@ -153,6 +170,8 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
         //        let category = categories[indexPath.row]
         //        performSegue(withIdentifier: "productVC", sender: category)
     }
+    
+    
     
 
 }

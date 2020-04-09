@@ -12,6 +12,7 @@ class TopStoriesDashboardTableViewCell: UITableViewCell {
 
     @IBOutlet weak var topStoriesView: UIView!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         topStoriesView.layer.cornerRadius = 10
@@ -23,6 +24,7 @@ class TopStoriesDashboardTableViewCell: UITableViewCell {
         topStoriesView.layer.shadowRadius = 2.0
         topStoriesView.layer.shadowOpacity = 0.7
         topStoriesView.layer.masksToBounds = false
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,5 +32,5 @@ class TopStoriesDashboardTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }
