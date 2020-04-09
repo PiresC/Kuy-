@@ -79,6 +79,12 @@ class EditExpenseViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     func updateView(){
         saveButton.isEnabled = true
+        
+        entertainments = EntertainmentRepository.fetchEntertainments()
+        entertainments = entertainments.reversed()
+        
+        picker.reloadAllComponents()
+        
         if let amount = self.amount{
             amountTextField.text = "\(amount)"
         }
@@ -132,8 +138,16 @@ class EditExpenseViewController: UIViewController, UIPickerViewDelegate, UIPicke
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "addEntertainmentFromEditExpense"){
+            if let dest = segue.destination as? AddEntertainmentViewController{
+                dest.editExpenseViewController = self
+            }
+        }
+    }
+    
     @objc func onAddEntertainment(){
-        view.endEditing(true)
+        performSegue(withIdentifier: "addEntertainmentFromEditExpense", sender: self)
     }
     
     @objc func onChangeEntertainment() {
