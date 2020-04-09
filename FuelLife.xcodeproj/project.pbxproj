@@ -31,6 +31,7 @@
 		BA4CC3B0243E2D450040875D /* TopStoriesDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4CC3AF243E2D450040875D /* TopStoriesDashboardTableViewCell.swift */; };
 		BA644A5D243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */; };
 		BA644A5E243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */; };
+		F00613A8243DC32E00A74F2E /* ChartImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00613A7243DC32E00A74F2E /* ChartImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		BA4CC3AF243E2D450040875D /* TopStoriesDashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesDashboardTableViewCell.swift; sourceTree = "<group>"; };
 		BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCollectionViewCell.xib; sourceTree = "<group>"; };
+		F00613A7243DC32E00A74F2E /* ChartImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				7AA4957E243730F0007692E4 /* Main.storyboard */,
 				7AA49586243730F1007692E4 /* LaunchScreen.storyboard */,
 				BA644A59243C2CF600AA3B4A /* Cell */,
+				F00613A7243DC32E00A74F2E /* ChartImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				7AA49579243730F0007692E4 /* AppDelegate.swift in Sources */,
 				BA43174F243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift in Sources */,
 				7ABDE8CA243C86F100B2F611 /* CurrencyFormatter.swift in Sources */,
+				F00613A8243DC32E00A74F2E /* ChartImageView.swift in Sources */,
 				7ABDE8C4243C67A400B2F611 /* EditExpenseViewController.swift in Sources */,
 				7A58E901243BA67100D83986 /* ExpenseDetailViewController.swift in Sources */,
 				BA4CC3B0243E2D450040875D /* TopStoriesDashboardTableViewCell.swift in Sources */,

@@ -17,6 +17,7 @@ class DashboardController: UIViewController {
         
         dashboardTableView.delegate = self
         dashboardTableView.dataSource = self
+
     }
     
 }
