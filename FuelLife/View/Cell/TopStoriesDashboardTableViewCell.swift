@@ -11,6 +11,7 @@ import UIKit
 class TopStoriesDashboardTableViewCell: UITableViewCell {
 
     @IBOutlet weak var topStoriesView: UIView!
+    @IBOutlet weak var topStoriesImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +24,9 @@ class TopStoriesDashboardTableViewCell: UITableViewCell {
         topStoriesView.layer.shadowRadius = 2.0
         topStoriesView.layer.shadowOpacity = 0.7
         topStoriesView.layer.masksToBounds = false
+        
+        topStoriesImage.layer.cornerRadius = 10
+ 
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
