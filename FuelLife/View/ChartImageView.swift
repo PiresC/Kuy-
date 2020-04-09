@@ -8,18 +8,25 @@
 
 import UIKit
 
+struct fgBackground {
+    var strokeColor: CGColor
+    var strokeStart: CGFloat
+    var strokeEnd: CGFloat
+}
+
+struct chartValue {
+    var pieValue: String
+    var persentase: String
+}
+
 private var backgroundLayer: CAShapeLayer!
 private var foregroundLayers: [CAShapeLayer?] = []
-
-private var foregroundLayer1: CAShapeLayer!
-private var foregroundLayer2: CAShapeLayer!
-private var foregroundLayer3: CAShapeLayer!
-private var foregroundLayer4: CAShapeLayer!
+private var chartValues: [String] = []
 
 private var textLayer: CATextLayer!
 private var chartText: String = ""
 
-class ChartView: UIView {
+class ChartImageView: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -29,35 +36,52 @@ class ChartView: UIView {
     }
     */
     
-    override func draw(_ rect: CGRect) {
-        let width = rect.width
-        let height = rect.height
+    init(frame: CGRect, text: String, fgBackground: [fgBackground]) {
+        super.init(frame: frame)
+        
+        let width = frame.width
+        let height = frame.height
         
         let lineWidth = 0.1 * min(width, height)
         
-        var chartText: String = "30%"
-        let persentase: Float = (chartText as NSString).floatValue / 100
-        print(persentase)
+        chartText = text
         
-        backgroundLayer = createCircularLayer(rect: rect, startAngle: -CGFloat.pi / 2, endAngle: (-CGFloat.pi / 2) + 2 * CGFloat.pi, strokeColor: UIColor.lightGray.cgColor, fillColor: UIColor.clear.cgColor, lineWidth: lineWidth)
+//        chartText = chartValues[chartValue]
+
+//        let persentase: Float = (chartText as NSString).floatValue / 100
+        print(fgBackground)
         
-        foregroundLayer1 = createCircularLayer(rect: rect, startAngle: -CGFloat.pi / 2, endAngle: (-CGFloat.pi / 2) + 2 * CGFloat.pi, strokeColor: UIColor.red.cgColor, fillColor: UIColor.clear.cgColor, lineWidth: lineWidth)
-        foregroundLayer1.strokeEnd = CGFloat(persentase)
+        let startAngle: CGFloat = -CGFloat.pi / 2
+        let endAngle: CGFloat = startAngle + 2 * CGFloat.pi
+        let fillColor: CGColor = UIColor.clear.cgColor
+        
+        backgroundLayer = createCircularLayer(rect: frame, startAngle: startAngle, endAngle: endAngle, strokeColor: UIColor.lightGray.cgColor, fillColor: fillColor, lineWidth: lineWidth)
         
         
-        foregroundLayers.append(foregroundLayer1)
-        
-        foregroundLayer2 = createCircularLayer(rect: rect, startAngle: -CGFloat.pi / 2, endAngle: (-CGFloat.pi / 2) + 2 * CGFloat.pi, strokeColor: UIColor.blue.cgColor, fillColor: UIColor.clear.cgColor, lineWidth: lineWidth)
-        foregroundLayer2.strokeStart = CGFloat(persentase)
-        foregroundLayer2.strokeEnd = CGFloat(persentase + 0.2)
-        
-        foregroundLayers.append(foregroundLayer2)
+        textLayer = createTextLayer(rect: frame, textColor: UIColor.black.cgColor, text: chartText)
         
         layer.addSublayer(backgroundLayer)
+        
+        for fgBackgroundCount in 0...fgBackground.count-1 {
+            let forebackgroundLayer = createCircularLayer(rect: frame, startAngle: startAngle, endAngle: endAngle, strokeColor: fgBackground[fgBackgroundCount].strokeColor, fillColor: fillColor, lineWidth: lineWidth)
+            forebackgroundLayer.strokeStart = fgBackground[fgBackgroundCount].strokeStart
+            forebackgroundLayer.strokeEnd = fgBackground[fgBackgroundCount].strokeEnd
+            foregroundLayers.append(forebackgroundLayer)
+//            layer.addSublayer(test)
+        }
+        
+        layer.addSublayer(textLayer)
+    }
+        
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+    }
+    
+    override func draw(_ rect: CGRect) {
+        layer.addSublayer(backgroundLayer!)
         for foregroundLayer in foregroundLayers {
             layer.addSublayer(foregroundLayer!)
         }
-        textLayer = createTextLayer(rect: rect, textColor: UIColor.black.cgColor, text: chartText)
         layer.addSublayer(textLayer)
     }
     

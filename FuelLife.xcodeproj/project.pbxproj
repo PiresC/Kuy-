@@ -28,7 +28,8 @@
 		BA43174D243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */; };
 		BA644A5D243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */; };
 		BA644A5E243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */; };
-		F00613A8243DC32E00A74F2E /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00613A7243DC32E00A74F2E /* ChartView.swift */; };
+		F00613A8243DC32E00A74F2E /* ChartImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00613A7243DC32E00A74F2E /* ChartImageView.swift */; };
+		F0C4381F243DEA1800EADFFA /* BudgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C4381E243DEA1800EADFFA /* BudgetTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +56,8 @@
 		BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBudgetTableViewCell.swift; sourceTree = "<group>"; };
 		BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCollectionViewCell.xib; sourceTree = "<group>"; };
-		F00613A7243DC32E00A74F2E /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		F00613A7243DC32E00A74F2E /* ChartImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartImageView.swift; sourceTree = "<group>"; };
+		F0C4381E243DEA1800EADFFA /* BudgetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */,
 				BA29EA15243D107500CAA028 /* RecommendationTableViewCell.swift */,
 				BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */,
+				F0C4381E243DEA1800EADFFA /* BudgetTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -149,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				BA644A59243C2CF600AA3B4A /* Cell */,
-				F00613A7243DC32E00A74F2E /* ChartView.swift */,
+				F00613A7243DC32E00A74F2E /* ChartImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -240,7 +243,7 @@
 				7AA49583243730F0007692E4 /* FuelLife.xcdatamodeld in Sources */,
 				7AA49579243730F0007692E4 /* AppDelegate.swift in Sources */,
 				7ABDE8CA243C86F100B2F611 /* CurrencyFormatter.swift in Sources */,
-				F00613A8243DC32E00A74F2E /* ChartView.swift in Sources */,
+				F00613A8243DC32E00A74F2E /* ChartImageView.swift in Sources */,
 				7ABDE8C4243C67A400B2F611 /* EditExpenseViewController.swift in Sources */,
 				7A58E901243BA67100D83986 /* ExpenseDetailViewController.swift in Sources */,
 				7A21F2642439C65C00F01389 /* ExpenseTableViewCell.swift in Sources */,
@@ -252,6 +255,7 @@
 				7AA4957B243730F0007692E4 /* SceneDelegate.swift in Sources */,
 				7A58E8FF243B8ED300D83986 /* AddExpenseViewController.swift in Sources */,
 				7A21F2622439C52900F01389 /* ExpenseHistoryViewController.swift in Sources */,
+				F0C4381F243DEA1800EADFFA /* BudgetTableViewCell.swift in Sources */,
 				7AA495CF243786B6007692E4 /* ExpenseRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
