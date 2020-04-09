@@ -63,36 +63,8 @@ extension LastExpensesTableViewCell: UITableViewDelegate, UITableViewDataSource 
             return 80
         
     }
-    
-    
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        
-
-         let loginButton = UIButton(type: .custom)
-         
-         loginButton.frame = CGRect(x: 169, y: 10, width: 320, height: 10)
-         loginButton.setTitle("See detail", for: .normal)
-         //loginButton.addTarget(self, action: "loginAction", for: .touchUpInside)
-         loginButton.setTitleColor(UIColor.black, for: .normal)
-         //loginButton.backgroundColor = UIColor.blue
-        
-        loginButton.titleLabel!.font = UIFont(name: "HelveticaNeue" , size: 19)
-        
-         let footerView = UIView()
-         footerView.addSubview(loginButton)
-
-         return footerView
-
-
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-      return 10
-    }
-    
-    func loginAction()
-       {
-           print("Hello");
-       }
     
 }

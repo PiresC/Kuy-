@@ -70,6 +70,11 @@ class AddExpenseViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     func updateView(){
         saveButton.isEnabled = true
+        
+        entertainments = EntertainmentRepository.fetchEntertainments()
+        entertainments = entertainments.reversed()
+        picker.reloadAllComponents()
+        
         if let amount = self.amount{
             amountTextField.text = "\(amount)"
         }
@@ -96,6 +101,11 @@ class AddExpenseViewController: UIViewController, UIPickerViewDelegate, UIPicker
         }
     }
     
+    @IBAction func amountTextEditingChanged(_ sender: Any) {
+        amount = Int(amountTextField.text!)
+        updateView()
+    }
+    
     @IBAction func amountTextChanged(_ sender: Any) {
         amount = Int(amountTextField.text!)
         updateView()
@@ -119,6 +129,14 @@ class AddExpenseViewController: UIViewController, UIPickerViewDelegate, UIPicker
                 let insufficientAlert = UIAlertController(title: "Insufficient Entertainment Budget", message: "Your entertainment budget is not enough", preferredStyle: UIAlertController.Style.alert)
                 insufficientAlert.addAction(UIAlertAction(title: "Okay", style: .cancel))
                 present(insufficientAlert, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "addEntertainmentFromAddExpense"){
+            if let dest = segue.destination as? AddEntertainmentViewController{
+                dest.addExpenseViewController = self
             }
         }
     }

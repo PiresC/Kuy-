@@ -77,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A39AE59243F297C00CDE96E /* Entertainment */ = {
+			isa = PBXGroup;
+			children = (
+				7A210A49243DE304002107B7 /* AddEntertainmentViewController.swift */,
+			);
+			path = Entertainment;
+			sourceTree = "<group>";
+		};
 		7AA4956C243730F0007692E4 = {
 			isa = PBXGroup;
 			children = (
@@ -176,7 +184,7 @@
 		BAD7319C2439016000E23E39 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7A210A49243DE304002107B7 /* AddEntertainmentViewController.swift */,
+				7A39AE59243F297C00CDE96E /* Entertainment */,
 				BA890F09243DFC15007CA962 /* Dashboard */,
 				7ABDE8C5243C7E4700B2F611 /* Expenses */,
 			);
