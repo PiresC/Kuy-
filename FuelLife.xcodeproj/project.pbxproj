@@ -28,7 +28,7 @@
 		BA29EA16243D107500CAA028 /* RecommendationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29EA15243D107500CAA028 /* RecommendationTableViewCell.swift */; };
 		BA43174D243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */; };
 		BA43174F243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43174E243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift */; };
-		BA4CC3AE243E19370040875D /* ExpenseDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4CC3AD243E19370040875D /* ExpenseDashboardTableViewCell.swift */; };
+		BA4CC3AE243E19370040875D /* LastExpensesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4CC3AD243E19370040875D /* LastExpensesTableViewCell.swift */; };
 		BA4CC3B0243E2D450040875D /* TopStoriesDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4CC3AF243E2D450040875D /* TopStoriesDashboardTableViewCell.swift */; };
 		BA644A5D243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */; };
 		BA644A5E243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */; };
@@ -59,7 +59,7 @@
 		BA29EA15243D107500CAA028 /* RecommendationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationTableViewCell.swift; sourceTree = "<group>"; };
 		BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBudgetTableViewCell.swift; sourceTree = "<group>"; };
 		BA43174E243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetChartTableViewCell.swift; sourceTree = "<group>"; };
-		BA4CC3AD243E19370040875D /* ExpenseDashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDashboardTableViewCell.swift; sourceTree = "<group>"; };
+		BA4CC3AD243E19370040875D /* LastExpensesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastExpensesTableViewCell.swift; sourceTree = "<group>"; };
 		BA4CC3AF243E2D450040875D /* TopStoriesDashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesDashboardTableViewCell.swift; sourceTree = "<group>"; };
 		BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 				BA29EA15243D107500CAA028 /* RecommendationTableViewCell.swift */,
 				BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */,
 				BA43174E243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift */,
-				BA4CC3AD243E19370040875D /* ExpenseDashboardTableViewCell.swift */,
+				BA4CC3AD243E19370040875D /* LastExpensesTableViewCell.swift */,
 				BA4CC3AF243E2D450040875D /* TopStoriesDashboardTableViewCell.swift */,
 			);
 			path = Cell;
@@ -273,7 +273,7 @@
 				BA644A5D243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift in Sources */,
 				BA43174D243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift in Sources */,
 				7AA4957B243730F0007692E4 /* SceneDelegate.swift in Sources */,
-				BA4CC3AE243E19370040875D /* ExpenseDashboardTableViewCell.swift in Sources */,
+				BA4CC3AE243E19370040875D /* LastExpensesTableViewCell.swift in Sources */,
 				7A58E8FF243B8ED300D83986 /* AddExpenseViewController.swift in Sources */,
 				7A21F2622439C52900F01389 /* ExpenseHistoryViewController.swift in Sources */,
 				7AA495CF243786B6007692E4 /* ExpenseRepository.swift in Sources */,
