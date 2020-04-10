@@ -1183,7 +1183,13 @@
                             <outlet property="delegate" destination="Kcl-V5-TXo" id="nWm-cM-r32"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Entertainment" largeTitleDisplayMode="always" id="A6P-3x-6H3"/>
+                    <navigationItem key="navigationItem" title="Entertainment" largeTitleDisplayMode="always" id="A6P-3x-6H3">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="Wql-IS-NKd">
+                            <connections>
+                                <segue destination="5en-PR-CaA" kind="presentation" id="BD5-qf-hvU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdd-tk-SJA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
