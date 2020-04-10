@@ -152,7 +152,6 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
 		8DEDFB4F243F16A100623CCA /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,9 +161,6 @@
 			sourceTree = "<group>";
 		};
 		BA644A59243C2CF600AA3B4A /* Cell */ = {
-=======
-		BA644A59243C2CF600AA3B4A /* Dashboard */ = {
->>>>>>> b52a0480f704c5cda6d677e7a65be3e21811b29e
 			isa = PBXGroup;
 			children = (
 				F00613A7243DC32E00A74F2E /* ChartImageView.swift */,
