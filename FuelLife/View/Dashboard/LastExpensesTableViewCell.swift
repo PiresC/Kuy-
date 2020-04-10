@@ -37,7 +37,14 @@ class LastExpensesTableViewCell: UITableViewCell {
         
         lastExpenseTableView.dataSource = self
         lastExpenseTableView.delegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadDashboardExpenseTableView), name: NSNotification.Name(rawValue: "reloadEDashboardExpenseTableView"), object: nil)
+        
     }
+    
+    @objc func reloadDashboardExpenseTableView(notification: NSNotification){
+        self.lastExpenseTableView.reloadData()
+q    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
