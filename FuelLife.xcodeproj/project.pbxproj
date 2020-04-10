@@ -168,10 +168,10 @@
 		BA644A5A243C2D0000AA3B4A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BAE14237243FBED600623328 /* Expense */,
 				7AA4957E243730F0007692E4 /* Main.storyboard */,
 				7AA49586243730F1007692E4 /* LaunchScreen.storyboard */,
 				BA644A59243C2CF600AA3B4A /* Dashboard */,
+				BAE14237243FBED600623328 /* Expense */,
 			);
 			path = View;
 			sourceTree = "<group>";
