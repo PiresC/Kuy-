@@ -9,42 +9,54 @@
 import UIKit
 
 class PreferencesCell: UICollectionViewCell {
+    
+    static var identifier: String = "Cell"
+
+    var image: UIImage? {
+        didSet {
+            guard let image = image else { return }
+            cellImageView.image = image
+        }
+    }
+    
+    let cellImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.image = #imageLiteral(resourceName: "supermarket")
+        iv.contentMode = .scaleAspectFill
+        iv.clipsToBounds = true
+        return iv
+    }()
+    
+    // MARK: - Lifecycle
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor.red
-        addSubview(imgView)
-        imgView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        imgView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        imgView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        imgView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         
+        addSubview(cellImageView)
+        cellImageView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        cellImageView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        cellImageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        cellImageView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    let imgView : UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "travel.png")
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
-    }()
 }
 
-class OnboardingViewController: UIViewController, UIScrollViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+class OnboardingViewController: UIViewController, UIScrollViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imagePreferences.count
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! PreferencesCell
-        cell.imgView.image = UIImage(named: imagePreferences[indexPath.row])
+        cell.cellImageView.image = imagePreferences[indexPath.item]
         return cell
     }
+    
+    
+    var imagePreferences: [UIImage] = [#imageLiteral(resourceName: "popcorn"), #imageLiteral(resourceName: "supermarket"), #imageLiteral(resourceName: "fish"), #imageLiteral(resourceName: "wallet")]
     
 
     @IBOutlet weak var scrollView: UIScrollView!
@@ -57,10 +69,10 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate, UICollec
     
     var titles: [String] = ["Enjoy Life", "Budget Friendly", "Choose you preference"]
     var descriptions = ["life is short, do something about it", "entertainment that you can do, with your own budget", ""]
-    var imagePreferences = ["popcorn", "supermarket", "fish", "travel"]
+//    var imagePreferences = ["popcorn", "supermarket", "fish", "travel"]
     var images = ["theater", "wallet", "theater"]
     
-    var prefCollectionView: UICollectionView
+    var collectionView: UICollectionView?
     
     override func viewDidLayoutSubviews() {
         scrollWidth = scrollView.frame.size.width
@@ -78,13 +90,15 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate, UICollec
         var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
         let txt1 = UILabel.init(frame: CGRect(x:32,y:78,width:scrollWidth-64,height:100))
         
-//        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-//        layout.sectionInset = UIEdgeInsets(top: 20, left: 5, bottom: 10, right: 10)
-//        layout.itemSize = CGSize(width: 60, height: 60)
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 5, bottom: 10, right: 10)
+        layout.itemSize = CGSize(width: 60, height: 60)
         
-//        prefCollectionView = UICollectionView.init(frame: CGRect(x: 30, y: txt1.frame.maxY+20, width: 150, height: 200), collectionViewLayout: layout)
+        self.collectionView = UICollectionView.init(frame: CGRect(x: 30, y: txt1.frame.maxY+20, width: 150, height: 200), collectionViewLayout: layout)
         
-        collectionView.register(PreferencesCell.self, forCellWithReuseIdentifier: cellIdentifier)
+        self.collectionView?.dataSource = self
+        self.collectionView?.delegate = self
+        self.collectionView?.register(PreferencesCell.self, forCellWithReuseIdentifier: cellIdentifier)
         
         for index in 0..<titles.count {
             if index < 2 {
@@ -126,7 +140,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate, UICollec
                 txt1.text = titles[index]
                 
                 slide.addSubview(txt1)
-                slide.addSubview(prefCollectionView ?? UICollectionView())
+                slide.addSubview(self.collectionView ?? UICollectionView())
                 scrollView.addSubview(slide)
             }
             
