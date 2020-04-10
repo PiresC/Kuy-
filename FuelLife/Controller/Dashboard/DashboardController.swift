@@ -36,13 +36,7 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
         var numberOfRows: Int
 
         switch section {
-        case 0:
-            numberOfRows = 1
-        case 1:
-            numberOfRows = 1
-        case 2:
-            numberOfRows = 1
-        case 3:
+        case 0, 1, 2, 3:
             numberOfRows = 1
         case 4:
             numberOfRows = 4
@@ -74,14 +68,9 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
           
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         
-                //let category = categories[indexPath.row]
-                
-                //cell.textLabel?.text = "Section \(indexPath.section) Row \(indexPath.row)"
-        //        cell.textLabel?.text = category.categoryName
-        //        cell.detailTextLabel?.text = category.categoryDescription
-        //        cell.imageView?.image = UIImage(named: category.categoryImage)
-        //        recommendationCellLabel.text = recommendationLabel
-        //          recommendationCellPrice?.text = recommendationPrice
+        if let c = cell as? LastExpensesTableViewCell{
+            c.dashboardView = self
+        }
                             
         return cell
     }
@@ -148,7 +137,6 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
     }
     
     
-   
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        let category = categories[indexPath.row]
         //        performSegue(withIdentifier: "productVC", sender: category)

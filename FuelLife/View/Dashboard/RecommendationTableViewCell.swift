@@ -57,10 +57,15 @@ extension RecommendationTableViewCell: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommendationCollectionViewCell.identifier, for: indexPath) as! RecommendationCollectionViewCell
         
-        cell.layer.backgroundColor = #colorLiteral(red: 0.9725490196, green: 0.968627451, blue: 0.5960784314, alpha: 1)
+        let entertainments = EntertainmentRepository.fetchRecommendationEntertainments()
         
-        cell.configure(recommendationLabel: "Movie", recommendationPrice: "$ 100")
-        
+        for entertainment in entertainments {
+
+            cell.configure(recommendationLabel: entertainment.name!,
+                           recommendationPrice: String(entertainment.basePrice),
+                           recommendationColor: entertainment.color ?? "#32a852")
+        }
+
         return cell
     }
 

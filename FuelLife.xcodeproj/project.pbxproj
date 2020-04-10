@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A210A4A243DE304002107B7 /* AddEntertainmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A210A49243DE304002107B7 /* AddEntertainmentViewController.swift */; };
 		7A21F2622439C52900F01389 /* ExpenseHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21F2612439C52900F01389 /* ExpenseHistoryViewController.swift */; };
 		7A21F2642439C65C00F01389 /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21F2632439C65C00F01389 /* ExpenseTableViewCell.swift */; };
+		7A39AE5B243F324200CDE96E /* EditEntertainmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A39AE5A243F324200CDE96E /* EditEntertainmentViewController.swift */; };
 		7A58E8FF243B8ED300D83986 /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A58E8FE243B8ED300D83986 /* AddExpenseViewController.swift */; };
 		7A58E901243BA67100D83986 /* ExpenseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A58E900243BA67100D83986 /* ExpenseDetailViewController.swift */; };
 		7AA49579243730F0007692E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49578243730F0007692E4 /* AppDelegate.swift */; };
@@ -35,8 +37,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A210A49243DE304002107B7 /* AddEntertainmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntertainmentViewController.swift; sourceTree = "<group>"; };
 		7A21F2612439C52900F01389 /* ExpenseHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseHistoryViewController.swift; sourceTree = "<group>"; };
 		7A21F2632439C65C00F01389 /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
+		7A39AE5A243F324200CDE96E /* EditEntertainmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEntertainmentViewController.swift; sourceTree = "<group>"; };
 		7A58E8FE243B8ED300D83986 /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
 		7A58E900243BA67100D83986 /* ExpenseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDetailViewController.swift; sourceTree = "<group>"; };
 		7AA49575243730F0007692E4 /* Kuy!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kuy!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A39AE59243F297C00CDE96E /* Entertainment */ = {
+			isa = PBXGroup;
+			children = (
+				7A210A49243DE304002107B7 /* AddEntertainmentViewController.swift */,
+				7A39AE5A243F324200CDE96E /* EditEntertainmentViewController.swift */,
+			);
+			path = Entertainment;
+			sourceTree = "<group>";
+		};
 		7AA4956C243730F0007692E4 = {
 			isa = PBXGroup;
 			children = (
@@ -137,10 +150,10 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		BA644A59243C2CF600AA3B4A /* Cell */ = {
+		BA644A59243C2CF600AA3B4A /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				7A21F2632439C65C00F01389 /* ExpenseTableViewCell.swift */,
+				F00613A7243DC32E00A74F2E /* ChartImageView.swift */,
 				BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */,
 				BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */,
 				BA29EA15243D107500CAA028 /* RecommendationTableViewCell.swift */,
@@ -149,7 +162,7 @@
 				BA4CC3AD243E19370040875D /* LastExpensesTableViewCell.swift */,
 				BA4CC3AF243E2D450040875D /* TopStoriesDashboardTableViewCell.swift */,
 			);
-			path = Cell;
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 		BA644A5A243C2D0000AA3B4A /* View */ = {
@@ -157,8 +170,8 @@
 			children = (
 				7AA4957E243730F0007692E4 /* Main.storyboard */,
 				7AA49586243730F1007692E4 /* LaunchScreen.storyboard */,
-				BA644A59243C2CF600AA3B4A /* Cell */,
-				F00613A7243DC32E00A74F2E /* ChartImageView.swift */,
+				BA644A59243C2CF600AA3B4A /* Dashboard */,
+				BAE14237243FBED600623328 /* Expense */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,9 +188,18 @@
 			isa = PBXGroup;
 			children = (
 				BA890F09243DFC15007CA962 /* Dashboard */,
+				7A39AE59243F297C00CDE96E /* Entertainment */,
 				7ABDE8C5243C7E4700B2F611 /* Expenses */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BAE14237243FBED600623328 /* Expense */ = {
+			isa = PBXGroup;
+			children = (
+				7A21F2632439C65C00F01389 /* ExpenseTableViewCell.swift */,
+			);
+			path = Expense;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +277,8 @@
 				7AA4957D243730F0007692E4 /* DashboardController.swift in Sources */,
 				7ABDE8C7243C7FE300B2F611 /* UIColorExtension.swift in Sources */,
 				7AA49583243730F0007692E4 /* FuelLife.xcdatamodeld in Sources */,
+				7A39AE5B243F324200CDE96E /* EditEntertainmentViewController.swift in Sources */,
+				7A210A4A243DE304002107B7 /* AddEntertainmentViewController.swift in Sources */,
 				7AA49579243730F0007692E4 /* AppDelegate.swift in Sources */,
 				BA43174F243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift in Sources */,
 				7ABDE8CA243C86F100B2F611 /* CurrencyFormatter.swift in Sources */,
