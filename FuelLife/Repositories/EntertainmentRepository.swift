@@ -89,4 +89,26 @@ class EntertainmentRepository{
             print(error)
         }
     }
+    
+    static func fetchRecommendationEntertainments() -> [Entertainment]{
+        
+        //TODO: Implement Logic for recommmedation base on user data
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
+            return []
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<Entertainment>(entityName: "Entertainment")
+
+        do {
+            let entertainments = try managedContext.fetch(fetchRequest)
+            return entertainments
+        } catch let error as NSError {
+            print(error)
+        }
+        
+        return []
+        
+    }
+    
 }

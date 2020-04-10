@@ -36,13 +36,7 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
         var numberOfRows: Int
 
         switch section {
-        case 0:
-            numberOfRows = 1
-        case 1:
-            numberOfRows = 1
-        case 2:
-            numberOfRows = 1
-        case 3:
+        case 0, 1, 2, 3:
             numberOfRows = 1
         case 4:
             numberOfRows = 4
@@ -143,7 +137,6 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
     }
     
     
-   
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        let category = categories[indexPath.row]
         //        performSegue(withIdentifier: "productVC", sender: category)

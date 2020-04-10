@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Entertainment" representedClassName="Entertainment" syncable="YES" codeGenerationType="class">
         <attribute name="basePrice" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="color" optional="YES" attributeType="String" defaultValueString="#FFFFFF"/>
@@ -20,7 +20,7 @@
         <relationship name="expenses" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Expense" inverseName="period" inverseEntity="Expense"/>
     </entity>
     <elements>
-        <element name="Entertainment" positionX="-284.1484375" positionY="-129.765625" width="128" height="28"/>
+        <element name="Entertainment" positionX="-284.1484375" positionY="-129.765625" width="128" height="103"/>
         <element name="Expense" positionX="-360.5" positionY="196.7265625" width="128" height="118"/>
         <element name="Period" positionX="-328.3828125" positionY="398.14453125" width="128" height="28"/>
     </elements>
