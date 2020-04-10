@@ -150,10 +150,10 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		BA644A59243C2CF600AA3B4A /* Cell */ = {
+		BA644A59243C2CF600AA3B4A /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				7A21F2632439C65C00F01389 /* ExpenseTableViewCell.swift */,
+				F00613A7243DC32E00A74F2E /* ChartImageView.swift */,
 				BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */,
 				BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */,
 				BA29EA15243D107500CAA028 /* RecommendationTableViewCell.swift */,
@@ -162,16 +162,16 @@
 				BA4CC3AD243E19370040875D /* LastExpensesTableViewCell.swift */,
 				BA4CC3AF243E2D450040875D /* TopStoriesDashboardTableViewCell.swift */,
 			);
-			path = Cell;
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 		BA644A5A243C2D0000AA3B4A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BAE14237243FBED600623328 /* Expense */,
 				7AA4957E243730F0007692E4 /* Main.storyboard */,
 				7AA49586243730F1007692E4 /* LaunchScreen.storyboard */,
-				BA644A59243C2CF600AA3B4A /* Cell */,
-				F00613A7243DC32E00A74F2E /* ChartImageView.swift */,
+				BA644A59243C2CF600AA3B4A /* Dashboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,11 +187,19 @@
 		BAD7319C2439016000E23E39 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7A39AE59243F297C00CDE96E /* Entertainment */,
 				BA890F09243DFC15007CA962 /* Dashboard */,
+				7A39AE59243F297C00CDE96E /* Entertainment */,
 				7ABDE8C5243C7E4700B2F611 /* Expenses */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BAE14237243FBED600623328 /* Expense */ = {
+			isa = PBXGroup;
+			children = (
+				7A21F2632439C65C00F01389 /* ExpenseTableViewCell.swift */,
+			);
+			path = Expense;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

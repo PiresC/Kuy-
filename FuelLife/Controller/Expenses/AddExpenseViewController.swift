@@ -132,6 +132,9 @@ class AddExpenseViewController: UIViewController, UIPickerViewDelegate, UIPicker
                 present(insufficientAlert, animated: true, completion: nil)
             }
         }
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadEDashboardExpenseTableView"), object: nil)
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
