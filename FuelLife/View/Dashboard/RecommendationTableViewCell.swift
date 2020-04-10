@@ -60,12 +60,11 @@ extension RecommendationTableViewCell: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommendationCollectionViewCell.identifier, for: indexPath) as! RecommendationCollectionViewCell
         
-        for entertainment in recommendationEntertainments {
+        let recommendationEntertainment = recommendationEntertainments[indexPath.row]
 
-            cell.configure(recommendationLabel: entertainment.name!,
-                           recommendationPrice: String(entertainment.basePrice),
-                           recommendationColor: entertainment.color ?? "#32a852")
-        }
+        cell.configure(recommendationLabel: recommendationEntertainment.name!,
+                       recommendationPrice: String(recommendationEntertainment.basePrice),
+                       recommendationColor: recommendationEntertainment.color ?? "#32a852")
 
         return cell
     }
