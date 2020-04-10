@@ -15,6 +15,8 @@ class RecommendationCollectionViewCell: UICollectionViewCell {
 
     static let identifier = "RecommendationCollectionViewCell"
     
+    var color: String = ""
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -33,9 +35,12 @@ class RecommendationCollectionViewCell: UICollectionViewCell {
  
     }
     
-    public func configure(recommendationLabel: String, recommendationPrice: String) {
+    public func configure(recommendationLabel: String, recommendationPrice: String, recommendationColor: String) {
         recommendationCollectionViewCellLabel.text = recommendationLabel
         recommendationCollectionViewCellPrice?.text = recommendationPrice
+        
+        self.layer.backgroundColor = UIColor(hexString: recommendationColor).cgColor
+
     }
     
     static func nib() -> UINib {

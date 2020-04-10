@@ -70,17 +70,23 @@ class AddExpenseViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     func updateView(){
         saveButton.isEnabled = true
-        if let amount = self.amount{
-            amountTextField.text = "\(amount)"
-        }
-        else{
-            saveButton.isEnabled = false
-        }
+        
+        entertainments = EntertainmentRepository.fetchEntertainments()
+        entertainments = entertainments.reversed()
+        picker.reloadAllComponents()
+        
         if let entertainment = self.entertainment{
             categoryTextField.text = entertainment.name
             if amount == nil{
                 amountTextField.text = "\(entertainment.basePrice)"
+                amount = Int(entertainment.basePrice)
             }
+        }
+        else{
+            saveButton.isEnabled = false
+        }
+        if let amount = self.amount{
+            amountTextField.text = "\(amount)"
         }
         else{
             saveButton.isEnabled = false
@@ -94,6 +100,11 @@ class AddExpenseViewController: UIViewController, UIPickerViewDelegate, UIPicker
         else{
             saveButton.isEnabled = false
         }
+    }
+    
+    @IBAction func amountTextEditingChanged(_ sender: Any) {
+        amount = Int(amountTextField.text!)
+        updateView()
     }
     
     @IBAction func amountTextChanged(_ sender: Any) {
@@ -121,10 +132,21 @@ class AddExpenseViewController: UIViewController, UIPickerViewDelegate, UIPicker
                 present(insufficientAlert, animated: true, completion: nil)
             }
         }
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadEDashboardExpenseTableView"), object: nil)
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "addEntertainmentFromAddExpense"){
+            if let dest = segue.destination as? AddEntertainmentViewController{
+                dest.addExpenseViewController = self
+            }
+        }
     }
     
     @objc func onAddEntertainment(){
-        view.endEditing(true)
+        performSegue(withIdentifier: "addEntertainmentFromAddExpense", sender: self)
     }
     
     @objc func onChangeEntertainment() {
