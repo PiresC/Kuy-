@@ -67,7 +67,7 @@ extension LastExpensesTableViewCell: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "lastExpensesTableViewCell", for: indexPath) as! ExpenseTableViewCell
        
-        expenses = ExpenseRepository.fetchExpenses()
+        var expenses = ExpenseRepository.fetchExpenses()
         expenses.reverse()
         cell.expense = expenses[indexPath.row]
         return cell

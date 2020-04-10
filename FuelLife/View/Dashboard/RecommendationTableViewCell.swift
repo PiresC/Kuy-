@@ -12,6 +12,8 @@ class RecommendationTableViewCell: UITableViewCell {
     
     @IBOutlet weak var recommendationCollectionView: UICollectionView!
     
+    let recommendationEntertainments = EntertainmentRepository.fetchRecommendationEntertainments()
+    
     override func awakeFromNib() {
         let recommendationCollectionViewLayout = UICollectionViewFlowLayout();
 
@@ -49,17 +51,16 @@ extension RecommendationTableViewCell: UICollectionViewDelegate {
 }
 
 extension RecommendationTableViewCell: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
+        return recommendationEntertainments.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommendationCollectionViewCell.identifier, for: indexPath) as! RecommendationCollectionViewCell
         
-        let entertainments = EntertainmentRepository.fetchRecommendationEntertainments()
-        
-        for entertainment in entertainments {
+        for entertainment in recommendationEntertainments {
 
             cell.configure(recommendationLabel: entertainment.name!,
                            recommendationPrice: String(entertainment.basePrice),
