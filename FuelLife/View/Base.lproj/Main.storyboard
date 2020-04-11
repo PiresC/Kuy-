@@ -646,7 +646,7 @@
             <objects>
                 <viewController id="UwT-bF-yoL" customClass="EditEntertainmentViewController" customModule="Kuy_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Mm-ac-FHo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eVS-5M-U41">
@@ -1190,10 +1190,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="UwT-bF-yoL" kind="presentation" identifier="editEntertainmentSegue" id="xaf-JV-XdG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdd-tk-SJA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-884.05797101449286" y="889.95535714285711"/>
+            <point key="canvasLocation" x="4648" y="-571"/>
         </scene>
         <!--Preference Table View Controller-->
         <scene sceneID="6NT-Cc-P6k">
@@ -1255,7 +1258,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZcE-5v-w8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-126" y="865"/>
+            <point key="canvasLocation" x="3712" y="903"/>
         </scene>
     </scenes>
     <resources>
@@ -1272,7 +1275,7 @@
         <image name="travel" width="7952" height="5622"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zFx-mo-cyX"/>
+        <segue reference="BD5-qf-hvU"/>
         <segue reference="LkY-WA-UBS"/>
     </inferredMetricsTieBreakers>
 </document>
