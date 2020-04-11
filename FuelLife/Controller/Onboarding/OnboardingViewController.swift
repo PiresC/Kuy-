@@ -10,50 +10,41 @@ import UIKit
 
 class PreferencesCell: UICollectionViewCell {
     
-    static var identifier: String = "Cell"
-
-    var image: UIImage? {
-        didSet {
-            guard let image = image else { return }
-            cellImageView.image = image
-        }
-    }
-    
-    let cellImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "supermarket")
-        iv.contentMode = .scaleAspectFill
-        iv.clipsToBounds = true
-        return iv
-    }()
-    
-    // MARK: - Lifecycle
     
     override init(frame: CGRect) {
-        super.init(frame: frame)
+        super.init(frame: .zero)
         
-        addSubview(cellImageView)
-        cellImageView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        cellImageView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        cellImageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        cellImageView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        let layer = UIView()
+        layer.frame = CGRect(x: 0, y: 0, width: 150, height: 200)
+        layer.backgroundColor = .black
+        
+        
+        let imageView = UIImageView.init(image: UIImage.init(named: "travel"))
+          imageView.frame = CGRect(x:0,y:0,width:120,height:150)
+          imageView.contentMode = .scaleAspectFit
+        imageView.center = CGPoint(x:contentView.frame.size.width/2,y: contentView.frame.size.height/2 - 50)
+        
+        let txt1 = UILabel.init(frame: CGRect(x:32,y:imageView.frame.maxY+71,width:contentView.frame.size.width-64,height:50))
+          txt1.textAlignment = .center
+          txt1.font = UIFont.boldSystemFont(ofSize: 36.0)
+          txt1.text = "test"
+        
+        layer.addSubview(imageView)
+        layer.addSubview(txt1)
+        contentView.addSubview(layer)
+        
+//        contentView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+//        contentView.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
+//        contentView.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
+//        contentView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
-class OnboardingViewController: UIViewController, UIScrollViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! PreferencesCell
-        cell.cellImageView.image = imagePreferences[indexPath.item]
-        return cell
-    }
+class OnboardingViewController: UIViewController, UIScrollViewDelegate {
     
     
     var imagePreferences: [UIImage] = [#imageLiteral(resourceName: "popcorn"), #imageLiteral(resourceName: "supermarket"), #imageLiteral(resourceName: "fish"), #imageLiteral(resourceName: "wallet")]
@@ -94,11 +85,12 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate, UICollec
         layout.sectionInset = UIEdgeInsets(top: 20, left: 5, bottom: 10, right: 10)
         layout.itemSize = CGSize(width: 60, height: 60)
         
-        self.collectionView = UICollectionView.init(frame: CGRect(x: 30, y: txt1.frame.maxY+20, width: 150, height: 200), collectionViewLayout: layout)
+        self.collectionView = UICollectionView.init(frame: CGRect(x: 0, y: txt1.frame.maxY+20, width: scrollWidth, height: 500), collectionViewLayout: layout)
         
         self.collectionView?.dataSource = self
         self.collectionView?.delegate = self
         self.collectionView?.register(PreferencesCell.self, forCellWithReuseIdentifier: cellIdentifier)
+        self.collectionView?.backgroundColor = UIColor.blue
         
         for index in 0..<titles.count {
             if index < 2 {
@@ -138,9 +130,10 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate, UICollec
                 txt1.numberOfLines = 3
                 txt1.font = UIFont.boldSystemFont(ofSize: 36.0)
                 txt1.text = titles[index]
+
                 
                 slide.addSubview(txt1)
-                slide.addSubview(self.collectionView ?? UICollectionView())
+                slide.addSubview(self.collectionView!)
                 scrollView.addSubview(slide)
             }
             
@@ -173,4 +166,32 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate, UICollec
     }
 
 
+}
+
+extension OnboardingViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: collectionView.frame.width/2.5, height: collectionView.frame.width/2)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let totalCellWidth = (collectionView.frame.width/2.5) * 2
+        let totalSpacingWidth = 20 * (2 - 1)
+
+        let leftInset = (collectionView.frame.width - CGFloat(totalCellWidth + CGFloat(totalSpacingWidth))) / 2
+        let rightInset = leftInset
+
+        return UIEdgeInsets(top: 0, left: leftInset, bottom: 0, right: rightInset)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! PreferencesCell
+        return cell
+    }
+    
+    
 }
