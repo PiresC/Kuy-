@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let entertainmentColor = ["#32a852", "#000000", "#ff0000", "#3c00ff", "#fffb00"]
         if (ExpenseRepository.fetchExpenses().count == 0 && EntertainmentRepository.fetchEntertainments().count == 0){
             for i in 1...4{
-                let period = PeriodRepository.createPeriod(month: "0\(i)/2020", currentBudget: 1000000, startingBudget: 1000000)
+                let period = PeriodRepository.createPeriod(month: "0\(i)/2020", currentBudget: 12300000, startingBudget: 1000000)
                 for x in 0...4{
                     let entertainment = EntertainmentRepository.createEntertainment(name: entertainmentNama[x], basePrice: Int64(entertainmentHarga[x]), color: entertainmentColor[x])
                     if (x % i == 0){
