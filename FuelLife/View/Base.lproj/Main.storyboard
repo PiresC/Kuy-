@@ -1186,7 +1186,7 @@
                     <navigationItem key="navigationItem" title="Entertainment" largeTitleDisplayMode="always" id="A6P-3x-6H3">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="Wql-IS-NKd">
                             <connections>
-                                <segue destination="5en-PR-CaA" kind="presentation" id="BD5-qf-hvU"/>
+                                <segue destination="5en-PR-CaA" kind="presentation" identifier="AddEntertainmentSegue" id="BD5-qf-hvU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

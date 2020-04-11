@@ -36,6 +36,7 @@
 		BA644A5D243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */; };
 		BA644A5E243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */; };
 		BA8BB57B2440AF9F00983EC6 /* EntertainmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8BB57A2440AF9F00983EC6 /* EntertainmentTableViewController.swift */; };
+		BADD6E94244247FE0073FC7D /* RefreshDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD6E93244247FE0073FC7D /* RefreshDataDelegate.swift */; };
 		F00613A8243DC32E00A74F2E /* ChartImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00613A7243DC32E00A74F2E /* ChartImageView.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCollectionViewCell.xib; sourceTree = "<group>"; };
 		BA8BB57A2440AF9F00983EC6 /* EntertainmentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentTableViewController.swift; sourceTree = "<group>"; };
+		BADD6E93244247FE0073FC7D /* RefreshDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshDataDelegate.swift; sourceTree = "<group>"; };
 		F00613A7243DC32E00A74F2E /* ChartImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +116,7 @@
 		7AA49577243730F0007692E4 /* FuelLife */ = {
 			isa = PBXGroup;
 			children = (
+				BADD6E92244247BB0073FC7D /* Protocol */,
 				BA644A5A243C2D0000AA3B4A /* View */,
 				BAD7319C2439016000E23E39 /* Controller */,
 				7AA495D02437883C007692E4 /* Repositories */,
@@ -219,6 +222,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		BADD6E92244247BB0073FC7D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BADD6E93244247FE0073FC7D /* RefreshDataDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		BAE14237243FBED600623328 /* Expense */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +316,7 @@
 				7A39AE5B243F324200CDE96E /* EditEntertainmentViewController.swift in Sources */,
 				BA5CF05B2441458B00059C50 /* PreferenceTableViewController.swift in Sources */,
 				7A210A4A243DE304002107B7 /* AddEntertainmentViewController.swift in Sources */,
+				BADD6E94244247FE0073FC7D /* RefreshDataDelegate.swift in Sources */,
 				7AA49579243730F0007692E4 /* AppDelegate.swift in Sources */,
 				BA43174F243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift in Sources */,
 				7ABDE8CA243C86F100B2F611 /* CurrencyFormatter.swift in Sources */,

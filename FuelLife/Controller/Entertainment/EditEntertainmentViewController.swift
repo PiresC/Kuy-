@@ -15,6 +15,8 @@ class EditEntertainmentViewController: UIViewController, UIPickerViewDelegate, U
     @IBOutlet weak var selectedColorLabel: UIView!
     @IBOutlet weak var colorLabel: UITextField!
     
+    var tableViewDelegate: RefreshDataDelegate?
+
     var entertainment:Entertainment?
     
     var colors = ["#FF0028", "#a4cf00", "#ff00ff", "#f2d53c", "#ffc0cb","#ffa500", "#d2b48c", "#c0c0c0"]
@@ -83,6 +85,9 @@ class EditEntertainmentViewController: UIViewController, UIPickerViewDelegate, U
     @IBAction func saveButtonClick(_ sender: Any) {
         dismiss(animated: true){
             _ = EntertainmentRepository.updateEntertainment(entertainment: self.entertainment!, newName: self.nameLabel.text!, newBasePrice: Int64(self.priceLabel.text!)!, newColor: self.selectedColor!)
+            
+            self.tableViewDelegate!.refreshData()
+
         }
     }
 

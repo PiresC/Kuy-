@@ -9,11 +9,12 @@
 import UIKit
 
 class EntertainmentTableViewController: UITableViewController {
-    
-    let entertainments = EntertainmentRepository.fetchEntertainments()
+        
+    var entertainments = EntertainmentRepository.fetchEntertainments()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
     // MARK: - Table view data source
@@ -43,8 +44,22 @@ class EntertainmentTableViewController: UITableViewController {
         if segue.identifier == "editEntertainmentSegue" {
             let editEntertainmentController = segue.destination as! EditEntertainmentViewController
             editEntertainmentController.entertainment = sender as? Entertainment
+            editEntertainmentController.tableViewDelegate = self
+        } else if segue.identifier == "AddEntertainmentSegue" {
+            let addEntertainmentController = segue.destination as! AddEntertainmentViewController
+            addEntertainmentController.tableViewDelegate = self
         }
     }
-    
-  
 }
+
+extension EntertainmentTableViewController: RefreshDataDelegate {
+    func refreshData() {
+        entertainments = EntertainmentRepository.fetchEntertainments()
+        
+        //DispatchQueue.main.async{
+            self.tableView.reloadData()
+        //}
+        
+    }
+}
+
