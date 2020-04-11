@@ -39,9 +39,11 @@ class EntertainmentTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let editEntertainmentController = segue.destination as! EditEntertainmentViewController
         
-        editEntertainmentController.entertainment = sender as? Entertainment
+        if segue.identifier == "editEntertainmentSegue" {
+            let editEntertainmentController = segue.destination as! EditEntertainmentViewController
+            editEntertainmentController.entertainment = sender as? Entertainment
+        }
     }
     
   
