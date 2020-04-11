@@ -1198,7 +1198,7 @@
         <!--Preference Table View Controller-->
         <scene sceneID="6NT-Cc-P6k">
             <objects>
-                <tableViewController title="Preferences" id="v7H-iF-4yK" userLabel="Preference Table View Controller" sceneMemberID="viewController">
+                <tableViewController title="Preferences" id="v7H-iF-4yK" userLabel="Preference Table View Controller" customClass="PreferenceTableViewController" customModule="Kuy_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4yJ-HV-3NP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

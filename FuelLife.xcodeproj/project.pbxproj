@@ -32,6 +32,7 @@
 		BA43174F243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43174E243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift */; };
 		BA4CC3AE243E19370040875D /* LastExpensesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4CC3AD243E19370040875D /* LastExpensesTableViewCell.swift */; };
 		BA4CC3B0243E2D450040875D /* TopStoriesDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4CC3AF243E2D450040875D /* TopStoriesDashboardTableViewCell.swift */; };
+		BA5CF05B2441458B00059C50 /* PreferenceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5CF05A2441458B00059C50 /* PreferenceTableViewController.swift */; };
 		BA644A5D243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */; };
 		BA644A5E243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */; };
 		BA8BB57B2440AF9F00983EC6 /* EntertainmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8BB57A2440AF9F00983EC6 /* EntertainmentTableViewController.swift */; };
@@ -66,6 +67,7 @@
 		BA43174E243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetChartTableViewCell.swift; sourceTree = "<group>"; };
 		BA4CC3AD243E19370040875D /* LastExpensesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastExpensesTableViewCell.swift; sourceTree = "<group>"; };
 		BA4CC3AF243E2D450040875D /* TopStoriesDashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesDashboardTableViewCell.swift; sourceTree = "<group>"; };
+		BA5CF05A2441458B00059C50 /* PreferenceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceTableViewController.swift; sourceTree = "<group>"; };
 		BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCollectionViewCell.xib; sourceTree = "<group>"; };
 		BA8BB57A2440AF9F00983EC6 /* EntertainmentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentTableViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,14 @@
 			path = Preference;
 			sourceTree = "<group>";
 		};
+		BA5CF0592441456800059C50 /* Preference */ = {
+			isa = PBXGroup;
+			children = (
+				BA5CF05A2441458B00059C50 /* PreferenceTableViewController.swift */,
+			);
+			path = Preference;
+			sourceTree = "<group>";
+		};
 		BA644A59243C2CF600AA3B4A /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +211,7 @@
 		BAD7319C2439016000E23E39 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BA5CF0592441456800059C50 /* Preference */,
 				BA890F09243DFC15007CA962 /* Dashboard */,
 				7A39AE59243F297C00CDE96E /* Entertainment */,
 				7ABDE8C5243C7E4700B2F611 /* Expenses */,
@@ -292,6 +303,7 @@
 				7ABDE8C7243C7FE300B2F611 /* UIColorExtension.swift in Sources */,
 				7AA49583243730F0007692E4 /* FuelLife.xcdatamodeld in Sources */,
 				7A39AE5B243F324200CDE96E /* EditEntertainmentViewController.swift in Sources */,
+				BA5CF05B2441458B00059C50 /* PreferenceTableViewController.swift in Sources */,
 				7A210A4A243DE304002107B7 /* AddEntertainmentViewController.swift in Sources */,
 				7AA49579243730F0007692E4 /* AppDelegate.swift in Sources */,
 				BA43174F243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift in Sources */,
