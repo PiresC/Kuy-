@@ -43,7 +43,6 @@ class PeriodRepository{
     }
     
     
-    
     static func resetBudget(){
         let data = fetchPeriods()
         
