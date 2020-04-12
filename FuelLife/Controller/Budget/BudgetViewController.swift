@@ -18,6 +18,20 @@ class BudgetViewController: UIViewController {
         super.viewDidLoad()
         currentBudgetTextField.isHidden = true
         // Do any additional setup after loading the view.
+        
+        let budget = PeriodRepository.getCurrentBudget()
+        
+        var abc = 0
+        
+        if let current_budget = budget?.currentBudget {
+            abc = Int(exactly:current_budget) ?? 0
+            currentBudgetTextField.text = CurrencyFormatter.format(abc)
+            currentBudgetLabel.text = CurrencyFormatter.format(abc)
+        } else {
+            currentBudgetTextField.text = "0"
+            currentBudgetLabel.text = "0"
+        }
+        
     }
     
     @IBAction func editBudgetAction(_ sender: UIButton) {
