@@ -24,6 +24,26 @@ class PeriodRepository{
         return createPeriod(month: month, currentBudget: 0, startingBudget: 0)
     }
     
+    static func getCurrentBudget() -> Budget?{
+        let data = fetchPeriods()
+        
+        let now = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/YYYY"
+        let month = dateFormatter.string(from: now)
+        
+        var budget: Budget?
+        
+        if let period = (data.filter { $0.month == month }.first){
+            budget = Budget(startingBudget: period.startingBudget, currentBudget: period.currentBudget)
+        }
+        
+        return budget
+    
+    }
+    
+    
+    
     static func resetBudget(){
         let data = fetchPeriods()
         
