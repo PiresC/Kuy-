@@ -137,6 +137,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func toDashboard(_ sender: UIButton) {
         UserDefaults.standard.set(preferenceRecommendation, forKey: "preferedRecommendation")
         UserDefaults.standard.set(false, forKey: "firstComer")
+        performSegue(withIdentifier: "toDashboard", sender: nil)
     }
     
 
