@@ -21,8 +21,8 @@ class DashboardController: UIViewController {
         
         dashboardTableView.delegate = self
         dashboardTableView.dataSource = self
-        tp.fetchApi()
-        tp.setTitleLabel()
+//        tp.fetchApi()
+//        tp.setTitleLabel()
         
 //        topstories = tp.fetchApi()
         print(topstories)
