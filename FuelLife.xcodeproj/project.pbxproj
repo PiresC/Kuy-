@@ -27,6 +27,8 @@
 		7ABDE8C7243C7FE300B2F611 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABDE8C6243C7FE300B2F611 /* UIColorExtension.swift */; };
 		7ABDE8CA243C86F100B2F611 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABDE8C9243C86F100B2F611 /* CurrencyFormatter.swift */; };
 		BA02EF7224408EA00082BA83 /* EntertainmentPreferenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02EF7124408EA00082BA83 /* EntertainmentPreferenceTableViewCell.swift */; };
+		BA1EB7BA2442CEE700248DBC /* BudgetDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1EB7B92442CEE700248DBC /* BudgetDetailTableViewController.swift */; };
+		BA1EB7BC2442D11000248DBC /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1EB7BB2442D11000248DBC /* BudgetViewController.swift */; };
 		BA29EA16243D107500CAA028 /* RecommendationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29EA15243D107500CAA028 /* RecommendationTableViewCell.swift */; };
 		BA43174D243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */; };
 		BA43174F243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43174E243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift */; };
@@ -63,6 +65,8 @@
 		7ABDE8C6243C7FE300B2F611 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		7ABDE8C9243C86F100B2F611 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		BA02EF7124408EA00082BA83 /* EntertainmentPreferenceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentPreferenceTableViewCell.swift; sourceTree = "<group>"; };
+		BA1EB7B92442CEE700248DBC /* BudgetDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetailTableViewController.swift; sourceTree = "<group>"; };
+		BA1EB7BB2442D11000248DBC /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
 		BA29EA15243D107500CAA028 /* RecommendationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationTableViewCell.swift; sourceTree = "<group>"; };
 		BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBudgetTableViewCell.swift; sourceTree = "<group>"; };
 		BA43174E243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetChartTableViewCell.swift; sourceTree = "<group>"; };
@@ -116,10 +120,10 @@
 		7AA49577243730F0007692E4 /* FuelLife */ = {
 			isa = PBXGroup;
 			children = (
-				BADD6E92244247BB0073FC7D /* Protocol */,
 				BA644A5A243C2D0000AA3B4A /* View */,
 				BAD7319C2439016000E23E39 /* Controller */,
 				7AA495D02437883C007692E4 /* Repositories */,
+				BADD6E92244247BB0073FC7D /* Protocol */,
 				7ABDE8C8243C800000B2F611 /* Utilities */,
 				7AA49584243730F1007692E4 /* Assets.xcassets */,
 				7AA49578243730F0007692E4 /* AppDelegate.swift */,
@@ -168,6 +172,15 @@
 			path = Preference;
 			sourceTree = "<group>";
 		};
+		BA1EB7B82442CEBD00248DBC /* Budget */ = {
+			isa = PBXGroup;
+			children = (
+				BA1EB7B92442CEE700248DBC /* BudgetDetailTableViewController.swift */,
+				BA1EB7BB2442D11000248DBC /* BudgetViewController.swift */,
+			);
+			path = Budget;
+			sourceTree = "<group>";
+		};
 		BA5CF0592441456800059C50 /* Preference */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +227,7 @@
 		BAD7319C2439016000E23E39 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BA1EB7B82442CEBD00248DBC /* Budget */,
 				BA5CF0592441456800059C50 /* Preference */,
 				BA890F09243DFC15007CA962 /* Dashboard */,
 				7A39AE59243F297C00CDE96E /* Entertainment */,
@@ -317,6 +331,7 @@
 				BA5CF05B2441458B00059C50 /* PreferenceTableViewController.swift in Sources */,
 				7A210A4A243DE304002107B7 /* AddEntertainmentViewController.swift in Sources */,
 				BADD6E94244247FE0073FC7D /* RefreshDataDelegate.swift in Sources */,
+				BA1EB7BC2442D11000248DBC /* BudgetViewController.swift in Sources */,
 				7AA49579243730F0007692E4 /* AppDelegate.swift in Sources */,
 				BA43174F243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift in Sources */,
 				7ABDE8CA243C86F100B2F611 /* CurrencyFormatter.swift in Sources */,
@@ -335,6 +350,7 @@
 				7AA4957B243730F0007692E4 /* SceneDelegate.swift in Sources */,
 				BA4CC3AE243E19370040875D /* LastExpensesTableViewCell.swift in Sources */,
 				7A58E8FF243B8ED300D83986 /* AddExpenseViewController.swift in Sources */,
+				BA1EB7BA2442CEE700248DBC /* BudgetDetailTableViewController.swift in Sources */,
 				7A21F2622439C52900F01389 /* ExpenseHistoryViewController.swift in Sources */,
 				7AA495CF243786B6007692E4 /* ExpenseRepository.swift in Sources */,
 			);
