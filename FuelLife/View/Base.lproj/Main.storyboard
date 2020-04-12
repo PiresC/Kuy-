@@ -188,6 +188,7 @@
                                                             </state>
                                                             <connections>
                                                                 <action selector="seeDetailButtonClick:" destination="mi6-yc-85m" eventType="touchUpInside" id="hJz-mY-ccX"/>
+                                                                <segue destination="dSr-gs-TlF" kind="show" id="01Y-R4-2uq"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -518,6 +519,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYu-RG-gSM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1071" y="890"/>
+        </scene>
+        <!--Budget-->
+        <scene sceneID="sJh-9d-b54">
+            <objects>
+                <viewController id="dSr-gs-TlF" customClass="BudgetViewController" customModule="Kuy_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ois-uW-y3v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rp. 1.000.000.000,-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3O-Z8-BCE">
+                                <rect key="frame" x="20" y="191" width="374" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rpa-h1-4cD">
+                                <rect key="frame" x="362" y="155" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pencil" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="editBudgetAction:" destination="dSr-gs-TlF" eventType="touchUpInside" id="REM-Cy-o3W"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1T5-gi-r3y">
+                                <rect key="frame" x="20" y="287" width="374" height="575"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XaG-FT-DoR">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XaG-FT-DoR" id="jSV-Jg-Yzd">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BtV-Sw-lZQ">
+                                <rect key="frame" x="20" y="204" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kNj-SP-yCe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Budget" largeTitleDisplayMode="always" id="njQ-Ij-sP0"/>
+                    <connections>
+                        <outlet property="currentBudgetLabel" destination="e3O-Z8-BCE" id="Qbt-TK-vZd"/>
+                        <outlet property="currentBudgetTextField" destination="BtV-Sw-lZQ" id="OPb-eM-BHm"/>
+                        <outlet property="editBudgetButton" destination="Rpa-h1-4cD" id="s98-Lk-GSp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q2h-ge-cX4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="160.86956521739131" y="889.95535714285711"/>
         </scene>
         <!--Edit Expense View Controller-->
         <scene sceneID="KQj-Qs-eKf">
@@ -1187,6 +1249,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="umX-yI-nd5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.92317359367113438" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1242,7 +1305,7 @@
                     <navigationItem key="navigationItem" title="Entertainment" largeTitleDisplayMode="always" id="A6P-3x-6H3">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="Wql-IS-NKd">
                             <connections>
-                                <segue destination="5en-PR-CaA" kind="presentation" id="BD5-qf-hvU"/>
+                                <segue destination="5en-PR-CaA" kind="presentation" identifier="AddEntertainmentSegue" id="BD5-qf-hvU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1330,9 +1393,10 @@
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="idr-tag" width="80" height="80"/>
         <image name="nextButtonOnboarding" width="213" height="45"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-        <image name="textformat.alt" catalog="system" width="128" height="80"/>
-        <image name="travel" width="128" height="128"/>
+        <image name="pencil" catalog="system" width="64" height="56"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+        <image name="textformat.alt" catalog="system" width="64" height="40"/>
+        <image name="travel" width="7952" height="5622"/>
     </resources>
 </document>
