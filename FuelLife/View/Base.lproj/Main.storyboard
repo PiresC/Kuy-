@@ -188,6 +188,7 @@
                                                             </state>
                                                             <connections>
                                                                 <action selector="seeDetailButtonClick:" destination="mi6-yc-85m" eventType="touchUpInside" id="hJz-mY-ccX"/>
+                                                                <segue destination="dSr-gs-TlF" kind="show" id="01Y-R4-2uq"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -385,8 +386,14 @@
                                     <segue destination="UJp-8N-Woe" kind="presentation" id="iKS-Ef-Er3"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Item" image="gear" catalog="system" id="0yX-vs-b1h"/>
-                            <barButtonItem title="Item" image="Kuy" id="mlu-Ng-LhX"/>
+                            <barButtonItem title="Item" image="gear" catalog="system" id="0yX-vs-b1h">
+                                <connections>
+                                    <segue destination="v7H-iF-4yK" kind="show" id="bbQ-LF-EqU"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="Kuy" id="mlu-Ng-LhX">
+                                <inset key="imageInsets" minX="85" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
@@ -525,6 +532,67 @@
             </objects>
             <point key="canvasLocation" x="1071" y="890"/>
         </scene>
+        <!--Budget-->
+        <scene sceneID="sJh-9d-b54">
+            <objects>
+                <viewController id="dSr-gs-TlF" customClass="BudgetViewController" customModule="Kuy_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ois-uW-y3v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rp. 1.000.000.000,-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3O-Z8-BCE">
+                                <rect key="frame" x="20" y="191" width="374" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rpa-h1-4cD">
+                                <rect key="frame" x="362" y="155" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pencil" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="editBudgetAction:" destination="dSr-gs-TlF" eventType="touchUpInside" id="REM-Cy-o3W"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1T5-gi-r3y">
+                                <rect key="frame" x="20" y="287" width="374" height="575"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XaG-FT-DoR">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XaG-FT-DoR" id="jSV-Jg-Yzd">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BtV-Sw-lZQ">
+                                <rect key="frame" x="20" y="204" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kNj-SP-yCe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Budget" largeTitleDisplayMode="always" id="njQ-Ij-sP0"/>
+                    <connections>
+                        <outlet property="currentBudgetLabel" destination="e3O-Z8-BCE" id="Qbt-TK-vZd"/>
+                        <outlet property="currentBudgetTextField" destination="BtV-Sw-lZQ" id="OPb-eM-BHm"/>
+                        <outlet property="editBudgetButton" destination="Rpa-h1-4cD" id="s98-Lk-GSp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q2h-ge-cX4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="160.86956521739131" y="889.95535714285711"/>
+        </scene>
         <!--Edit Expense View Controller-->
         <scene sceneID="KQj-Qs-eKf">
             <objects>
@@ -652,7 +720,7 @@
             <objects>
                 <viewController id="UwT-bF-yoL" customClass="EditEntertainmentViewController" customModule="Kuy_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Mm-ac-FHo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eVS-5M-U41">
@@ -1137,6 +1205,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="umX-yI-nd5">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.92317359367113438" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1147,22 +1216,146 @@
             </objects>
             <point key="canvasLocation" x="160.86956521739131" y="137.94642857142856"/>
         </scene>
+        <!--Entertainment Table View Controller-->
+        <scene sceneID="XgO-U9-ze3">
+            <objects>
+                <tableViewController id="Kcl-V5-TXo" userLabel="Entertainment Table View Controller" customClass="EntertainmentTableViewController" customModule="Kuy_" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="71F-Np-eHH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EntertainmentPreferenceTableViewCell" id="T6F-Lu-iJS" customClass="EntertainmentPreferenceTableViewCell" customModule="Kuy_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T6F-Lu-iJS" id="V63-5S-xvM">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Movie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba5-uX-LHU">
+                                            <rect key="frame" x="60" y="11" width="154" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YUo-jS-LbU">
+                                            <rect key="frame" x="20" y="6" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </view>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="colorTagView" destination="YUo-jS-LbU" id="QHF-3F-ct1"/>
+                                    <outlet property="title" destination="ba5-uX-LHU" id="GfO-FW-rvC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="Kcl-V5-TXo" id="FNO-52-n2r"/>
+                            <outlet property="delegate" destination="Kcl-V5-TXo" id="nWm-cM-r32"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Entertainment" largeTitleDisplayMode="always" id="A6P-3x-6H3">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="Wql-IS-NKd">
+                            <connections>
+                                <segue destination="5en-PR-CaA" kind="presentation" identifier="AddEntertainmentSegue" id="BD5-qf-hvU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="UwT-bF-yoL" kind="presentation" identifier="editEntertainmentSegue" id="xaf-JV-XdG"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mdd-tk-SJA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4648" y="-571"/>
+        </scene>
+        <!--Preference Table View Controller-->
+        <scene sceneID="6NT-Cc-P6k">
+            <objects>
+                <tableViewController title="Preferences" id="v7H-iF-4yK" userLabel="Preference Table View Controller" customClass="PreferenceTableViewController" customModule="Kuy_" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4yJ-HV-3NP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection id="WGB-W0-nr5">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="24Q-UU-Y3b" style="IBUITableViewCellStyleDefault" id="EfF-FX-w9c">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EfF-FX-w9c" id="75c-te-lR8">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Entertainment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="24Q-UU-Y3b">
+                                                    <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Kcl-V5-TXo" kind="show" id="Fdn-v1-pq9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="siH-8t-qZD" style="IBUITableViewCellStyleDefault" id="2HU-GB-oNl">
+                                        <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2HU-GB-oNl" id="62u-Di-MyD">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Reset Budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="siH-8t-qZD">
+                                                    <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="v7H-iF-4yK" id="vfZ-qu-XYe"/>
+                            <outlet property="delegate" destination="v7H-iF-4yK" id="hLL-dp-x4J"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Preferences" largeTitleDisplayMode="always" id="OaU-hr-vLN"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZcE-5v-w8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3712" y="903"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="zFx-mo-cyX"/>
         <segue reference="iKS-Ef-Er3"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Kuy" width="746" height="329"/>
-        <image name="calendar" catalog="system" width="128" height="106"/>
-        <image name="chevron.left" catalog="system" width="96" height="128"/>
-        <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <image name="folder" catalog="system" width="128" height="95"/>
-        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="Kuy" width="500" height="516"/>
+        <image name="calendar" catalog="system" width="64" height="52"/>
+        <image name="chevron.left" catalog="system" width="48" height="64"/>
+        <image name="chevron.right" catalog="system" width="48" height="64"/>
+        <image name="folder" catalog="system" width="64" height="46"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
         <image name="idr-tag" width="80" height="80"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-        <image name="textformat.alt" catalog="system" width="128" height="80"/>
+        <image name="pencil" catalog="system" width="64" height="56"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+        <image name="textformat.alt" catalog="system" width="64" height="40"/>
         <image name="travel" width="7952" height="5622"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="BD5-qf-hvU"/>
+        <segue reference="LkY-WA-UBS"/>
+    </inferredMetricsTieBreakers>
 </document>

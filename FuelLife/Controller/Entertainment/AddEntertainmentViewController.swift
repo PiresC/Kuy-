@@ -18,6 +18,8 @@ class AddEntertainmentViewController: UIViewController, UIPickerViewDelegate, UI
     var addExpenseViewController:AddExpenseViewController?
     var editExpenseViewController:EditExpenseViewController?
     
+    var tableViewDelegate: RefreshDataDelegate?
+
     var colors = ["#FF0028", "#a4cf00", "#ff00ff", "#f2d53c", "#ffc0cb","#ffa500", "#d2b48c", "#c0c0c0"]
     var selectedColor:String?
     let picker = UIPickerView()
@@ -83,6 +85,9 @@ class AddEntertainmentViewController: UIViewController, UIPickerViewDelegate, UI
             else if let vc = self.editExpenseViewController{
                 vc.updateView()
             }
+            
+            self.tableViewDelegate!.refreshData()
+
         }
     }
 

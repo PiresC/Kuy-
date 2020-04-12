@@ -26,13 +26,19 @@
 		7ABDE8C4243C67A400B2F611 /* EditExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABDE8C3243C67A400B2F611 /* EditExpenseViewController.swift */; };
 		7ABDE8C7243C7FE300B2F611 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABDE8C6243C7FE300B2F611 /* UIColorExtension.swift */; };
 		7ABDE8CA243C86F100B2F611 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABDE8C9243C86F100B2F611 /* CurrencyFormatter.swift */; };
+		BA02EF7224408EA00082BA83 /* EntertainmentPreferenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02EF7124408EA00082BA83 /* EntertainmentPreferenceTableViewCell.swift */; };
+		BA1EB7BA2442CEE700248DBC /* BudgetDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1EB7B92442CEE700248DBC /* BudgetDetailTableViewController.swift */; };
+		BA1EB7BC2442D11000248DBC /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1EB7BB2442D11000248DBC /* BudgetViewController.swift */; };
 		BA29EA16243D107500CAA028 /* RecommendationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29EA15243D107500CAA028 /* RecommendationTableViewCell.swift */; };
 		BA43174D243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */; };
 		BA43174F243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43174E243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift */; };
 		BA4CC3AE243E19370040875D /* LastExpensesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4CC3AD243E19370040875D /* LastExpensesTableViewCell.swift */; };
 		BA4CC3B0243E2D450040875D /* TopStoriesDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4CC3AF243E2D450040875D /* TopStoriesDashboardTableViewCell.swift */; };
+		BA5CF05B2441458B00059C50 /* PreferenceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5CF05A2441458B00059C50 /* PreferenceTableViewController.swift */; };
 		BA644A5D243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */; };
 		BA644A5E243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */; };
+		BA8BB57B2440AF9F00983EC6 /* EntertainmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8BB57A2440AF9F00983EC6 /* EntertainmentTableViewController.swift */; };
+		BADD6E94244247FE0073FC7D /* RefreshDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD6E93244247FE0073FC7D /* RefreshDataDelegate.swift */; };
 		F00613A8243DC32E00A74F2E /* ChartImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00613A7243DC32E00A74F2E /* ChartImageView.swift */; };
 		F04CBC862443307B002F3B28 /* TopStoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04CBC852443307B002F3B28 /* TopStoryRepository.swift */; };
 /* End PBXBuildFile section */
@@ -59,13 +65,19 @@
 		7ABDE8C3243C67A400B2F611 /* EditExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditExpenseViewController.swift; sourceTree = "<group>"; };
 		7ABDE8C6243C7FE300B2F611 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		7ABDE8C9243C86F100B2F611 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		BA02EF7124408EA00082BA83 /* EntertainmentPreferenceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentPreferenceTableViewCell.swift; sourceTree = "<group>"; };
+		BA1EB7B92442CEE700248DBC /* BudgetDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetailTableViewController.swift; sourceTree = "<group>"; };
+		BA1EB7BB2442D11000248DBC /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
 		BA29EA15243D107500CAA028 /* RecommendationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationTableViewCell.swift; sourceTree = "<group>"; };
 		BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBudgetTableViewCell.swift; sourceTree = "<group>"; };
 		BA43174E243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetChartTableViewCell.swift; sourceTree = "<group>"; };
 		BA4CC3AD243E19370040875D /* LastExpensesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastExpensesTableViewCell.swift; sourceTree = "<group>"; };
 		BA4CC3AF243E2D450040875D /* TopStoriesDashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesDashboardTableViewCell.swift; sourceTree = "<group>"; };
+		BA5CF05A2441458B00059C50 /* PreferenceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceTableViewController.swift; sourceTree = "<group>"; };
 		BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCollectionViewCell.xib; sourceTree = "<group>"; };
+		BA8BB57A2440AF9F00983EC6 /* EntertainmentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentTableViewController.swift; sourceTree = "<group>"; };
+		BADD6E93244247FE0073FC7D /* RefreshDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshDataDelegate.swift; sourceTree = "<group>"; };
 		F00613A7243DC32E00A74F2E /* ChartImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartImageView.swift; sourceTree = "<group>"; };
 		F04CBC852443307B002F3B28 /* TopStoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoryRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +98,7 @@
 			children = (
 				7A210A49243DE304002107B7 /* AddEntertainmentViewController.swift */,
 				7A39AE5A243F324200CDE96E /* EditEntertainmentViewController.swift */,
+				BA8BB57A2440AF9F00983EC6 /* EntertainmentTableViewController.swift */,
 			);
 			path = Entertainment;
 			sourceTree = "<group>";
@@ -112,6 +125,7 @@
 				BA644A5A243C2D0000AA3B4A /* View */,
 				BAD7319C2439016000E23E39 /* Controller */,
 				7AA495D02437883C007692E4 /* Repositories */,
+				BADD6E92244247BB0073FC7D /* Protocol */,
 				7ABDE8C8243C800000B2F611 /* Utilities */,
 				7AA49584243730F1007692E4 /* Assets.xcassets */,
 				7AA49578243730F0007692E4 /* AppDelegate.swift */,
@@ -153,6 +167,31 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		BA02EF7024408E4A0082BA83 /* Preference */ = {
+			isa = PBXGroup;
+			children = (
+				BA02EF7124408EA00082BA83 /* EntertainmentPreferenceTableViewCell.swift */,
+			);
+			path = Preference;
+			sourceTree = "<group>";
+		};
+		BA1EB7B82442CEBD00248DBC /* Budget */ = {
+			isa = PBXGroup;
+			children = (
+				BA1EB7B92442CEE700248DBC /* BudgetDetailTableViewController.swift */,
+				BA1EB7BB2442D11000248DBC /* BudgetViewController.swift */,
+			);
+			path = Budget;
+			sourceTree = "<group>";
+		};
+		BA5CF0592441456800059C50 /* Preference */ = {
+			isa = PBXGroup;
+			children = (
+				BA5CF05A2441458B00059C50 /* PreferenceTableViewController.swift */,
+			);
+			path = Preference;
+			sourceTree = "<group>";
+		};
 		BA644A59243C2CF600AA3B4A /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,10 +210,11 @@
 		BA644A5A243C2D0000AA3B4A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BAE14237243FBED600623328 /* Expense */,
 				7AA4957E243730F0007692E4 /* Main.storyboard */,
 				7AA49586243730F1007692E4 /* LaunchScreen.storyboard */,
 				BA644A59243C2CF600AA3B4A /* Dashboard */,
+				BAE14237243FBED600623328 /* Expense */,
+				BA02EF7024408E4A0082BA83 /* Preference */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,11 +230,21 @@
 		BAD7319C2439016000E23E39 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BA1EB7B82442CEBD00248DBC /* Budget */,
+				BA5CF0592441456800059C50 /* Preference */,
 				BA890F09243DFC15007CA962 /* Dashboard */,
 				7A39AE59243F297C00CDE96E /* Entertainment */,
 				7ABDE8C5243C7E4700B2F611 /* Expenses */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BADD6E92244247BB0073FC7D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BADD6E93244247FE0073FC7D /* RefreshDataDelegate.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		BAE14237243FBED600623328 /* Expense */ = {
@@ -281,7 +331,10 @@
 				7ABDE8C7243C7FE300B2F611 /* UIColorExtension.swift in Sources */,
 				7AA49583243730F0007692E4 /* FuelLife.xcdatamodeld in Sources */,
 				7A39AE5B243F324200CDE96E /* EditEntertainmentViewController.swift in Sources */,
+				BA5CF05B2441458B00059C50 /* PreferenceTableViewController.swift in Sources */,
 				7A210A4A243DE304002107B7 /* AddEntertainmentViewController.swift in Sources */,
+				BADD6E94244247FE0073FC7D /* RefreshDataDelegate.swift in Sources */,
+				BA1EB7BC2442D11000248DBC /* BudgetViewController.swift in Sources */,
 				7AA49579243730F0007692E4 /* AppDelegate.swift in Sources */,
 				BA43174F243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift in Sources */,
 				7ABDE8CA243C86F100B2F611 /* CurrencyFormatter.swift in Sources */,
@@ -290,14 +343,17 @@
 				7A58E901243BA67100D83986 /* ExpenseDetailViewController.swift in Sources */,
 				BA4CC3B0243E2D450040875D /* TopStoriesDashboardTableViewCell.swift in Sources */,
 				7A21F2642439C65C00F01389 /* ExpenseTableViewCell.swift in Sources */,
+				BA02EF7224408EA00082BA83 /* EntertainmentPreferenceTableViewCell.swift in Sources */,
 				7AA495CB24377A5A007692E4 /* PeriodRepository.swift in Sources */,
 				7AA495CD243783EE007692E4 /* EntertainmentRepository.swift in Sources */,
 				BA29EA16243D107500CAA028 /* RecommendationTableViewCell.swift in Sources */,
 				BA644A5D243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift in Sources */,
 				BA43174D243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift in Sources */,
+				BA8BB57B2440AF9F00983EC6 /* EntertainmentTableViewController.swift in Sources */,
 				7AA4957B243730F0007692E4 /* SceneDelegate.swift in Sources */,
 				BA4CC3AE243E19370040875D /* LastExpensesTableViewCell.swift in Sources */,
 				7A58E8FF243B8ED300D83986 /* AddExpenseViewController.swift in Sources */,
+				BA1EB7BA2442CEE700248DBC /* BudgetDetailTableViewController.swift in Sources */,
 				7A21F2622439C52900F01389 /* ExpenseHistoryViewController.swift in Sources */,
 				7AA495CF243786B6007692E4 /* ExpenseRepository.swift in Sources */,
 				F04CBC862443307B002F3B28 /* TopStoryRepository.swift in Sources */,
