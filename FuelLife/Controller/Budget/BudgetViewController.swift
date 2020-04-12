@@ -16,21 +16,12 @@ class BudgetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         currentBudgetTextField.isHidden = true
-        // Do any additional setup after loading the view.
+                    
+        self.updateBudgetText()
         
-        let budget = PeriodRepository.getCurrentBudget()
-        
-        var abc = 0
-        
-        if let current_budget = budget?.currentBudget {
-            abc = Int(exactly:current_budget) ?? 0
-            currentBudgetTextField.text = CurrencyFormatter.format(abc)
-            currentBudgetLabel.text = CurrencyFormatter.format(abc)
-        } else {
-            currentBudgetTextField.text = "0"
-            currentBudgetLabel.text = "0"
-        }
+        currentBudgetTextField.delegate = self
         
     }
     
@@ -39,14 +30,33 @@ class BudgetViewController: UIViewController {
         currentBudgetTextField.isHidden = false
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+extension BudgetViewController  {
+    func updateBudgetText(){
+        let budget = PeriodRepository.getCurrentBudget()
+                
+        if let current_budget = budget?.currentBudget {
+            currentBudgetTextField.text = "\(current_budget)"
+            currentBudgetLabel.text = CurrencyFormatter.format(Int(exactly:current_budget) ?? 0)
+        } else {
+            currentBudgetTextField.text = "0"
+            currentBudgetLabel.text = "0"
+        }
+    }
+}
+
+extension BudgetViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
+        PeriodRepository.editBudget(newBudget: Int64(textField.text ?? "0")!)
+        textField.resignFirstResponder()
+        
+        self.updateBudgetText()
+        currentBudgetLabel.isHidden = false
+        currentBudgetTextField.isHidden = true
+        return true
+    }
+}
+
+
