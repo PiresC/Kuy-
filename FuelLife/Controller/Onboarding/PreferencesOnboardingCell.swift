@@ -9,7 +9,7 @@
 import UIKit
 
 class PreferencesOnboardingCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var imagePreference: UIImageView!
     @IBOutlet weak var titlePreference: UILabel!
     @IBOutlet weak var colorCategory: UIButton!
@@ -19,6 +19,8 @@ class PreferencesOnboardingCell: UICollectionViewCell {
     var color: UIColor?
     var title: String = ""
     var image: UIImage?
+    var imageName: String = ""
+    var testName: String = "travel-col"
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,14 +29,28 @@ class PreferencesOnboardingCell: UICollectionViewCell {
         titlePreference.text = "Traveling"
     }
     
-    public func configure(image: UIImage, title: String, color: UIColor) {
-        self.imagePreference.image = image
+    public func configure(image: String, title: String, color: UIColor) {
+        self.imageName = image
+        self.imagePreference.image = UIImage(named: image)
         self.titlePreference.text? = title
         self.colorCategory.tintColor? = color
     }
     
     static func nib() -> UINib {
         return UINib(nibName: "PreferencesOnboardingCell", bundle: nil)
+    }
+    
+    override var isSelected: Bool {
+        willSet(bool) {
+            let splittedName = imageName.split(separator: "-")
+            if splittedName[0] != imageName {
+                imageName = String(splittedName[0])
+                self.imagePreference.image = UIImage(named: imageName)
+            } else {
+                imageName = "\(imageName)-col"
+                self.imagePreference.image = UIImage(named: imageName)
+            }
+        }
     }
     
 }

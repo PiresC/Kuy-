@@ -55,7 +55,7 @@ class EntertainmentRepository{
     
     static func updateEntertainment(entertainment:Entertainment, newName:String, newBasePrice:Int64, newColor:String){
         let entertainments = fetchEntertainments()
-        if (entertainments.filter { $0.name == newName }.count == 1){
+        if (entertainments.filter { $0.name == entertainment.name }.count == 1){
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
                 return
             }
