@@ -9,8 +9,12 @@
 import UIKit
 
 class TopStoriesDashboardTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var topStoriesView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var abstractLabel: UILabel!
+    
+    var count: Int = 0
     
     
     override func awakeFromNib() {
@@ -24,9 +28,12 @@ class TopStoriesDashboardTableViewCell: UITableViewCell {
         topStoriesView.layer.shadowRadius = 2.0
         topStoriesView.layer.shadowOpacity = 0.7
         topStoriesView.layer.masksToBounds = false
-        
     }
-
+    
+    @IBAction func openWebsiteButton(_ sender: UIButton) {
+        UIApplication.shared.open(URL(string: "http://www.apple.com")!, options: [:], completionHandler: nil)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

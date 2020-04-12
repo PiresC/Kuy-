@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EJv-SA-Cm4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EJv-SA-Cm4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -353,12 +353,21 @@
                                                                 <action selector="shareBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2dg-Lx-tqj"/>
                                                             </connections>
                                                         </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTG-Rj-A5M">
+                                                            <rect key="frame" x="8" y="0.0" width="343" height="270"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <connections>
+                                                                <action selector="openWebsiteButton:" destination="NaV-uG-05r" eventType="touchUpInside" id="KmZ-gc-VXg"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="abstractLabel" destination="pR4-yv-V7R" id="CWZ-IJ-v3g"/>
+                                            <outlet property="titleLabel" destination="Rax-tp-EVb" id="cbp-H4-iBP"/>
                                             <outlet property="topStoriesView" destination="9Fa-TZ-JdR" id="aGu-aa-rJm"/>
                                         </connections>
                                     </tableViewCell>
@@ -1139,21 +1148,21 @@
             <point key="canvasLocation" x="160.86956521739131" y="137.94642857142856"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Kuy" width="746" height="329"/>
-        <image name="calendar" catalog="system" width="64" height="52"/>
-        <image name="chevron.left" catalog="system" width="48" height="64"/>
-        <image name="chevron.right" catalog="system" width="48" height="64"/>
-        <image name="folder" catalog="system" width="64" height="46"/>
-        <image name="gear" catalog="system" width="64" height="58"/>
-        <image name="idr-tag" width="80" height="80"/>
-        <image name="plus" catalog="system" width="64" height="56"/>
-        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
-        <image name="textformat.alt" catalog="system" width="64" height="40"/>
-        <image name="travel" width="7952" height="5622"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zFx-mo-cyX"/>
         <segue reference="iKS-Ef-Er3"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="Kuy" width="746" height="329"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="folder" catalog="system" width="128" height="95"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="idr-tag" width="80" height="80"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="textformat.alt" catalog="system" width="128" height="80"/>
+        <image name="travel" width="7952" height="5622"/>
+    </resources>
 </document>

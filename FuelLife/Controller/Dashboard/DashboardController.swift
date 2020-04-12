@@ -9,6 +9,10 @@
 import UIKit
 
 class DashboardController: UIViewController {
+    
+    var news: [responseStory] = []
+    let tp = TopStoriesDashboardTableViewCell()
+    var topstories: [TopStory] = []
 
     @IBOutlet weak var dashboardTableView: UITableView!
         
@@ -17,7 +21,11 @@ class DashboardController: UIViewController {
         
         dashboardTableView.delegate = self
         dashboardTableView.dataSource = self
-
+        tp.fetchApi()
+        tp.setTitleLabel()
+        
+//        topstories = tp.fetchApi()
+        print(topstories)
     }
     @IBAction func shareBtn(_ sender: UIButton) {
         
@@ -84,10 +92,16 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
         }
           
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-        
+        print(indexPath.row)
         if let c = cell as? LastExpensesTableViewCell{
             c.dashboardView = self
         }
+        
+        if let c = cell as? TopStoriesDashboardTableViewCell {
+//            c.topStory = topstories[indexPath.row]
+//            print(topstories.count)
+        }
+        
                             
         return cell
     }

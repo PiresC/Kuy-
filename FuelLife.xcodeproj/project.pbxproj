@@ -34,6 +34,7 @@
 		BA644A5D243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */; };
 		BA644A5E243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */; };
 		F00613A8243DC32E00A74F2E /* ChartImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00613A7243DC32E00A74F2E /* ChartImageView.swift */; };
+		F04CBC862443307B002F3B28 /* TopStoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04CBC852443307B002F3B28 /* TopStoryRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		BA644A5B243C2D2700AA3B4A /* RecommendationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA644A5C243C2D2700AA3B4A /* RecommendationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCollectionViewCell.xib; sourceTree = "<group>"; };
 		F00613A7243DC32E00A74F2E /* ChartImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartImageView.swift; sourceTree = "<group>"; };
+		F04CBC852443307B002F3B28 /* TopStoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoryRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				7AA495CA24377A5A007692E4 /* PeriodRepository.swift */,
 				7AA495CC243783EE007692E4 /* EntertainmentRepository.swift */,
 				7AA495CE243786B6007692E4 /* ExpenseRepository.swift */,
+				F04CBC852443307B002F3B28 /* TopStoryRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				7A58E8FF243B8ED300D83986 /* AddExpenseViewController.swift in Sources */,
 				7A21F2622439C52900F01389 /* ExpenseHistoryViewController.swift in Sources */,
 				7AA495CF243786B6007692E4 /* ExpenseRepository.swift in Sources */,
+				F04CBC862443307B002F3B28 /* TopStoryRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

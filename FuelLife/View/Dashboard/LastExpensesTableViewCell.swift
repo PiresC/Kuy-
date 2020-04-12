@@ -44,7 +44,7 @@ class LastExpensesTableViewCell: UITableViewCell {
     
     @objc func reloadDashboardExpenseTableView(notification: NSNotification){
         self.lastExpenseTableView.reloadData()
-q    }
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
