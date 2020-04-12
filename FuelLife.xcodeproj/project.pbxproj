@@ -44,6 +44,7 @@
 		BA8BB57B2440AF9F00983EC6 /* EntertainmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8BB57A2440AF9F00983EC6 /* EntertainmentTableViewController.swift */; };
 		BADD6E94244247FE0073FC7D /* RefreshDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD6E93244247FE0073FC7D /* RefreshDataDelegate.swift */; };
 		F00613A8243DC32E00A74F2E /* ChartImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00613A7243DC32E00A74F2E /* ChartImageView.swift */; };
+		F04CBC862443307B002F3B28 /* TopStoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04CBC852443307B002F3B28 /* TopStoryRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		BA8BB57A2440AF9F00983EC6 /* EntertainmentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentTableViewController.swift; sourceTree = "<group>"; };
 		BADD6E93244247FE0073FC7D /* RefreshDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshDataDelegate.swift; sourceTree = "<group>"; };
 		F00613A7243DC32E00A74F2E /* ChartImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartImageView.swift; sourceTree = "<group>"; };
+		F04CBC852443307B002F3B28 /* TopStoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoryRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				7AA495CA24377A5A007692E4 /* PeriodRepository.swift */,
 				7AA495CC243783EE007692E4 /* EntertainmentRepository.swift */,
 				7AA495CE243786B6007692E4 /* ExpenseRepository.swift */,
+				F04CBC852443307B002F3B28 /* TopStoryRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				BA1EB7BA2442CEE700248DBC /* BudgetDetailTableViewController.swift in Sources */,
 				7A21F2622439C52900F01389 /* ExpenseHistoryViewController.swift in Sources */,
 				7AA495CF243786B6007692E4 /* ExpenseRepository.swift in Sources */,
+				F04CBC862443307B002F3B28 /* TopStoryRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,8 +9,13 @@
 import UIKit
 
 class TopStoriesDashboardTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var topStoriesView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var abstractLabel: UILabel!
+    var url: String?
+    var count: Int = 0
+    var share: [String]? = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,11 +29,17 @@ class TopStoriesDashboardTableViewCell: UITableViewCell {
         topStoriesView.layer.shadowOpacity = 0.7
         topStoriesView.layer.masksToBounds = false
     }
-
+    
+    @IBAction func openWebsiteButton(_ sender: UIButton) {
+        //okee contoh yaak misalnya https://www.nytimes.com/2020/04/12/podcasts/the-daily/weird-al-yankovic-coronavirus-music.html
+        
+        UIApplication.shared.open(URL(string: url ?? "http://www.apple.com")!, options: [:], completionHandler: nil)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
-
+    
 }
