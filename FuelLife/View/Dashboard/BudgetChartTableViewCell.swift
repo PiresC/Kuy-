@@ -22,7 +22,10 @@ class BudgetChartTableViewCell: UITableViewCell {
     var test: String = ""
     var count: Int = 0
     
+<<<<<<< HEAD
+=======
     //    var data: [fgBackground] = []
+>>>>>>> 561a27ba87975cf437a2ff58c8c7c8c93ae68cce
     var arrText: [String] = []
     
     func updateView(){
@@ -64,6 +67,15 @@ class BudgetChartTableViewCell: UITableViewCell {
         budgetChartView?.layer.shadowRadius = 2.0
         budgetChartView?.layer.shadowOpacity = 0.7
         budgetChartView?.layer.masksToBounds = false
+<<<<<<< HEAD
+        
+        
+        arrText.append("a")
+        arrText.append("b")
+        setLabel(textLabel: arrText)
+         
+=======
+>>>>>>> 561a27ba87975cf437a2ff58c8c7c8c93ae68cce
     }
     
     func setChart(frame: CGRect, text: String, strokeColor: CGColor, strokeStart: CGFloat, strokeEnd: CGFloat) {

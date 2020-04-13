@@ -12,12 +12,14 @@ struct TopStory {
     var title: String = ""
     var url: String = ""
     var abstract: String = ""
+    var thumbnail_standard: String = ""
 }
 
 struct result: Decodable {
     let title: String
     let url: String
     let abstract: String
+    let thumbnail_standard: String
 }
 
 struct responseStory: Decodable {
@@ -46,6 +48,7 @@ struct TopStoryRepository {
                                 topstory.title = apiResult.title
                                 topstory.abstract = apiResult.abstract
                                 topstory.url = apiResult.url
+                                topstory.thumbnail_standard = apiResult.thumbnail_standard
                                 stories.append(topstory)
                             }
                             self.delegate?.updateData(data: stories)
