@@ -41,7 +41,6 @@ class BudgetDetailTableViewCell: UITableViewCell {
          self.contentView.sendSubviewToBack(whiteRoundedView)
         
         
-
     }
 
     override func awakeFromNib() {
