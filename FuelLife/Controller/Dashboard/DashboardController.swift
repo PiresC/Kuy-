@@ -20,7 +20,7 @@ class DashboardController: UIViewController, TopStoryRepositoryDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let imageView = UIImageView(frame: CGRect(x: 85, y: 0, width: 10, height: 10))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
         
         imageView.contentMode = .scaleAspectFit
         let image = UIImage(named: "Kuy")
@@ -32,7 +32,6 @@ class DashboardController: UIViewController, TopStoryRepositoryDelegate {
         dashboardTableView.delegate = self
         dashboardTableView.dataSource = self
         repo.fetchApi()
-//        print(topstories)
         
         NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: NSNotification.Name(rawValue: "dataChanged"), object: nil)
     }
