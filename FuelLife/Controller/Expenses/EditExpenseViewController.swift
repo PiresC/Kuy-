@@ -136,6 +136,8 @@ class EditExpenseViewController: UIViewController, UIPickerViewDelegate, UIPicke
         else{
             print("kena")
         }
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dataChanged"), object: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

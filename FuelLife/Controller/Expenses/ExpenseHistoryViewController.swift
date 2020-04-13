@@ -91,6 +91,7 @@ class ExpenseHistoryViewController: UIViewController, UITableViewDelegate, UITab
             PeriodRepository.updatePeriod(period: self.period!, startingBudget: self.period!.startingBudget, currentBudget: self.period!.currentBudget + Int64(expense.price))
                 ExpenseRepository.deleteExpense(expense: expense)
                 self.updateView()
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dataChanged"), object: nil)
         }))
         present(refreshAlert, animated: true, completion: nil)
     }
