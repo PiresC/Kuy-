@@ -21,20 +21,8 @@ class Budget {
     
     static func getCurrentBudgetDetails() -> [BudgetDetail] {
         var budgetDetails: [BudgetDetail] = []
-        var entertainments: [Entertainment] = []
-
-        entertainments = EntertainmentRepository.fetchEntertainments()
         
-        let expenses = ExpenseRepository.fetchExpenses()
-
-        for entertainment in entertainments {
-            
-            //TODO, ini random!!!!
-            var percentage = Int.random(in: 5..<25)
-            
-            let budgetdetail = BudgetDetail(name: entertainment.name!, backgroundColor: entertainment.color!, percentage: percentage, expenses: expenses)
-            budgetDetails.append(budgetdetail)
-        }
+        budgetDetails = EntertainmentRepository.getEntertainmentReport()
         
         return budgetDetails
     }

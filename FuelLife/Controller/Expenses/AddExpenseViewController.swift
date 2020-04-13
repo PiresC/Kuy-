@@ -133,7 +133,7 @@ class AddExpenseViewController: UIViewController, UIPickerViewDelegate, UIPicker
             }
         }
         
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadEDashboardExpenseTableView"), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dataChanged"), object: nil)
 
     }
     

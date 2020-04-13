@@ -34,6 +34,13 @@ class DashboardController: UIViewController, TopStoryRepositoryDelegate {
             self.dashboardTableView.reloadData()
         }
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier=="dashboardAddExpense"){
+            if let s = sender as? Entertainment, let dest = segue.destination as? AddExpenseViewController{
+                dest.entertainment = s
+            }
+        }
+    }
 }
 
 
@@ -87,6 +94,10 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
         let cell = dashboardTableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         print(indexPath.row)
         if let c = cell as? LastExpensesTableViewCell{
+            c.dashboardView = self
+        }
+        
+        if let c = cell as? RecommendationTableViewCell{
             c.dashboardView = self
         }
         
