@@ -31,7 +31,6 @@ class Budget {
             
             //TODO, ini random!!!!
             var percentage = Int.random(in: 5..<25)
-            print("percentage: \(percentage)")
             
             let budgetdetail = BudgetDetail(name: entertainment.name!, backgroundColor: entertainment.color!, percentage: percentage, expenses: expenses)
             budgetDetails.append(budgetdetail)
