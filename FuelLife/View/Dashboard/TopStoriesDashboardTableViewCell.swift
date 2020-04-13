@@ -16,6 +16,9 @@ class TopStoriesDashboardTableViewCell: UITableViewCell {
     var url: String?
     var count: Int = 0
     var share: [String]? = []
+    var shareUrl: String?
+    
+    var dashboardView: DashboardController?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,6 +31,16 @@ class TopStoriesDashboardTableViewCell: UITableViewCell {
         topStoriesView.layer.shadowRadius = 2.0
         topStoriesView.layer.shadowOpacity = 0.7
         topStoriesView.layer.masksToBounds = false
+    }
+    
+    @IBAction func shareButton(_ sender: UIButton) {
+        let secondActivityItem: URL = URL(string: url ?? "http://www.apple.com")!
+        
+        let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [secondActivityItem], applicationActivities: nil)
+
+        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook, UIActivity.ActivityType.postToTwitter, UIActivity.ActivityType.addToReadingList]
+
+        dashboardView?.present(activityViewController, animated: true, completion: nil)
     }
     
     @IBAction func openWebsiteButton(_ sender: UIButton) {

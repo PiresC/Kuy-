@@ -34,7 +34,7 @@ struct TopStoryRepository {
     var delegate: TopStoryRepositoryDelegate?
     
     func fetchApi() {
-            if let url = URL(string: "https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=HqWJNEfPxWnk73JGAjZ0rmGOhie5iWV2&limit=4") {
+            if let url = URL(string: "https://api.nytimes.com/svc/news/v3/content/nyt/arts.json?api-key=HqWJNEfPxWnk73JGAjZ0rmGOhie5iWV2&limit=4") {
                 URLSession.shared.dataTask(with: url) { data, response, error in
                     if let data = data {
                         let jsonDecoder = JSONDecoder()
