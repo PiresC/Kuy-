@@ -44,9 +44,9 @@ extension BudgetViewController  {
     func updateBudgetText(){
         let budget = PeriodRepository.getCurrentBudget()
                 
-        if let current_budget = budget?.currentBudget {
-            currentBudgetTextField.text = "\(current_budget)"
-            currentBudgetLabel.text = CurrencyFormatter.format(Int(exactly:current_budget) ?? 0)
+        if let startingBudget = budget?.startingBudget {
+            currentBudgetTextField.text = "\(startingBudget)"
+            currentBudgetLabel.text = CurrencyFormatter.format(Int(exactly:startingBudget) ?? 0)
         } else {
             currentBudgetTextField.text = "0"
             currentBudgetLabel.text = "0"
