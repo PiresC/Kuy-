@@ -14,15 +14,23 @@ class BudgetViewController: UIViewController {
     @IBOutlet weak var editBudgetButton: UIButton!
     @IBOutlet weak var currentBudgetTextField: UITextField!
     
+    @IBOutlet weak var BudgetDetailTableView: UITableView!
+    
+    var budgetDetails: [BudgetDetail] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        BudgetDetailTableView.delegate = self
+        BudgetDetailTableView.dataSource = self
         
-        currentBudgetTextField.isHidden = true
-                    
         self.updateBudgetText()
-        
+
+        currentBudgetTextField.isHidden = true
         currentBudgetTextField.delegate = self
         
+        budgetDetails = Budget.getCurrentBudgetDetails()
+                
     }
     
     @IBAction func editBudgetAction(_ sender: UIButton) {
@@ -57,6 +65,23 @@ extension BudgetViewController: UITextFieldDelegate {
         currentBudgetTextField.isHidden = true
         return true
     }
+}
+
+extension BudgetViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return budgetDetails.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "budgetTableViewCell", for: indexPath) as! BudgetDetailTableViewCell
+        cell.budgetDetail = budgetDetails[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 135
+    }
+    
 }
 
 
