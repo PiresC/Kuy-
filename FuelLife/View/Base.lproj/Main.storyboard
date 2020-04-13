@@ -431,19 +431,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="kik-sb-oRM">
-                        <barButtonItem key="leftBarButtonItem" width="85" id="mlu-Ng-LhX"/>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Item" image="plus" catalog="system" id="lUq-MS-1Ra">
-                                <connections>
-                                    <segue destination="UJp-8N-Woe" kind="presentation" identifier="dashboardAddExpense" id="iKS-Ef-Er3"/>
-                                </connections>
-                            </barButtonItem>
+                        <leftBarButtonItems>
                             <barButtonItem title="Item" image="gear" catalog="system" id="0yX-vs-b1h">
                                 <connections>
                                     <segue destination="v7H-iF-4yK" kind="show" id="bbQ-LF-EqU"/>
                                 </connections>
                             </barButtonItem>
-                        </rightBarButtonItems>
+                            <barButtonItem id="mlu-Ng-LhX"/>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="lUq-MS-1Ra">
+                            <connections>
+                                <segue destination="UJp-8N-Woe" kind="presentation" identifier="dashboardAddExpense" id="iKS-Ef-Er3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dashboardTableView" destination="myf-oE-nQ6" id="Y6p-T8-oSD"/>
@@ -1506,11 +1506,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calendar" catalog="system" width="128" height="106"/>
-        <image name="chevron.left" catalog="system" width="96" height="128"/>
-        <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <image name="folder" catalog="system" width="128" height="95"/>
-        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="calendar" catalog="system" width="64" height="52"/>
+        <image name="category" width="76" height="90"/>
+        <image name="chevron.left" catalog="system" width="48" height="64"/>
+        <image name="chevron.right" catalog="system" width="48" height="64"/>
+        <image name="folder" catalog="system" width="64" height="46"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
         <image name="idr-tag" width="80" height="80"/>
         <image name="nextButtonOnboarding" width="213" height="45"/>
         <image name="pencil" catalog="system" width="64" height="56"/>
@@ -1520,7 +1521,7 @@
         <image name="travel" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BD5-qf-hvU"/>
-        <segue reference="LkY-WA-UBS"/>
+        <segue reference="OYb-JJ-o0L"/>
+        <segue reference="iKS-Ef-Er3"/>
     </inferredMetricsTieBreakers>
 </document>
