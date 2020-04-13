@@ -41,6 +41,10 @@ class RecommendationCollectionViewCell: UICollectionViewCell {
         
         self.layer.backgroundColor = UIColor(hexString: recommendationColor).cgColor
 
+
+            //it is the time for us to  call an accessibility function we created before.
+            applyAccessibility(data: "\(recommendationLabel) \(String(recommendationPrice))")
+        
     }
     
     static func nib() -> UINib {
@@ -48,4 +52,16 @@ class RecommendationCollectionViewCell: UICollectionViewCell {
     }
 
 
+
+    //Function to implementing the accessibility on a collectionView that sitting at  the tableView.
+    //By Aris Yohanes Elean
+    final func applyAccessibility(data: String)
+{
+    isAccessibilityElement = true
+    accessibilityLabel = "\(data)"
+    accessibilityHint =  "Double tab to select"
+    recommendationCollectionViewCellLabel.isAccessibilityElement = false
+    recommendationCollectionViewCellPrice?.isAccessibilityElement = false
+    }
 }
+
