@@ -35,6 +35,7 @@
 		BA29EA16243D107500CAA028 /* RecommendationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29EA15243D107500CAA028 /* RecommendationTableViewCell.swift */; };
 		BA31E0E02443FE3F00AE96C9 /* BudgetDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA31E0DF2443FE3F00AE96C9 /* BudgetDetailTableViewCell.swift */; };
 		BA31E0E22444059B00AE96C9 /* BudgetDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA31E0E12444059B00AE96C9 /* BudgetDetail.swift */; };
+		BA409A9B24445B1D00C0298C /* BudgetDetailExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA409A9A24445B1D00C0298C /* BudgetDetailExpenseTableViewCell.swift */; };
 		BA43174D243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */; };
 		BA43174F243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43174E243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift */; };
 		BA4CC3AE243E19370040875D /* LastExpensesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4CC3AD243E19370040875D /* LastExpensesTableViewCell.swift */; };
@@ -79,6 +80,7 @@
 		BA29EA15243D107500CAA028 /* RecommendationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationTableViewCell.swift; sourceTree = "<group>"; };
 		BA31E0DF2443FE3F00AE96C9 /* BudgetDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetailTableViewCell.swift; sourceTree = "<group>"; };
 		BA31E0E12444059B00AE96C9 /* BudgetDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetail.swift; sourceTree = "<group>"; };
+		BA409A9A24445B1D00C0298C /* BudgetDetailExpenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetailExpenseTableViewCell.swift; sourceTree = "<group>"; };
 		BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBudgetTableViewCell.swift; sourceTree = "<group>"; };
 		BA43174E243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetChartTableViewCell.swift; sourceTree = "<group>"; };
 		BA4CC3AD243E19370040875D /* LastExpensesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastExpensesTableViewCell.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				BA31E0DF2443FE3F00AE96C9 /* BudgetDetailTableViewCell.swift */,
+				BA409A9A24445B1D00C0298C /* BudgetDetailExpenseTableViewCell.swift */,
 			);
 			path = Budget;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				BADD6E94244247FE0073FC7D /* RefreshDataDelegate.swift in Sources */,
 				BA1EB7BC2442D11000248DBC /* BudgetViewController.swift in Sources */,
 				7AA49579243730F0007692E4 /* AppDelegate.swift in Sources */,
+				BA409A9B24445B1D00C0298C /* BudgetDetailExpenseTableViewCell.swift in Sources */,
 				BA43174F243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift in Sources */,
 				7ABDE8CA243C86F100B2F611 /* CurrencyFormatter.swift in Sources */,
 				F00613A8243DC32E00A74F2E /* ChartImageView.swift in Sources */,
