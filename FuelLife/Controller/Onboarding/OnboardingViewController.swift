@@ -21,6 +21,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var skipButton: UIButton!
     
     let cellIdentifier = PreferencesOnboardingCell.identifier
 
@@ -44,6 +45,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         self.view.layoutIfNeeded()
         self.nextButton.isHidden = true
+        self.skipButton.isHidden = false
         self.scrollView.delegate = self
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
@@ -136,7 +138,13 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
 
     @IBAction func toDashboard(_ sender: UIButton) {
         UserDefaults.standard.set(preferenceRecommendation, forKey: "preferedRecommendation")
-        UserDefaults.standard.set(false, forKey: "firstComer")
+        UserDefaults.standard.set(true, forKey: "hasLaunched")
+        performSegue(withIdentifier: "toDashboard", sender: nil)
+    }
+    
+    @IBAction func skipping(_ sender: UIButton) {
+        UserDefaults.standard.set(preferenceRecommendation, forKey: "preferedRecommendation")
+        UserDefaults.standard.set(true, forKey: "hasLaunched")
         performSegue(withIdentifier: "toDashboard", sender: nil)
     }
     
@@ -173,8 +181,10 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
         doSomethingWhenItemClicked(indexPath)
         if preferenceRecommendation.count > 0 {
             self.nextButton.isHidden = false
+            self.skipButton.isHidden = true
         } else {
             self.nextButton.isHidden = true
+            self.skipButton.isHidden = false
         }
     }
     
