@@ -44,6 +44,8 @@ class ProgressBudgetTableViewCell: UITableViewCell {
         usedBudgetView.layer.shadowOpacity = 0.7
         usedBudgetView.layer.masksToBounds = false
         
+//        availableBudgetAmountLabel.text = 
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
