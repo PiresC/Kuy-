@@ -19,6 +19,8 @@ class ProgressBudgetTableViewCell: UITableViewCell {
     @IBOutlet weak var usedBudgetLabel: UILabel!
     @IBOutlet weak var usedBudgetAmountLabel: UILabel!
     
+    let budget = PeriodRepository.getCurrentBudget()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,7 +35,6 @@ class ProgressBudgetTableViewCell: UITableViewCell {
         availableBudgetView.layer.shadowOpacity = 0.7
         availableBudgetView.layer.masksToBounds = false
         
-
         usedBudgetView.layer.cornerRadius = 10
         usedBudgetView.layer.borderWidth = 1.0
         usedBudgetView.layer.borderColor = UIColor.lightGray.cgColor
@@ -44,6 +45,20 @@ class ProgressBudgetTableViewCell: UITableViewCell {
         usedBudgetView.layer.shadowOpacity = 0.7
         usedBudgetView.layer.masksToBounds = false
         
+        if let current_budget = budget?.currentBudget {
+            availableBudgetAmountLabel.text = "\(current_budget)"
+            availableBudgetAmountLabel.text = CurrencyFormatter.format(Int(exactly:current_budget) ?? 0)
+        } else {
+            availableBudgetAmountLabel.text = "0"
+            availableBudgetAmountLabel.text = "0"
+        }
+        
+        var expenses = PeriodRepository.getCurrentPeriod()?.expenses?.array as! [Expense]
+        var amount = 0
+        for i in expenses{
+            amount += Int(exactly:i.price ) ?? 0
+        }
+        usedBudgetAmountLabel.text = CurrencyFormatter.format(amount)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

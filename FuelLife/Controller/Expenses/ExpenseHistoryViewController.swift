@@ -26,8 +26,6 @@ class ExpenseHistoryViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var totalAmountLabel: UILabel!
     @IBOutlet weak var monthTextField: UITextField!
     
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         period = PeriodRepository.getCurrentPeriod()
