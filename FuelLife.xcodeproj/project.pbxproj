@@ -30,10 +30,11 @@
 		8D42D6392441EA70000ABA45 /* PreferencesOnboardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D42D6372441EA70000ABA45 /* PreferencesOnboardingCell.xib */; };
 		8DEDFB51243F16C500623CCA /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEDFB50243F16C500623CCA /* OnboardingViewController.swift */; };
 		BA02EF7224408EA00082BA83 /* EntertainmentPreferenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02EF7124408EA00082BA83 /* EntertainmentPreferenceTableViewCell.swift */; };
-		BA1EB7BA2442CEE700248DBC /* BudgetDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1EB7B92442CEE700248DBC /* BudgetDetailTableViewController.swift */; };
 		BA1EB7BC2442D11000248DBC /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1EB7BB2442D11000248DBC /* BudgetViewController.swift */; };
 		BA1EB7BF2443277200248DBC /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1EB7BE2443277200248DBC /* Budget.swift */; };
 		BA29EA16243D107500CAA028 /* RecommendationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29EA15243D107500CAA028 /* RecommendationTableViewCell.swift */; };
+		BA31E0E02443FE3F00AE96C9 /* BudgetDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA31E0DF2443FE3F00AE96C9 /* BudgetDetailTableViewCell.swift */; };
+		BA31E0E22444059B00AE96C9 /* BudgetDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA31E0E12444059B00AE96C9 /* BudgetDetail.swift */; };
 		BA43174D243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */; };
 		BA43174F243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43174E243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift */; };
 		BA4CC3AE243E19370040875D /* LastExpensesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4CC3AD243E19370040875D /* LastExpensesTableViewCell.swift */; };
@@ -73,10 +74,11 @@
 		8D42D6372441EA70000ABA45 /* PreferencesOnboardingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferencesOnboardingCell.xib; sourceTree = "<group>"; };
 		8DEDFB50243F16C500623CCA /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		BA02EF7124408EA00082BA83 /* EntertainmentPreferenceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentPreferenceTableViewCell.swift; sourceTree = "<group>"; };
-		BA1EB7B92442CEE700248DBC /* BudgetDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetailTableViewController.swift; sourceTree = "<group>"; };
 		BA1EB7BB2442D11000248DBC /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
 		BA1EB7BE2443277200248DBC /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		BA29EA15243D107500CAA028 /* RecommendationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationTableViewCell.swift; sourceTree = "<group>"; };
+		BA31E0DF2443FE3F00AE96C9 /* BudgetDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetailTableViewCell.swift; sourceTree = "<group>"; };
+		BA31E0E12444059B00AE96C9 /* BudgetDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetail.swift; sourceTree = "<group>"; };
 		BA43174C243D9CEA00E8F4A3 /* ProgressBudgetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBudgetTableViewCell.swift; sourceTree = "<group>"; };
 		BA43174E243DA82A00E8F4A3 /* BudgetChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetChartTableViewCell.swift; sourceTree = "<group>"; };
 		BA4CC3AD243E19370040875D /* LastExpensesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastExpensesTableViewCell.swift; sourceTree = "<group>"; };
@@ -197,7 +199,6 @@
 		BA1EB7B82442CEBD00248DBC /* Budget */ = {
 			isa = PBXGroup;
 			children = (
-				BA1EB7B92442CEE700248DBC /* BudgetDetailTableViewController.swift */,
 				BA1EB7BB2442D11000248DBC /* BudgetViewController.swift */,
 			);
 			path = Budget;
@@ -207,8 +208,17 @@
 			isa = PBXGroup;
 			children = (
 				BA1EB7BE2443277200248DBC /* Budget.swift */,
+				BA31E0E12444059B00AE96C9 /* BudgetDetail.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BA31E0DE2443FE2400AE96C9 /* Budget */ = {
+			isa = PBXGroup;
+			children = (
+				BA31E0DF2443FE3F00AE96C9 /* BudgetDetailTableViewCell.swift */,
+			);
+			path = Budget;
 			sourceTree = "<group>";
 		};
 		BA5CF0592441456800059C50 /* Preference */ = {
@@ -240,6 +250,7 @@
 				7AA4957E243730F0007692E4 /* Main.storyboard */,
 				7AA49586243730F1007692E4 /* LaunchScreen.storyboard */,
 				BA644A59243C2CF600AA3B4A /* Dashboard */,
+				BA31E0DE2443FE2400AE96C9 /* Budget */,
 				BAE14237243FBED600623328 /* Expense */,
 				BA02EF7024408E4A0082BA83 /* Preference */,
 			);
@@ -359,6 +370,7 @@
 				7AA4957D243730F0007692E4 /* DashboardController.swift in Sources */,
 				7ABDE8C7243C7FE300B2F611 /* UIColorExtension.swift in Sources */,
 				BA1EB7BF2443277200248DBC /* Budget.swift in Sources */,
+				BA31E0E02443FE3F00AE96C9 /* BudgetDetailTableViewCell.swift in Sources */,
 				7AA49583243730F0007692E4 /* FuelLife.xcdatamodeld in Sources */,
 				7A39AE5B243F324200CDE96E /* EditEntertainmentViewController.swift in Sources */,
 				BA5CF05B2441458B00059C50 /* PreferenceTableViewController.swift in Sources */,
@@ -384,8 +396,8 @@
 				BA8BB57B2440AF9F00983EC6 /* EntertainmentTableViewController.swift in Sources */,
 				7AA4957B243730F0007692E4 /* SceneDelegate.swift in Sources */,
 				BA4CC3AE243E19370040875D /* LastExpensesTableViewCell.swift in Sources */,
+				BA31E0E22444059B00AE96C9 /* BudgetDetail.swift in Sources */,
 				7A58E8FF243B8ED300D83986 /* AddExpenseViewController.swift in Sources */,
-				BA1EB7BA2442CEE700248DBC /* BudgetDetailTableViewController.swift in Sources */,
 				7A21F2622439C52900F01389 /* ExpenseHistoryViewController.swift in Sources */,
 				7AA495CF243786B6007692E4 /* ExpenseRepository.swift in Sources */,
 				F04CBC862443307B002F3B28 /* TopStoryRepository.swift in Sources */,
@@ -533,12 +545,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5UDBHNS49;
 				INFOPLIST_FILE = FuelLife/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.team10.FuelLife;
+				PRODUCT_BUNDLE_IDENTIFIER = org.team10.FuelLife;
 				PRODUCT_NAME = "Kuy!";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -550,12 +563,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5UDBHNS49;
 				INFOPLIST_FILE = FuelLife/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.team10.FuelLife;
+				PRODUCT_BUNDLE_IDENTIFIER = org.team10.FuelLife;
 				PRODUCT_NAME = "Kuy!";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -13,8 +13,17 @@ class Budget {
     var startingBudget: Int64
     var currentBudget: Int64
     
+    
     init(startingBudget: Int64, currentBudget: Int64) {
         self.startingBudget = startingBudget
         self.currentBudget = currentBudget
+    }
+    
+    static func getCurrentBudgetDetails() -> [BudgetDetail] {
+        var budgetDetails: [BudgetDetail] = []
+        
+        budgetDetails = EntertainmentRepository.getEntertainmentReport()
+        
+        return budgetDetails
     }
 }

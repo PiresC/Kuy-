@@ -38,7 +38,7 @@ class LastExpensesTableViewCell: UITableViewCell {
         lastExpenseTableView.dataSource = self
         lastExpenseTableView.delegate = self
         
-        NotificationCenter.default.addObserver(self, selector: #selector(reloadDashboardExpenseTableView), name: NSNotification.Name(rawValue: "reloadEDashboardExpenseTableView"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadDashboardExpenseTableView), name: NSNotification.Name(rawValue: "dataChanged"), object: nil)
         
     }
     
