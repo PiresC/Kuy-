@@ -13,6 +13,7 @@ class RecommendationTableViewCell: UITableViewCell {
     @IBOutlet weak var recommendationCollectionView: UICollectionView!
     
     let recommendationEntertainments = EntertainmentRepository.fetchRecommendationEntertainments()
+    var dashboardView: DashboardController?
     
     override func awakeFromNib() {
         let recommendationCollectionViewLayout = UICollectionViewFlowLayout();
@@ -46,6 +47,10 @@ class RecommendationTableViewCell: UITableViewCell {
 
 extension RecommendationTableViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let recommendationEntertainment = recommendationEntertainments[indexPath.row]
+        if let dashboard = dashboardView{
+            dashboard.performSegue(withIdentifier: "dashboardAddExpense", sender: recommendationEntertainment)
+        }
         print("you tapped me")
     }
 }
@@ -68,6 +73,7 @@ extension RecommendationTableViewCell: UICollectionViewDataSource {
 
         return cell
     }
+    
 
 }
     
