@@ -14,15 +14,15 @@ class BudgetViewController: UIViewController {
     @IBOutlet weak var editBudgetButton: UIButton!
     @IBOutlet weak var currentBudgetTextField: UITextField!
     
-    @IBOutlet weak var BudgetDetailTableView: UITableView!
+    @IBOutlet weak var budgetDetailTableView: UITableView!
     
     var budgetDetails: [BudgetDetail] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        BudgetDetailTableView.delegate = self
-        BudgetDetailTableView.dataSource = self
+        budgetDetailTableView.delegate = self
+        budgetDetailTableView.dataSource = self
         
         self.updateBudgetText()
 
@@ -79,9 +79,7 @@ extension BudgetViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 135
+        return 200
     }
     
 }
-
-
