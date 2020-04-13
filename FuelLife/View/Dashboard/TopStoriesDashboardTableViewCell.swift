@@ -13,10 +13,11 @@ class TopStoriesDashboardTableViewCell: UITableViewCell {
     @IBOutlet weak var topStoriesView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var abstractLabel: UILabel!
+    @IBOutlet weak var newsImage: UIImageView!
+    
     var url: String?
     var count: Int = 0
     var share: [String]? = []
-    var shareUrl: String?
     
     var dashboardView: DashboardController?
     
@@ -31,6 +32,7 @@ class TopStoriesDashboardTableViewCell: UITableViewCell {
         topStoriesView.layer.shadowRadius = 2.0
         topStoriesView.layer.shadowOpacity = 0.7
         topStoriesView.layer.masksToBounds = false
+        
     }
     
     @IBAction func shareButton(_ sender: UIButton) {

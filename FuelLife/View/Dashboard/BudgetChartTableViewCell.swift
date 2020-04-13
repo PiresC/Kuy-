@@ -22,7 +22,6 @@ class BudgetChartTableViewCell: UITableViewCell {
     var test: String = ""
     var count: Int = 0
     
-//    var data: [fgBackground] = []
     var arrText: [String] = []
     
     override func awakeFromNib() {
@@ -46,6 +45,7 @@ class BudgetChartTableViewCell: UITableViewCell {
         budgetChartView?.layer.shadowRadius = 2.0
         budgetChartView?.layer.shadowOpacity = 0.7
         budgetChartView?.layer.masksToBounds = false
+        
         
         arrText.append("a")
         arrText.append("b")

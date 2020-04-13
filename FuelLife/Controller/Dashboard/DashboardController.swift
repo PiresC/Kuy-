@@ -19,13 +19,20 @@ class DashboardController: UIViewController, TopStoryRepositoryDelegate {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let imageView = UIImageView(frame: CGRect(x: 85, y: 0, width: 10, height: 10))
+        
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "Kuy")
+        imageView.image = image
+        
+        navigationItem.titleView = imageView
+        
         repo.delegate = self
         dashboardTableView.delegate = self
         dashboardTableView.dataSource = self
-        
         repo.fetchApi()
-        
-        print(topstories)
+//        print(topstories)
     }
     
     func updateData(data: [TopStory]) {
@@ -35,7 +42,6 @@ class DashboardController: UIViewController, TopStoryRepositoryDelegate {
         }
     }
 }
-
 
 // MARK: Table View Extensions
 
@@ -85,7 +91,7 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
         }
           
         let cell = dashboardTableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-        print(indexPath.row)
+        
         if let c = cell as? LastExpensesTableViewCell{
             c.dashboardView = self
         }
@@ -94,10 +100,22 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
             c.titleLabel.text = topstories[indexPath.row].title
             c.abstractLabel.text = topstories[indexPath.row].abstract
             c.url = topstories[indexPath.row].url
+            
+            var imageName = topstories[indexPath.row].thumbnail_standard
+            let replaceimageName: String = imageName.replacingOccurrences(of: "thumbStandard", with: "thumbLarge")
+            if let url = URL(string: replaceimageName) {
+                print(url)
+                do {
+                    let data = try Data(contentsOf: url)
+                    c.newsImage?.image = UIImage(data: data)
+                } catch  {
+                    print(error.localizedDescription)
+                }
+            }
+        
             c.dashboardView = self
         }
-        print("DATA FROM API :",topstories)
-                            
+//        print("DATA FROM API :",topstories)
         return cell
     }
     
@@ -117,7 +135,6 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
         default:
             return 250
         }
-        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -161,7 +178,6 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
            
         return headerView
     }
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        let category = categories[indexPath.row]
