@@ -34,20 +34,6 @@ class DashboardController: UIViewController, TopStoryRepositoryDelegate {
             self.dashboardTableView.reloadData()
         }
     }
-    
-    @IBAction func shareBtn(_ sender: UIButton) {
-        
-        
-        let secondActivityItem: URL = URL(string: tp.url ?? "http://www.apple.com")!
-        
-        let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [secondActivityItem], applicationActivities: nil)
-
-        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook, UIActivity.ActivityType.postToTwitter, UIActivity.ActivityType.addToReadingList]
-
-        self.present(activityViewController, animated: true, completion: nil)
-        
-    }
-    
 }
 
 
@@ -108,7 +94,7 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
             c.titleLabel.text = topstories[indexPath.row].title
             c.abstractLabel.text = topstories[indexPath.row].abstract
             c.url = topstories[indexPath.row].url
-            
+            c.dashboardView = self
         }
         print("DATA FROM API :",topstories)
                             
