@@ -343,6 +343,9 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration" label="Expense Section ">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <connections>
                                             <outlet property="expenseView" destination="wcg-he-EDn" id="26H-7s-n0S"/>
                                             <outlet property="lastExpenseTableView" destination="CLu-Cd-0r1" id="Lft-Ax-rxS"/>
@@ -631,41 +634,38 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-BB-NHm">
-                                                    <rect key="frame" x="20" y="58" width="328" height="77"/>
+                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-BB-NHm">
+                                                    <rect key="frame" x="20" y="58" width="328" height="121"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <prototypes>
-                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="nwZ-wM-1Ng">
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="budgetDetailExpenseTableViewCell" id="nwZ-wM-1Ng" customClass="BudgetDetailExpenseTableViewCell" customModule="Kuy_" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="28" width="328" height="44"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nwZ-wM-1Ng" id="9GY-fb-XrH">
                                                                 <rect key="frame" x="0.0" y="0.0" width="328" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vul-0H-nMk">
-                                                                        <rect key="frame" x="20" y="0.0" width="45" height="21"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSy-59-hzx">
-                                                                        <rect key="frame" x="20" y="23" width="36" height="21"/>
+                                                                        <rect key="frame" x="20" y="0.0" width="194" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATN-vI-sqg">
-                                                                        <rect key="frame" x="271" y="0.0" width="39" height="21"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATN-vI-sqg">
+                                                                        <rect key="frame" x="186" y="0.0" width="124" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </tableViewCellContentView>
+                                                            <connections>
+                                                                <outlet property="expenseDateLabel" destination="zSy-59-hzx" id="vrj-i3-yfc"/>
+                                                                <outlet property="expensePriceLabel" destination="ATN-vI-sqg" id="bHK-3G-PeW"/>
+                                                            </connections>
                                                         </tableViewCell>
                                                     </prototypes>
                                                 </tableView>
@@ -674,6 +674,7 @@
                                         <connections>
                                             <outlet property="budgetDetailEntertainmentLabel" destination="QyL-No-bL7" id="hKm-YB-uEm"/>
                                             <outlet property="budgetDetailEntertainmentPercentage" destination="fW5-Fg-cIC" id="3LZ-ya-ae0"/>
+                                            <outlet property="budgetDetailExpenseTableView" destination="yYj-BB-NHm" id="dh5-5i-5nX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -690,7 +691,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Budget" largeTitleDisplayMode="always" id="njQ-Ij-sP0"/>
                     <connections>
-                        <outlet property="BudgetDetailTableView" destination="1T5-gi-r3y" id="2ws-iB-s4w"/>
+                        <outlet property="budgetDetailTableView" destination="1T5-gi-r3y" id="2ws-iB-s4w"/>
                         <outlet property="currentBudgetLabel" destination="e3O-Z8-BCE" id="Qbt-TK-vZd"/>
                         <outlet property="currentBudgetTextField" destination="BtV-Sw-lZQ" id="OPb-eM-BHm"/>
                         <outlet property="editBudgetButton" destination="Rpa-h1-4cD" id="s98-Lk-GSp"/>
@@ -1515,7 +1516,7 @@
         <image name="travel" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OYb-JJ-o0L"/>
-        <segue reference="iKS-Ef-Er3"/>
+        <segue reference="BD5-qf-hvU"/>
+        <segue reference="LkY-WA-UBS"/>
     </inferredMetricsTieBreakers>
 </document>
