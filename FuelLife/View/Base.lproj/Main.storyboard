@@ -362,9 +362,15 @@
                                                     <rect key="frame" x="10" y="11" width="394" height="270"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="travel" translatesAutoresizingMaskIntoConstraints="NO" id="HFQ-oY-csA">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="travel" translatesAutoresizingMaskIntoConstraints="NO" id="HFQ-oY-csA">
                                                             <rect key="frame" x="0.0" y="0.0" width="394" height="162"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="70"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Judul Story" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rax-tp-EVb">
                                                             <rect key="frame" x="12" y="170" width="366" height="36"/>
@@ -409,6 +415,7 @@
                                         </accessibility>
                                         <connections>
                                             <outlet property="abstractLabel" destination="pR4-yv-V7R" id="CWZ-IJ-v3g"/>
+                                            <outlet property="newsImage" destination="HFQ-oY-csA" id="ama-0V-lNP"/>
                                             <outlet property="titleLabel" destination="Rax-tp-EVb" id="cbp-H4-iBP"/>
                                             <outlet property="topStoriesView" destination="9Fa-TZ-JdR" id="aGu-aa-rJm"/>
                                         </connections>
@@ -424,19 +431,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="kik-sb-oRM">
+                        <barButtonItem key="leftBarButtonItem" width="85" id="mlu-Ng-LhX"/>
                         <rightBarButtonItems>
                             <barButtonItem title="Item" image="plus" catalog="system" id="lUq-MS-1Ra">
                                 <connections>
-                                    <segue destination="UJp-8N-Woe" kind="presentation" id="iKS-Ef-Er3"/>
+                                    <segue destination="UJp-8N-Woe" kind="presentation" identifier="dashboardAddExpense" id="iKS-Ef-Er3"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="gear" catalog="system" id="0yX-vs-b1h">
                                 <connections>
                                     <segue destination="v7H-iF-4yK" kind="show" id="bbQ-LF-EqU"/>
                                 </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Item" image="Kuy" id="mlu-Ng-LhX">
-                                <inset key="imageInsets" minX="85" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -1038,7 +1043,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="folder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pGV-Zs-9Oh">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="category" translatesAutoresizingMaskIntoConstraints="NO" id="pGV-Zs-9Oh">
                                 <rect key="frame" x="20" y="216" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1501,12 +1506,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Kuy" width="500" height="516"/>
-        <image name="calendar" catalog="system" width="64" height="52"/>
-        <image name="chevron.left" catalog="system" width="48" height="64"/>
-        <image name="chevron.right" catalog="system" width="48" height="64"/>
-        <image name="folder" catalog="system" width="64" height="46"/>
-        <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="folder" catalog="system" width="128" height="95"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
         <image name="idr-tag" width="80" height="80"/>
         <image name="nextButtonOnboarding" width="213" height="45"/>
         <image name="pencil" catalog="system" width="64" height="56"/>

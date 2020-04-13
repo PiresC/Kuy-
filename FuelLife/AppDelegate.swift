@@ -17,9 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
-        let entertainmentNama = ["Netflix", "Bioskop", "Makan Baso", "Makan Mie Ayam", "Coffee Shop"]
-        let entertainmentHarga = [50000,45000,20000,20000,50000]
-        let entertainmentColor = ["#32a852", "#000000", "#ff0000", "#3c00ff", "#fffb00"]
+        let entertainmentNama = ["Movie", "Shopping", "Games", "Travel", "Concert", "Sport"]
+        let entertainmentHarga = [50000,10000,300000,10000,20000,20000]
+        let entertainmentColor = ["#FF0028", "#FEA737", "#ADD45E", "#FF00FF", "#EAE310", "#EAE310"]
         if (ExpenseRepository.fetchExpenses().count == 0 && EntertainmentRepository.fetchEntertainments().count == 0){
             for i in 1...4{
                 let period = PeriodRepository.createPeriod(month: "0\(i)/2020", currentBudget: 12300000, startingBudget: 1000000)

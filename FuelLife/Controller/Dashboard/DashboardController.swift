@@ -19,13 +19,29 @@ class DashboardController: UIViewController, TopStoryRepositoryDelegate {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let imageView = UIImageView(frame: CGRect(x: 85, y: 0, width: 10, height: 10))
+        
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "Kuy")
+        imageView.image = image
+        
+        navigationItem.titleView = imageView
+        
         repo.delegate = self
         dashboardTableView.delegate = self
         dashboardTableView.dataSource = self
-        
         repo.fetchApi()
+//        print(topstories)
         
-        print(topstories)
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: NSNotification.Name(rawValue: "dataChanged"), object: nil)
+    }
+    
+    @objc func reloadData(notification: NSNotification){
+        let parent = view.superview
+        view.removeFromSuperview()
+        view = nil
+        parent?.addSubview(view)
     }
     
     func updateData(data: [TopStory]) {
@@ -34,8 +50,14 @@ class DashboardController: UIViewController, TopStoryRepositoryDelegate {
             self.dashboardTableView.reloadData()
         }
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier=="dashboardAddExpense"){
+            if let s = sender as? Entertainment, let dest = segue.destination as? AddExpenseViewController{
+                dest.entertainment = s
+            }
+        }
+    }
 }
-
 
 // MARK: Table View Extensions
 
@@ -85,8 +107,12 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
         }
           
         let cell = dashboardTableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-        print(indexPath.row)
+        
         if let c = cell as? LastExpensesTableViewCell{
+            c.dashboardView = self
+        }
+        
+        if let c = cell as? RecommendationTableViewCell{
             c.dashboardView = self
         }
         
@@ -94,10 +120,30 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
             c.titleLabel.text = topstories[indexPath.row].title
             c.abstractLabel.text = topstories[indexPath.row].abstract
             c.url = topstories[indexPath.row].url
+            c.imageView?.image = nil
+
+            DispatchQueue.global().async() {
+                let imageName = self.topstories[indexPath.row].thumbnail_standard
+                let replaceimageName: String = imageName.replacingOccurrences(of: "thumbStandard", with: "thumbLarge")
+                DispatchQueue.global().async() {
+                    if let url = URL(string: replaceimageName) {
+                        print(url)
+                        do {
+                            let data = try Data(contentsOf: url)
+                            DispatchQueue.main.async {
+                                if let cell = tableView.cellForRow(at: indexPath) as? TopStoriesDashboardTableViewCell{
+                                    cell.newsImage?.image = UIImage(data: data)
+                                }
+                            }
+                        } catch  {
+                            print(error.localizedDescription)
+                        }
+                    }
+                }
+            }
             c.dashboardView = self
         }
-        print("DATA FROM API :",topstories)
-                            
+//        print("DATA FROM API :",topstories)
         return cell
     }
     
@@ -117,7 +163,6 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
         default:
             return 250
         }
-        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -161,7 +206,6 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
            
         return headerView
     }
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        let category = categories[indexPath.row]

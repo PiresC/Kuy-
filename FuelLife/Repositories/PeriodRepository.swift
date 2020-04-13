@@ -65,7 +65,11 @@ class PeriodRepository{
         let month = dateFormatter.string(from: now)
         
         if let period = (data.filter { $0.month == month }.first){
-            updatePeriod(period: period, startingBudget: period.startingBudget, currentBudget: newBudget)
+            var startingBudget = period.startingBudget
+            if newBudget > period.startingBudget{
+                startingBudget = newBudget
+            }
+            updatePeriod(period: period, startingBudget: startingBudget, currentBudget: newBudget)
         }
     }
     
