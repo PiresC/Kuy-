@@ -8,16 +8,44 @@
 
 import UIKit
 
-class DashboardController: UIViewController {
-
+class DashboardController: UIViewController, TopStoryRepositoryDelegate {
+    
+    var news: [responseStory] = []
+    let tp = TopStoriesDashboardTableViewCell()
+    var topstories: [TopStory] = []
+    
     @IBOutlet weak var dashboardTableView: UITableView!
+    var repo = TopStoryRepository()
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        repo.delegate = self
         dashboardTableView.delegate = self
         dashboardTableView.dataSource = self
+        
+        repo.fetchApi()
+        
+        print(topstories)
+    }
+    
+    func updateData(data: [TopStory]) {
+        DispatchQueue.main.async {
+            self.topstories = data
+            self.dashboardTableView.reloadData()
+        }
+    }
+    
+    @IBAction func shareBtn(_ sender: UIButton) {
+        
+        
+        let secondActivityItem: URL = URL(string: tp.url ?? "http://www.apple.com")!
+        
+        let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [secondActivityItem], applicationActivities: nil)
 
+        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook, UIActivity.ActivityType.postToTwitter, UIActivity.ActivityType.addToReadingList]
+
+        self.present(activityViewController, animated: true, completion: nil)
+        
     }
     
 }
@@ -44,7 +72,11 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
             numberOfRows = 1
         }
         
-        return numberOfRows
+        if section == 4 {
+            return topstories.count
+        } else {
+            return numberOfRows
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -66,11 +98,19 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
             identifier = "topStoriesTableViewCell"
         }
           
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-        
+        let cell = dashboardTableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        print(indexPath.row)
         if let c = cell as? LastExpensesTableViewCell{
             c.dashboardView = self
         }
+        
+        if let c = cell as? TopStoriesDashboardTableViewCell {
+            c.titleLabel.text = topstories[indexPath.row].title
+            c.abstractLabel.text = topstories[indexPath.row].abstract
+            c.url = topstories[indexPath.row].url
+            
+        }
+        print("DATA FROM API :",topstories)
                             
         return cell
     }
@@ -141,12 +181,6 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
         //        let category = categories[indexPath.row]
         //        performSegue(withIdentifier: "productVC", sender: category)
     }
-    
 
 }
-
-
-
-
-
 
