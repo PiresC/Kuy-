@@ -87,6 +87,7 @@ class EditEntertainmentViewController: UIViewController, UIPickerViewDelegate, U
             _ = EntertainmentRepository.updateEntertainment(entertainment: self.entertainment!, newName: self.nameLabel.text!, newBasePrice: Int64(self.priceLabel.text!)!, newColor: self.selectedColor!)
             
             self.tableViewDelegate!.refreshData()
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dataChanged"), object: nil)
 
         }
     }

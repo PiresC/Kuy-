@@ -33,6 +33,15 @@ class DashboardController: UIViewController, TopStoryRepositoryDelegate {
         dashboardTableView.dataSource = self
         repo.fetchApi()
 //        print(topstories)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: NSNotification.Name(rawValue: "dataChanged"), object: nil)
+    }
+    
+    @objc func reloadData(notification: NSNotification){
+        let parent = view.superview
+        view.removeFromSuperview()
+        view = nil
+        parent?.addSubview(view)
     }
     
     func updateData(data: [TopStory]) {
@@ -111,19 +120,27 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
             c.titleLabel.text = topstories[indexPath.row].title
             c.abstractLabel.text = topstories[indexPath.row].abstract
             c.url = topstories[indexPath.row].url
-            
-            var imageName = topstories[indexPath.row].thumbnail_standard
-            let replaceimageName: String = imageName.replacingOccurrences(of: "thumbStandard", with: "thumbLarge")
-            if let url = URL(string: replaceimageName) {
-                print(url)
-                do {
-                    let data = try Data(contentsOf: url)
-                    c.newsImage?.image = UIImage(data: data)
-                } catch  {
-                    print(error.localizedDescription)
+            c.imageView?.image = nil
+
+            DispatchQueue.global().async() {
+                let imageName = self.topstories[indexPath.row].thumbnail_standard
+                let replaceimageName: String = imageName.replacingOccurrences(of: "thumbStandard", with: "thumbLarge")
+                DispatchQueue.global().async() {
+                    if let url = URL(string: replaceimageName) {
+                        print(url)
+                        do {
+                            let data = try Data(contentsOf: url)
+                            DispatchQueue.main.async {
+                                if let cell = tableView.cellForRow(at: indexPath) as? TopStoriesDashboardTableViewCell{
+                                    cell.newsImage?.image = UIImage(data: data)
+                                }
+                            }
+                        } catch  {
+                            print(error.localizedDescription)
+                        }
+                    }
                 }
             }
-        
             c.dashboardView = self
         }
 //        print("DATA FROM API :",topstories)

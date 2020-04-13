@@ -87,6 +87,8 @@ class AddEntertainmentViewController: UIViewController, UIPickerViewDelegate, UI
             }
             
             self.tableViewDelegate!.refreshData()
+            
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dataChanged"), object: nil)
 
         }
     }
