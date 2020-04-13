@@ -22,7 +22,6 @@ class BudgetChartTableViewCell: UITableViewCell {
     var test: String = ""
     var count: Int = 0
     
-    //    var data: [fgBackground] = []
     var arrText: [String] = []
     
     func updateView(){

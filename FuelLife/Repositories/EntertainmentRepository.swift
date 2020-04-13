@@ -26,7 +26,12 @@ class EntertainmentRepository{
                 result.append(BudgetDetail(name: i.name!, backgroundColor: i.color!, percentage: percentage, expenses: temp))
             }
         }
-        return result
+        result.sort { (budgetDetail1, budgetDetail2) -> Bool in
+            return budgetDetail1.percentage > budgetDetail2.percentage
+        }
+        return result.filter { (budgetDetail) -> Bool in
+            return budgetDetail.percentage>0
+        }
     }
     
     static func fetchEntertainments() -> [Entertainment]{
