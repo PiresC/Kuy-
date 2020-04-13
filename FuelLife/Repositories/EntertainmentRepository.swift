@@ -26,7 +26,12 @@ class EntertainmentRepository{
                 result.append(BudgetDetail(name: i.name!, backgroundColor: i.color!, percentage: percentage, expenses: temp))
             }
         }
-        return result
+        result.sort { (budgetDetail1, budgetDetail2) -> Bool in
+            return budgetDetail1.percentage > budgetDetail2.percentage
+        }
+        return result.filter { (budgetDetail) -> Bool in
+            return budgetDetail.percentage>0
+        }
     }
     
     static func fetchEntertainments() -> [Entertainment]{
@@ -110,24 +115,37 @@ class EntertainmentRepository{
     }
     
     static func fetchRecommendationEntertainments() -> [Entertainment]{
-        
-        //TODO: Implement Logic for recommmedation base on user data
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-            return []
+        if (ExpenseRepository.fetchExpenses().count > 0){
+            var entertainments = fetchEntertainments()
+            entertainments = entertainments.filter { (e) -> Bool in
+                return (e.expenses?.array.count)! > 0
+            }
+            
+            entertainments.sort { (entertainment1, entertainment2) -> Bool in
+                return (entertainment1.expenses?.array.count)! > (entertainment2.expenses?.array.count)!
+            }
+            if entertainments.count<6{
+                return entertainments
+            }
+            else{
+                return Array<Entertainment>(entertainments[0...5])
+            }
         }
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        let fetchRequest = NSFetchRequest<Entertainment>(entityName: "Entertainment")
-
-        do {
-            let entertainments = try managedContext.fetch(fetchRequest)
-            return entertainments
-        } catch let error as NSError {
-            print(error)
+        else{
+            let entertaiments = fetchEntertainments()
+            var result:[Entertainment] = []
+            if let arr = UserDefaults.standard.array(forKey: "preferedRecommendation") as? [String]{
+                for i in arr{
+                    let temp = entertaiments.filter { (entertainment) -> Bool in
+                        return entertainment.name == i
+                    }.first
+                    if let e = temp{
+                        result.append(e)
+                    }
+                }
+            }
+            return result
         }
-        
-        return []
-        
     }
     
 }

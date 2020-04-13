@@ -68,7 +68,7 @@ extension RecommendationTableViewCell: UICollectionViewDataSource {
         let recommendationEntertainment = recommendationEntertainments[indexPath.row]
 
         cell.configure(recommendationLabel: recommendationEntertainment.name!,
-                       recommendationPrice: String(recommendationEntertainment.basePrice),
+                       recommendationPrice: CurrencyFormatter.format(Int(recommendationEntertainment.basePrice)),
                        recommendationColor: recommendationEntertainment.color ?? "#32a852")
 
         return cell
