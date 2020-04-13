@@ -15,7 +15,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
     var imagePreferences: [String] = ["popcorn-col", "travel-col", "shopping-col", "guitar-col", "controller-col", "soccer-col"]
     var imageUnchoosen: [String] = ["popcorn", "travel", "supermarket", "guitar", "controller", "soccer"]
     var titlePreferences: [String] = ["Bioskop", "Traveling", "Shopping", "Music", "Game", "Sport"]
-    var colorPreferences: [UIColor] = [UIColor.green, UIColor.orange, UIColor.blue, UIColor.red]
+    var colorPreferences: [UIColor] = [UIColor.green, UIColor.orange, UIColor.blue, UIColor.red, UIColor.yellow, UIColor.black]
     
 
     @IBOutlet weak var scrollView: UIScrollView!
@@ -28,7 +28,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
     var scrollWidth: CGFloat! = 0.0
     var scrollHeight: CGFloat! = 0.0
     
-    var titles: [String] = ["Enjoy Life", "Budget Friendly", "Choose you preference"]
+    var titles: [String] = ["Enjoy Life", "Budget Friendly", "Choose your preferences"]
     var descriptions = ["life is short, do something about it", "entertainment that you can do, with your own budget", ""]
     var images = ["theater", "wallet", "theater"]
     
@@ -168,7 +168,7 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return imageUnchoosen.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
