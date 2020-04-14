@@ -34,6 +34,7 @@ class DashboardController: UIViewController, TopStoryRepositoryDelegate {
         repo.fetchApi()
         
         NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: NSNotification.Name(rawValue: "dataChanged"), object: nil)
+        
     }
     
     @objc func reloadData(notification: NSNotification){
