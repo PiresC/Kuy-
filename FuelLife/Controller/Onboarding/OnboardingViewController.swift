@@ -15,19 +15,20 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
     var imagePreferences: [String] = ["popcorn-col", "travel-col", "shopping-col", "guitar-col", "controller-col", "soccer-col"]
     var imageUnchoosen: [String] = ["popcorn", "travel", "supermarket", "guitar", "controller", "soccer"]
     var titlePreferences: [String] = ["Bioskop", "Traveling", "Shopping", "Music", "Game", "Sport"]
-    var colorPreferences: [UIColor] = [UIColor.green, UIColor.orange, UIColor.blue, UIColor.red]
+    var colorPreferences: [UIColor] = [UIColor.green, UIColor.orange, UIColor.blue, UIColor.red, UIColor.yellow, UIColor.black]
     
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var skipButton: UIButton!
     
     let cellIdentifier = PreferencesOnboardingCell.identifier
 
     var scrollWidth: CGFloat! = 0.0
     var scrollHeight: CGFloat! = 0.0
     
-    var titles: [String] = ["Enjoy Life", "Budget Friendly", "Choose you preference"]
+    var titles: [String] = ["Enjoy Life", "Budget Friendly", "Choose your preferences"]
     var descriptions = ["life is short, do something about it", "entertainment that you can do, with your own budget", ""]
     var images = ["theater", "wallet", "theater"]
     
@@ -44,6 +45,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         self.view.layoutIfNeeded()
         self.nextButton.isHidden = true
+        self.skipButton.isHidden = false
         self.scrollView.delegate = self
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
@@ -136,7 +138,13 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
 
     @IBAction func toDashboard(_ sender: UIButton) {
         UserDefaults.standard.set(preferenceRecommendation, forKey: "preferedRecommendation")
-        UserDefaults.standard.set(false, forKey: "firstComer")
+        UserDefaults.standard.set(true, forKey: "hasLaunched")
+        performSegue(withIdentifier: "toDashboard", sender: nil)
+    }
+    
+    @IBAction func skipping(_ sender: UIButton) {
+        UserDefaults.standard.set(preferenceRecommendation, forKey: "preferedRecommendation")
+        UserDefaults.standard.set(true, forKey: "hasLaunched")
         performSegue(withIdentifier: "toDashboard", sender: nil)
     }
     
@@ -160,7 +168,7 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return imageUnchoosen.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -173,8 +181,10 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
         doSomethingWhenItemClicked(indexPath)
         if preferenceRecommendation.count > 0 {
             self.nextButton.isHidden = false
+            self.skipButton.isHidden = true
         } else {
             self.nextButton.isHidden = true
+            self.skipButton.isHidden = false
         }
     }
     
