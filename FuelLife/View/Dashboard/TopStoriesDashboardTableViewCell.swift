@@ -46,8 +46,6 @@ class TopStoriesDashboardTableViewCell: UITableViewCell {
     }
     
     @IBAction func openWebsiteButton(_ sender: UIButton) {
-        //okee contoh yaak misalnya https://www.nytimes.com/2020/04/12/podcasts/the-daily/weird-al-yankovic-coronavirus-music.html
-        
         UIApplication.shared.open(URL(string: url ?? "http://www.apple.com")!, options: [:], completionHandler: nil)
     }
     

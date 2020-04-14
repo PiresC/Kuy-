@@ -27,14 +27,6 @@ private var textLayer: CATextLayer!
 private var chartText: String = ""
 
 class ChartImageView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     
     init(frame: CGRect, text: String, fgBackground: [fgBackground]) {
         super.init(frame: frame)
@@ -46,9 +38,6 @@ class ChartImageView: UIView {
         
         chartText = text
         
-//        chartText = chartValues[chartValue]
-
-//        let persentase: Float = (chartText as NSString).floatValue / 100
         print(fgBackground)
         
         let startAngle: CGFloat = -CGFloat.pi / 2
@@ -56,7 +45,6 @@ class ChartImageView: UIView {
         let fillColor: CGColor = UIColor.clear.cgColor
         
         backgroundLayer = createCircularLayer(rect: frame, startAngle: startAngle, endAngle: endAngle, strokeColor: UIColor.lightGray.cgColor, fillColor: fillColor, lineWidth: lineWidth)
-        
         
         textLayer = createTextLayer(rect: frame, textColor: UIColor.black.cgColor, text: chartText)
         
@@ -67,7 +55,6 @@ class ChartImageView: UIView {
             forebackgroundLayer.strokeStart = fgBackground[fgBackgroundCount].strokeStart
             forebackgroundLayer.strokeEnd = fgBackground[fgBackgroundCount].strokeEnd
             foregroundLayers.append(forebackgroundLayer)
-//            layer.addSublayer(test)
         }
         
         layer.addSublayer(textLayer)

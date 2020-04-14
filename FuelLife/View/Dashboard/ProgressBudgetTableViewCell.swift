@@ -19,7 +19,8 @@ class ProgressBudgetTableViewCell: UITableViewCell {
     @IBOutlet weak var usedBudgetLabel: UILabel!
     @IBOutlet weak var usedBudgetAmountLabel: UILabel!
     
-    let budget = PeriodRepository.getCurrentBudget()
+    var budget = PeriodRepository.getCurrentBudget()
+    let expenses = PeriodRepository.getCurrentPeriod()?.expenses?.array as! [Expense]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -53,7 +54,7 @@ class ProgressBudgetTableViewCell: UITableViewCell {
             availableBudgetAmountLabel.text = "0"
         }
         
-        var expenses = PeriodRepository.getCurrentPeriod()?.expenses?.array as! [Expense]
+//        let expenses = PeriodRepository.getCurrentPeriod()?.expenses?.array as! [Expense]
         var amount = 0
         for i in expenses{
             amount += Int(exactly:i.price ) ?? 0

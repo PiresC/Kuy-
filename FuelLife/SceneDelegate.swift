@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = scene as? UIWindowScene else { return }
         
         if UserDefaults.standard.bool(forKey: "hasLaunched") {
-            let vc = storyboard.instantiateViewController (withIdentifier: "mainVC") as! DashboardController
+            let vc = storyboard.instantiateViewController (withIdentifier: "mainVC") as! UINavigationController
             window = UIWindow(windowScene: windowScene)
             window?.rootViewController = vc
             window?.makeKeyAndVisible()
