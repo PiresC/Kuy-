@@ -63,6 +63,9 @@ extension BudgetViewController: UITextFieldDelegate {
         self.updateBudgetText()
         currentBudgetLabel.isHidden = false
         currentBudgetTextField.isHidden = true
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dataChanged"), object: nil)
+        
         return true
     }
 }
