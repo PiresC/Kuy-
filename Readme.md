@@ -17,7 +17,9 @@ my first doing app together with a team, and first time using Github as a collab
 
 * [Swift in Xcode](https://developer.apple.com/xcode/) - IDE
 * [Core Data](https://developer.apple.com/documentation/coredata) - Framework for permanent data
+* [Nytimes] (https://developer.nytimes.com/) API for top news segment
 * [Sketch](https://www.sketch.com/) - Prototype
+
 
 
 ## Contributors
