@@ -19,7 +19,7 @@ my first doing app together with a team, and first time using Github as a collab
 * [Core Data](https://developer.apple.com/documentation/coredata) - Framework for permanent data
 * [Nytimes API](https://developer.nytimes.com/)  - API for top news segment
 * [Sketch](https://www.sketch.com/) - Prototype
-
+* [freepik](https://www.flaticon.com/authors/freepik) - icon from freepik at flaticon
 
 
 
